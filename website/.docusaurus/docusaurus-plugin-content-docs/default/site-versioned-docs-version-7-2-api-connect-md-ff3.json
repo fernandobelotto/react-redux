@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/connect",
+  "id": "version-7.2/api/connect",
+  "isDocsHomePage": false,
+  "title": "Connect",
+  "description": "connect()",
+  "source": "@site/versioned_docs\\version-7.2\\api\\connect.md",
+  "slug": "/api/connect",
+  "permalink": "/api/connect",
+  "version": "7.2",
+  "sidebar_label": "connect()",
+  "sidebar": "version-7.2/docs",
+  "previous": {
+    "title": "Static Typing",
+    "permalink": "/using-react-redux/static-typing"
+  },
+  "next": {
+    "title": "Provider",
+    "permalink": "/api/provider"
+  }
+}

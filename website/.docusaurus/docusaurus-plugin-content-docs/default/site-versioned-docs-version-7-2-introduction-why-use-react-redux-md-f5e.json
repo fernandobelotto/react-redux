@@ -1,0 +1,21 @@
+{
+  "unversionedId": "introduction/why-use-react-redux",
+  "id": "version-7.2/introduction/why-use-react-redux",
+  "isDocsHomePage": false,
+  "title": "Why Use React Redux?",
+  "description": "Why Use React Redux?",
+  "source": "@site/versioned_docs\\version-7.2\\introduction\\why-use-react-redux.md",
+  "slug": "/introduction/why-use-react-redux",
+  "permalink": "/introduction/why-use-react-redux",
+  "version": "7.2",
+  "sidebar_label": "Why Use React Redux?",
+  "sidebar": "version-7.2/docs",
+  "previous": {
+    "title": "Basic Tutorial",
+    "permalink": "/introduction/basic-tutorial"
+  },
+  "next": {
+    "title": "Connect: Extracting Data with mapStateToProps",
+    "permalink": "/using-react-redux/connect-mapstate"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "using-react-redux/accessing-store",
+  "id": "using-react-redux/accessing-store",
+  "isDocsHomePage": false,
+  "title": "Accessing the Store",
+  "description": "Accessing the Store",
+  "source": "@site/..\\docs\\using-react-redux\\accessing-store.md",
+  "slug": "/using-react-redux/accessing-store",
+  "permalink": "/next/using-react-redux/accessing-store",
+  "version": "current",
+  "sidebar_label": "Accessing the Store",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Connect: Dispatching Actions with mapDispatchToProps",
+    "permalink": "/next/using-react-redux/connect-mapdispatch"
+  },
+  "next": {
+    "title": "Static Typing",
+    "permalink": "/next/using-react-redux/static-typing"
+  }
+}

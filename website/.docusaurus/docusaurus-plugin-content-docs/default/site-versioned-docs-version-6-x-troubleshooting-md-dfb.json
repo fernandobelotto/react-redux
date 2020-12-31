@@ -1,0 +1,17 @@
+{
+  "unversionedId": "troubleshooting",
+  "id": "version-6.x/troubleshooting",
+  "isDocsHomePage": false,
+  "title": "Troubleshooting",
+  "description": "Troubleshooting",
+  "source": "@site/versioned_docs\\version-6.x\\troubleshooting.md",
+  "slug": "/troubleshooting",
+  "permalink": "/6.x/troubleshooting",
+  "version": "6.x",
+  "sidebar_label": "Troubleshooting",
+  "sidebar": "version-6.x/docs",
+  "previous": {
+    "title": "connectAdvanced",
+    "permalink": "/6.x/api/connect-advanced"
+  }
+}

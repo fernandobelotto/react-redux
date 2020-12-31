@@ -1,0 +1,21 @@
+{
+  "unversionedId": "using-react-redux/connect-mapdispatch",
+  "id": "version-7.2/using-react-redux/connect-mapdispatch",
+  "isDocsHomePage": false,
+  "title": "Connect: Dispatching Actions with mapDispatchToProps",
+  "description": "Connect: Dispatching Actions with mapDispatchToProps",
+  "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+  "slug": "/using-react-redux/connect-mapdispatch",
+  "permalink": "/using-react-redux/connect-mapdispatch",
+  "version": "7.2",
+  "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+  "sidebar": "version-7.2/docs",
+  "previous": {
+    "title": "Connect: Extracting Data with mapStateToProps",
+    "permalink": "/using-react-redux/connect-mapstate"
+  },
+  "next": {
+    "title": "Accessing the Store",
+    "permalink": "/using-react-redux/accessing-store"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/connect",
+  "id": "version-7.0/api/connect",
+  "isDocsHomePage": false,
+  "title": "Connect",
+  "description": "connect()",
+  "source": "@site/versioned_docs\\version-7.0\\api\\connect.md",
+  "slug": "/api/connect",
+  "permalink": "/7.0/api/connect",
+  "version": "7.0",
+  "sidebar_label": "connect()",
+  "sidebar": "version-7.0/docs",
+  "previous": {
+    "title": "Accessing the Store",
+    "permalink": "/7.0/using-react-redux/accessing-store"
+  },
+  "next": {
+    "title": "Provider",
+    "permalink": "/7.0/api/provider"
+  }
+}

@@ -1,90 +1,90 @@
 ---
 id: why-use-react-redux
-title: Why Use React Redux?
+title: Por que usar React Redux?
 hide_title: true
-sidebar_label: Why Use React Redux?
+sidebar_label: Por que usar React Redux?
 ---
 
-# Why Use React Redux?
+# Por que usar React Redux?
 
-Redux itself is a standalone library that can be used with any UI layer or framework, including React, Angular, Vue, Ember, and vanilla JS. Although Redux and React are commonly used together, they are independent of each other.
+O próprio Redux é uma biblioteca independente que pode ser usada com qualquer estrutura ou camada de UI, incluindo React, Angular, Vue, Ember e vanilla JS. Embora Redux e React sejam comumente usados ​​juntos, eles são independentes um do outro.
 
-If you are using Redux with any kind of UI framework, you will normally use a "UI binding" library to tie Redux together with your UI framework, rather than directly interacting with the store from your UI code.
+Se você estiver usando Redux com qualquer tipo de estrutura de UI, normalmente usará uma biblioteca de "ligação de UI" para amarrar Redux com sua estrutura de UI, em vez de interagir diretamente com a loja a partir de seu código de UI.
 
-**React Redux is the official Redux UI binding library for React**. If you are using Redux and React together, you should also use React Redux to bind these two libraries.
+**React Redux é a biblioteca oficial de ligação do React com o Redux**. Se estiver usando Redux e React juntos, você também deve usar React Redux para conectar essas duas bibliotecas.
 
-To understand why you should use React Redux, it may help to understand what a "UI binding library" does.
+Para entender por que você deve usar o React Redux, pode ser útil entender o que uma "biblioteca de vinculação de interface do usuário" faz.
 
-> **Note**: If you have questions about whether you should use Redux in general, please see these articles for discussion of when and why you might want to use Redux, and how it's intended to be used:
+> **Nota**: Se você tiver dúvidas sobre se deve usar Redux em geral, consulte estes artigos para uma discussão de quando e por que você pode querer usar Redux, e como ele deve ser usado:
 >
 > - [Redux docs: Motivation](https://redux.js.org/introduction/motivation)
-> - [Redux docs: FAQ - When should I use Redux?](https://redux.js.org/faq/general#when-should-i-use-redux)
-> - [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
-> - [Idiomatic Redux: The Tao of Redux, Part 1 - Implementation and Intent](https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)
+> - [Redux docs: Perguntas Frequentes - Quando devo usar Redux?](https://redux.js.org/faq/general#when-should-i-use-redux)
+> - [Você pode não precisar de redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
+> - [Redux idiomático: o Tao do Redux, Part 1 - Implementação e Intenção](https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)
 
-## Integrating Redux with a UI
+## Integrando Redux com uma UI
 
-Using Redux with _any_ UI layer requires [the same consistent set of steps](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/ui-layer.html#/4):
+Usar Redux com _qualquer_ camada de IU requer [o mesmo conjunto consistente de etapas](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/ui-layer.html#/4):
 
-1. Create a Redux store
-2. Subscribe to updates
-3. Inside the subscription callback:
-   1. Get the current store state
-   2. Extract the data needed by this piece of UI
-   3. Update the UI with the data
-4. If necessary, render the UI with initial state
+1. Crie uma Redux store
+2. Subscribe para atualizações
+3. Dentro da callback de subscription:
+   1. Obtenha o estado atual da store
+   2. Extraia os dados necessários para esta parte da UI
+   3. Atualize a UI com os dados
+4. Se necessário, renderize a UI com o estado inicial
 5. Respond to UI inputs by dispatching Redux actions
 
-While it is possible to write this logic by hand, doing so would become very repetitive. In addition, optimizing UI performance would require complicated logic.
+Embora seja possível escrever essa lógica à mão, isso se tornaria muito repetitivo. Além disso, otimizar o desempenho da IU exigiria uma lógica complicada.
 
-The process of subscribing to the store, checking for updated data, and triggering a re-render can be made more generic and reusable. **A UI binding library like React Redux handles the store interaction logic, so you don't have to write that code yourself.**
+O processo de assinatura da loja, verificação de dados atualizados e ativação de uma nova renderização pode ser mais genérico e reutilizável. **Uma biblioteca de ligação de IU como a React Redux lida com a lógica de interação coma a store, então você não precisa escrever esse código sozinho.**
 
-> **Note**: For a deeper look at how React Redux works internally and how it handles the store interaction for you, see **[Idiomatic Redux: The History and Implementation of React Redux](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)**.
+> **Nota**: Para uma visão mais aprofundada de como React Redux funciona internamente e como ele lida com a interação com a loja para você, consulte **[Redux idiomático: a história e a implementação do React Redux](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)**.
 
-## Reasons to Use React Redux
+## Razões para usar o React Redux
 
-### It is the Official Redux UI Bindings for React
+### É a a biblioteca oficial de ligação do Redux para o React
 
-While Redux can be used with any UI layer, it was originally designed and intended for use with React. There are [UI binding layers for many other frameworks](https://redux.js.org/introduction/ecosystem#library-integration-and-bindings), but React Redux is maintained directly by the Redux team.
+Embora o Redux possa ser usado com qualquer camada da UI, ele foi originalmente projetado e destinado para ser usado com o React. Existem [camadas de ligação de UI para muitos outros frameworks](https://redux.js.org/introduction/ecosystem#library-integration-and-bindings), mas React Redux é mantido diretamente pela equipe do Redux.
 
-As the offical Redux binding for React, React Redux is kept up-to-date with any API changes from either library, to ensure that your React components behave as expected. Its intended usage adopts the design principles of React - writing declarative components.
+Como é a biblioteca oficial do Redux para React, o React Redux é mantido atualizado com quaisquer alterações de API de qualquer uma das bibliotecas, para garantir que seus componentes do React se comportem conforme o esperado. O uso pretendido adota os princípios de design do React - escrevendo componentes declarativos.
 
-### It Encourages Good React Architecture
+### Ela incentiva a boa arquitetura React
 
-React components are a lot like functions. While it's possible to write all your code in a single function, it's usually better to split that logic into smaller functions that each handle a specific task, making them easier to understand.
+Os componentes do React são muito parecidos com funções. Embora seja possível escrever todo o seu código em uma única função, geralmente é melhor dividir essa lógica em funções menores, cada uma com uma tarefa específica, tornando-as mais fáceis de entender.
 
-Similarly, while you can write large React components that handle many different tasks, it's usually better to split up components based on responsibilities. In particular, it is common to have "container" components that are responsible for collecting and managing some kind of data, and "presentational" components that simply display UI based on whatever data they've received as props.
+Da mesma forma, embora você possa escrever grandes componentes React que lidam com muitas tarefas diferentes, geralmente é melhor dividir os componentes com base nas responsabilidades. Em particular, é comum ter componentes de "contêiner" que são responsáveis ​​por coletar e gerenciar algum tipo de dados e componentes de "apresentação" que simplesmente exibem a interface do usuário com base em quaisquer dados que receberam por props.
 
 **The React Redux `connect` function generates "container" wrapper components that handle the process of interacting with the store for you**. That way, your own components can focus on other tasks, whether it be collecting other data, or just displaying a piece of the UI. In addition, **`connect` abstracts away the question of _which_ store is being used, making your own components more reusable**.
 
-As a general architectural principle, **we want to keep our own components "unaware" of Redux**. They should simply receive data and functions as props, just like any other React component. This ultimately makes it easier to test and reuse your own components.
+Como um princípio geral de arquitetura, **queremos manter nossos próprios componentes "inconscientes" do Redux**. Eles devem simplesmente receber dados e funções como parâmetros, assim como qualquer outro componente do React. Em última análise, isso torna mais fácil testar e reutilizar seus próprios componentes.
 
-### It Implements Performance Optimizations For You
+### Ela implementa otimizações de desempenho para você
 
-React is generally fast, but by default any updates to a component will cause React to re-render all of the components inside that part of the component tree. This does require work, and if the data for a given component hasn't changed, then re-rendering is likely some wasted effort because the requested UI output would be the same.
+O React é geralmente rápido, mas por padrão qualquer atualização de um componente fará com que o React renderize novamente todos os componentes dentro daquela parte da árvore de componentes. Isso exige trabalho e, se os dados de um determinado componente não foram alterados, provavelmente a nova renderização é um esforço desperdiçado porque a saída da IU solicitada seria a mesma.
 
-If performance is a concern, the best way to improve performance is to skip unnecessary re-renders, so that components only re-render when their data has actually changed. **React Redux implements many performance optimizations internally, so that your own component only re-renders when it actually needs to.**
+Se o desempenho for uma preocupação, a melhor maneira de melhorar o desempenho é pular as novas renderizações desnecessárias, para que os componentes só sejam renderizados novamente quando seus dados forem realmente alterados. **A React Redux implementa muitas otimizações de desempenho internamente, de modo que seu próprio componente só é renderizado novamente quando realmente precisa.**
 
-In addition, by connecting multiple components in your React component tree, you can ensure that each connected component only extracts the specific pieces of data from the store state that are needed by that component. This means that your own component will need to re-render less often, because most of the time those specific pieces of data haven't changed.
+Além disso, ao conectar vários componentes em sua árvore de componentes React, você pode garantir que cada componente conectado extraia apenas as partes específicas de dados do estado de armazenamento que são necessárias para aquele componente. Isso significa que seu próprio componente precisará ser renderizado novamente com menos frequência, porque na maioria das vezes esses dados específicos não mudaram.
 
-### Community Support
+### Suporte da comunidade
 
-As the official binding library for React and Redux, React Redux has a large community of users. This makes it easier to ask for help, learn about best practices, use libraries that build on top of React Redux, and reuse your knowledge across different applications.
+Como a biblioteca de ligação oficial para React e Redux, React Redux tem uma grande comunidade de usuários. Isso torna mais fácil pedir ajuda, aprender sobre as melhores práticas, usar bibliotecas que se baseiam no React Redux e reutilizar seu conhecimento em diferentes aplicativos.
 
-## Links and References
+## Links e referências
 
-### Understanding React Redux
+### Compreendendo o React Redux
 
-- [Idiomatic Redux: The History and Implementation of React Redux](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)
-- [`connect.js` Explained](https://gist.github.com/gaearon/1d19088790e70ac32ea636c025ba424e)
-- [Redux Fundamentals workshop slides](https://blog.isquaredsoftware.com/2018/06/redux-fundamentals-workshop-slides/)
-  - [UI Layer Integration](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/ui-layer.html)
-  - [Using React Redux](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/react-redux.html)
+- [Redux idiomático: a história e a implementação do React Redux](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)
+- [`connect.js` Explicado](https://gist.github.com/gaearon/1d19088790e70ac32ea636c025ba424e)
+- [slides do workshop Redux Fundamentals](https://blog.isquaredsoftware.com/2018/06/redux-fundamentals-workshop-slides/)
+  - [Integração de camada de UI](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/ui-layer.html)
+  - [Usando React Redux](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/react-redux.html)
 
-### Community Resources
+### Recursos da comunidade
 
-- Discord channel: [#redux on Reactiflux](https://discord.gg/0ZcbPKXt5bZ6au5t) ([Reactiflux invite link](https://reactiflux.com))
-- Stack Overflow topics: [Redux](https://stackoverflow.com/questions/tagged/redux), [React Redux](https://stackoverflow.com/questions/tagged/redux)
+- Canal no Discord: [#redux no Reactiflux](https://discord.gg/0ZcbPKXt5bZ6au5t) ([Reactiflux link de convite](https://reactiflux.com))
+- Stack Overflow tópicos: [Redux](https://stackoverflow.com/questions/tagged/redux), [React Redux](https://stackoverflow.com/questions/tagged/redux)
 - Reddit: [/r/reactjs](https://www.reddit.com/r/reactjs/), [/r/reduxjs](https://www.reddit.com/r/reduxjs/)
-- GitHub issues (bug reports and feature requests): https://github.com/reduxjs/react-redux/issues
-- Tutorials, articles, and further resources: [React/Redux Links](https://github.com/markerikson/react-redux-links)
+- GitHub issues (relatórios de bugs e solicitações de recursos): https://github.com/reduxjs/react-redux/issues
+- Tutoriais, artigos e outros recursos: [React/Redux Links](https://github.com/markerikson/react-redux-links)

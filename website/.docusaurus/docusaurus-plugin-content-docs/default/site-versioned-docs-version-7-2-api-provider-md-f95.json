@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/provider",
+  "id": "version-7.2/api/provider",
+  "isDocsHomePage": false,
+  "title": "Provider",
+  "description": "Provider",
+  "source": "@site/versioned_docs\\version-7.2\\api\\Provider.md",
+  "slug": "/api/provider",
+  "permalink": "/api/provider",
+  "version": "7.2",
+  "sidebar_label": "Provider",
+  "sidebar": "version-7.2/docs",
+  "previous": {
+    "title": "Connect",
+    "permalink": "/api/connect"
+  },
+  "next": {
+    "title": "connectAdvanced",
+    "permalink": "/api/connect-advanced"
+  }
+}

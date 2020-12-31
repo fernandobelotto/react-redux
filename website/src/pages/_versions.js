@@ -81,7 +81,7 @@ function Versions() {
               </table>
             </React.Fragment>
           )}
-          <h3 id="archive">Past Versions</h3>
+          <h3 id="archive">Versões Anteriores</h3>
           <table className="versions">
             <tbody>
               {versions.map(

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/provider",
+  "id": "version-5.x/api/provider",
+  "isDocsHomePage": false,
+  "title": "Provider",
+  "description": "``",
+  "source": "@site/versioned_docs\\version-5.x\\api\\Provider.md",
+  "slug": "/api/provider",
+  "permalink": "/5.x/api/provider",
+  "version": "5.x",
+  "sidebar_label": "Provider",
+  "sidebar": "version-5.x/docs",
+  "previous": {
+    "title": "connectAdvanced",
+    "permalink": "/5.x/api/connect-advanced"
+  },
+  "next": {
+    "title": "Troubleshooting",
+    "permalink": "/5.x/troubleshooting"
+  }
+}

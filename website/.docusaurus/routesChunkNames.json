@@ -1,0 +1,335 @@
+{
+  "/-d7d": {
+    "component": "component---site-src-pages-index-jsece-a18",
+    "config": "config---5-e-9-4f3"
+  },
+  "/__docusaurus/debug-3d6": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/config-914": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/content-d12": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---docusaurus-debug-content-4-c-9-f03"
+  },
+  "/__docusaurus/debug/globalData-3cf": {
+    "component": "component---theme-debug-global-dataede-0fa"
+  },
+  "/__docusaurus/debug/metadata-31b": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4"
+  },
+  "/__docusaurus/debug/registry-0da": {
+    "component": "component---theme-debug-registry-679-501"
+  },
+  "/__docusaurus/debug/routes-244": {
+    "component": "component---theme-debug-routes-946-699"
+  },
+  "/search-756": {
+    "component": "component---c-traducoes-react-redux-website-node-modules-docusaurus-theme-search-algolia-src-theme-search-page-index-js-61-e-672"
+  },
+  "/5.x-cb9": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---5-xe-19-fda"
+  },
+  "/5.x/api/api-fda": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-api-apic-35-317"
+  },
+  "/5.x/api/connect-bc5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-api-connectbb-6-ade"
+  },
+  "/5.x/api/connect-advanced-0a6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-api-connect-advanced-6-ab-98d"
+  },
+  "/5.x/api/provider-b55": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-api-provider-053-443"
+  },
+  "/5.x/introduction/basic-tutorial-1f8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-introduction-basic-tutorial-0-c-7-d6e"
+  },
+  "/5.x/introduction/quick-start-8d4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-introduction-quick-start-584-567"
+  },
+  "/5.x/introduction/why-use-react-redux-63f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-introduction-why-use-react-redux-1-d-6-441"
+  },
+  "/5.x/troubleshooting-72d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-troubleshootinge-99-323"
+  },
+  "/5.x/using-react-redux/connect-mapdispatch-6ed": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-using-react-redux-connect-mapdispatch-53-b-6eb"
+  },
+  "/5.x/using-react-redux/connect-mapstate-435": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---5-x-using-react-redux-connect-mapstate-189-d3b"
+  },
+  "/6.x-970": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---6-xf-77-096"
+  },
+  "/6.x/api/connect-f5b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-api-connectd-71-2ac"
+  },
+  "/6.x/api/connect-advanced-83b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-api-connect-advanced-5-cf-d41"
+  },
+  "/6.x/api/provider-31f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-api-provider-66-e-b0e"
+  },
+  "/6.x/introduction/basic-tutorial-124": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-introduction-basic-tutorial-8-ad-8da"
+  },
+  "/6.x/introduction/quick-start-221": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-introduction-quick-start-5-f-9-c9e"
+  },
+  "/6.x/introduction/why-use-react-redux-b61": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-introduction-why-use-react-redux-183-464"
+  },
+  "/6.x/troubleshooting-ac8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-troubleshootingdfb-38b"
+  },
+  "/6.x/using-react-redux/accessing-store-959": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-using-react-redux-accessing-store-9-df-b6b"
+  },
+  "/6.x/using-react-redux/connect-mapdispatch-908": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-using-react-redux-connect-mapdispatch-63-c-81f"
+  },
+  "/6.x/using-react-redux/connect-mapstate-560": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---6-x-using-react-redux-connect-mapstate-62-a-95b"
+  },
+  "/7.0-c6b": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---7-021-a-259"
+  },
+  "/7.0/api/batch-774": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-api-batch-922-087"
+  },
+  "/7.0/api/connect-09c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-api-connectdd-5-fba"
+  },
+  "/7.0/api/connect-advanced-0f3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-api-connect-advanceded-4-0a8"
+  },
+  "/7.0/api/provider-4bc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-api-provider-911-d4b"
+  },
+  "/7.0/introduction/basic-tutorial-418": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-introduction-basic-tutorial-45-b-d60"
+  },
+  "/7.0/introduction/quick-start-657": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-introduction-quick-startdaa-f20"
+  },
+  "/7.0/introduction/why-use-react-redux-177": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-introduction-why-use-react-reduxc-97-877"
+  },
+  "/7.0/troubleshooting-a75": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-troubleshooting-775-8b6"
+  },
+  "/7.0/using-react-redux/accessing-store-fa6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-using-react-redux-accessing-store-282-0a8"
+  },
+  "/7.0/using-react-redux/connect-mapdispatch-2cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-using-react-redux-connect-mapdispatch-8-c-2-0c3"
+  },
+  "/7.0/using-react-redux/connect-mapstate-fb3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-0-using-react-redux-connect-mapstate-166-7c3"
+  },
+  "/7.1-72d": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---7-1-aa-0-a6e"
+  },
+  "/7.1/api/batch-624": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-api-batch-6-ef-f32"
+  },
+  "/7.1/api/connect-719": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-api-connect-754-e0e"
+  },
+  "/7.1/api/connect-advanced-091": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-api-connect-advanced-345-f83"
+  },
+  "/7.1/api/hooks-39e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-api-hooksb-8-b-a00"
+  },
+  "/7.1/api/provider-d99": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-api-provider-623-db6"
+  },
+  "/7.1/introduction/basic-tutorial-c5c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-introduction-basic-tutorial-107-da4"
+  },
+  "/7.1/introduction/quick-start-b03": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-introduction-quick-start-1-e-1-701"
+  },
+  "/7.1/introduction/why-use-react-redux-c07": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-introduction-why-use-react-reduxed-9-500"
+  },
+  "/7.1/troubleshooting-b9a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-troubleshooting-853-9b0"
+  },
+  "/7.1/using-react-redux/accessing-store-ab4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-using-react-redux-accessing-store-91-b-e75"
+  },
+  "/7.1/using-react-redux/connect-mapdispatch-d0a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-using-react-redux-connect-mapdispatch-5-e-9-1f5"
+  },
+  "/7.1/using-react-redux/connect-mapstate-c3b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-using-react-redux-connect-mapstate-48-c-1a3"
+  },
+  "/7.1/using-react-redux/static-typing-289": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---7-1-using-react-redux-static-typing-9-dd-349"
+  },
+  "/next-b8b": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---nextf-97-bb6"
+  },
+  "/next/api/batch-e58": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-api-batch-2-aa-f3e"
+  },
+  "/next/api/connect-43f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-api-connectfb-3-78b"
+  },
+  "/next/api/connect-advanced-7fb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-api-connect-advancedb-3-d-afe"
+  },
+  "/next/api/hooks-089": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-api-hooks-770-889"
+  },
+  "/next/api/provider-f3f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-api-providere-18-b3d"
+  },
+  "/next/introduction/basic-tutorial-343": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-introduction-basic-tutorialaec-a67"
+  },
+  "/next/introduction/quick-start-00e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-introduction-quick-starteaf-68e"
+  },
+  "/next/introduction/why-use-react-redux-f7f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-introduction-why-use-react-reduxfb-7-6d1"
+  },
+  "/next/troubleshooting-42a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-troubleshooting-2-ac-68e"
+  },
+  "/next/using-react-redux/accessing-store-21f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-using-react-redux-accessing-storef-25-5ff"
+  },
+  "/next/using-react-redux/connect-mapdispatch-0c4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-using-react-redux-connect-mapdispatch-318-41f"
+  },
+  "/next/using-react-redux/connect-mapstate-614": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-using-react-redux-connect-mapstateaf-7-cba"
+  },
+  "/next/using-react-redux/static-typing-792": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---next-using-react-redux-static-typingccb-c1a"
+  },
+  "/-b0b": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---e-73-20d"
+  },
+  "/api/batch-1b1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---api-batchbed-82f"
+  },
+  "/api/connect-6e5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---api-connectff-3-610"
+  },
+  "/api/connect-advanced-fe1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---api-connect-advanced-4-ac-686"
+  },
+  "/api/hooks-a94": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---api-hooksb-19-2d9"
+  },
+  "/api/provider-7ad": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---api-providerf-95-685"
+  },
+  "/introduction/basic-tutorial-6de": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---introduction-basic-tutorial-69-e-6b3"
+  },
+  "/introduction/quick-start-05b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---introduction-quick-start-1-d-3-bf0"
+  },
+  "/introduction/why-use-react-redux-6ba": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---introduction-why-use-react-reduxf-5-e-953"
+  },
+  "/troubleshooting-d5e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---troubleshooting-39-e-bfc"
+  },
+  "/using-react-redux/accessing-store-74a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---using-react-redux-accessing-store-4-ab-776"
+  },
+  "/using-react-redux/connect-mapdispatch-70a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---using-react-redux-connect-mapdispatch-924-a84"
+  },
+  "/using-react-redux/connect-mapstate-928": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---using-react-redux-connect-mapstate-381-564"
+  },
+  "/using-react-redux/static-typing-35d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---using-react-redux-static-typing-438-ada"
+  }
+}

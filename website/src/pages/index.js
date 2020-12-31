@@ -11,49 +11,49 @@ const features = [
   {
     content: (
       <p>
-        React Redux is maintained by the Redux team, and <strong>kept up-to-date with the latest APIs from Redux and React</strong>.
+        React Redux é mantido pela equipe Redux, e <strong> é atualizado com as APIs mais recentes do Redux e React</strong>.
       </p>
     ),
     image: <img src="img/noun_Certificate_1945625.svg" />,
     imageAlign: 'top',
-    title: 'Official'
+    title: 'Oficial'
   },
   {
     content: (
       <p>
-        <strong>Designed to work with React's component model</strong>.
-        {' '} You define how to extract the values your component needs from Redux, and your component receives them as props.
+        <strong>Projetado para trabalhar com o modelo de componente do React</strong>.
+        {' '} Você define como extrair os valores de que seu componente precisa do Redux, e seu componente os recebe como props.
       </p>
     ),
     image: <img src="img/noun_Check_1870817.svg" />,
     imageAlign: 'top',
-    title: 'Predictable'
+    title: 'Previsível'
   },
   {
     content: (
       <p>
-        Creates wrapper components that <strong>manage the store interaction logic for you</strong>, so you don't have to write it yourself.
+        Cria componentes de wrapper que <strong>gerenciam a lógica de interação com a store para você</strong>, para que você não precise lidar.
       </p>
     ),
     image: <img src="img/noun_Box_1664404.svg" />,
     imageAlign: 'top',
-    title: 'Encapsulated'
+    title: 'Encapsulado'
   },
   {
     content: (
       <p>
-        Automatically implements <strong>complex performance optimizations</strong>, so that your own component only re-renders when the data it needs has actually changed.
+        Implementa automaticamente <strong>otimizações de desempenho complexas</strong>, para que seus componentes sejam renderizados novamente somente quando os dados necessários forem realmente alterados.
       </p>
     ),
     image: <img src="img/noun_Rocket_1245262.svg" />,
     imageAlign: 'top',
-    title: 'Optimized'
+    title: 'Otimizado'
   },
 ]
 
 const otherLibraries = [
   {
-    content: 'A predictable state container for JavaScript applications',
+    content: 'Um contêiner de estado previsível para aplicativos JavaScript',
     title: 'Redux',
     link: 'https://redux.js.org',
     image: (
@@ -69,7 +69,7 @@ const otherLibraries = [
     ),
   },
   {
-    content: 'The official, opinionated, batteries-included toolset for efficient Redux development',
+    content: 'O conjunto de ferramentas oficial, opinativo, com baterias incluídas para o desenvolvimento Redux eficiente',
     title: 'Redux Toolkit',
     link: 'https://redux-toolkit.js.org',
     image: (
@@ -121,7 +121,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Support the Equal Justice Initiative.
+              Apoie a iniciativa Equal Justice.
             </a>
           </div>
         </div>
@@ -148,7 +148,7 @@ function Home() {
               )}
               to={useBaseUrl('introduction/quick-start')}
             >
-              Get Started
+              Comece agora
             </Link>
           </div>
         </div>
@@ -181,7 +181,7 @@ function Home() {
               <div className="row">
                 <div className="col">
                   <h2 className={`text--center ${styles.secondTitle}`}>
-                    Other Libraries from the Redux Team
+                    Outras bibliotecas da equipe do Redux
                   </h2>
                 </div>
               </div>

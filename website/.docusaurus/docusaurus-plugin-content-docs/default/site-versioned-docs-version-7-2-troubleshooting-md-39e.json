@@ -1,0 +1,17 @@
+{
+  "unversionedId": "troubleshooting",
+  "id": "version-7.2/troubleshooting",
+  "isDocsHomePage": false,
+  "title": "Troubleshooting",
+  "description": "Solução de problemas",
+  "source": "@site/versioned_docs\\version-7.2\\troubleshooting.md",
+  "slug": "/troubleshooting",
+  "permalink": "/troubleshooting",
+  "version": "7.2",
+  "sidebar_label": "Troubleshooting",
+  "sidebar": "version-7.2/docs",
+  "previous": {
+    "title": "Hooks",
+    "permalink": "/api/hooks"
+  }
+}

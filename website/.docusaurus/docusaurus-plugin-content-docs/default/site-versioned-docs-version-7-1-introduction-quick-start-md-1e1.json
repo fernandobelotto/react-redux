@@ -1,0 +1,17 @@
+{
+  "unversionedId": "introduction/quick-start",
+  "id": "version-7.1/introduction/quick-start",
+  "isDocsHomePage": false,
+  "title": "Quick Start",
+  "description": "Quick Start",
+  "source": "@site/versioned_docs\\version-7.1\\introduction\\quick-start.md",
+  "slug": "/introduction/quick-start",
+  "permalink": "/7.1/introduction/quick-start",
+  "version": "7.1",
+  "sidebar_label": "Quick Start",
+  "sidebar": "version-7.1/docs",
+  "next": {
+    "title": "Basic Tutorial",
+    "permalink": "/7.1/introduction/basic-tutorial"
+  }
+}

@@ -1,0 +1,2072 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "versionLabel": "Next",
+          "versionPath": "/next",
+          "isLast": false,
+          "sidebarFilePath": "C:\\traducoes\\react-redux\\website\\sidebars.json",
+          "docsDirPath": "C:\\traducoes\\react-redux\\docs",
+          "mainDocId": "introduction/quick-start",
+          "sidebars": {
+            "docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Introduction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "introduction/quick-start"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "introduction/basic-tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "introduction/why-use-react-redux"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Using React Redux",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "using-react-redux/connect-mapstate"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "using-react-redux/connect-mapdispatch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "using-react-redux/accessing-store"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "using-react-redux/static-typing"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "API Reference",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "api/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api/provider"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api/connect-advanced"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api/batch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "api/hooks"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guides",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "troubleshooting"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/next/api/batch": "docs",
+            "/next/api/connect": "docs",
+            "/next/api/connect-advanced": "docs",
+            "/next/api/hooks": "docs",
+            "/next/api/provider": "docs",
+            "/next/introduction/basic-tutorial": "docs",
+            "/next/introduction/quick-start": "docs",
+            "/next/introduction/why-use-react-redux": "docs",
+            "/next/troubleshooting": "docs",
+            "/next/using-react-redux/accessing-store": "docs",
+            "/next/using-react-redux/connect-mapdispatch": "docs",
+            "/next/using-react-redux/connect-mapstate": "docs",
+            "/next/using-react-redux/static-typing": "docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api/batch",
+              "id": "api/batch",
+              "isDocsHomePage": false,
+              "title": "batch",
+              "description": "batch()",
+              "source": "@site/..\\docs\\api\\batch.md",
+              "slug": "/api/batch",
+              "permalink": "/next/api/batch",
+              "version": "current",
+              "sidebar_label": "batch()",
+              "sidebar": "docs",
+              "previous": {
+                "title": "connectAdvanced",
+                "permalink": "/next/api/connect-advanced"
+              },
+              "next": {
+                "title": "Hooks",
+                "permalink": "/next/api/hooks"
+              }
+            },
+            {
+              "unversionedId": "api/connect",
+              "id": "api/connect",
+              "isDocsHomePage": false,
+              "title": "Connect",
+              "description": "connect()",
+              "source": "@site/..\\docs\\api\\connect.md",
+              "slug": "/api/connect",
+              "permalink": "/next/api/connect",
+              "version": "current",
+              "sidebar_label": "connect()",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Static Typing",
+                "permalink": "/next/using-react-redux/static-typing"
+              },
+              "next": {
+                "title": "Provider",
+                "permalink": "/next/api/provider"
+              }
+            },
+            {
+              "unversionedId": "api/connect-advanced",
+              "id": "api/connect-advanced",
+              "isDocsHomePage": false,
+              "title": "connectAdvanced",
+              "description": "connectAdvanced()",
+              "source": "@site/..\\docs\\api\\connect-advanced.md",
+              "slug": "/api/connect-advanced",
+              "permalink": "/next/api/connect-advanced",
+              "version": "current",
+              "sidebar_label": "connectAdvanced()",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Provider",
+                "permalink": "/next/api/provider"
+              },
+              "next": {
+                "title": "batch",
+                "permalink": "/next/api/batch"
+              }
+            },
+            {
+              "unversionedId": "api/hooks",
+              "id": "api/hooks",
+              "isDocsHomePage": false,
+              "title": "Hooks",
+              "description": "Hooks",
+              "source": "@site/..\\docs\\api\\hooks.md",
+              "slug": "/api/hooks",
+              "permalink": "/next/api/hooks",
+              "version": "current",
+              "sidebar_label": "Hooks",
+              "sidebar": "docs",
+              "previous": {
+                "title": "batch",
+                "permalink": "/next/api/batch"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/next/troubleshooting"
+              }
+            },
+            {
+              "unversionedId": "api/provider",
+              "id": "api/provider",
+              "isDocsHomePage": false,
+              "title": "Provider",
+              "description": "Provider",
+              "source": "@site/..\\docs\\api\\Provider.md",
+              "slug": "/api/provider",
+              "permalink": "/next/api/provider",
+              "version": "current",
+              "sidebar_label": "Provider",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Connect",
+                "permalink": "/next/api/connect"
+              },
+              "next": {
+                "title": "connectAdvanced",
+                "permalink": "/next/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "introduction/basic-tutorial",
+              "id": "introduction/basic-tutorial",
+              "isDocsHomePage": false,
+              "title": "Basic Tutorial",
+              "description": "Basic Tutorial",
+              "source": "@site/..\\docs\\introduction\\basic-tutorial.md",
+              "slug": "/introduction/basic-tutorial",
+              "permalink": "/next/introduction/basic-tutorial",
+              "version": "current",
+              "sidebar_label": "Basic Tutorial",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Começo rápido",
+                "permalink": "/next/introduction/quick-start"
+              },
+              "next": {
+                "title": "Por que usar React Redux?",
+                "permalink": "/next/introduction/why-use-react-redux"
+              }
+            },
+            {
+              "unversionedId": "introduction/quick-start",
+              "id": "introduction/quick-start",
+              "isDocsHomePage": false,
+              "title": "Começo rápido",
+              "description": "Início rápido",
+              "source": "@site/..\\docs\\introduction\\quick-start.md",
+              "slug": "/introduction/quick-start",
+              "permalink": "/next/introduction/quick-start",
+              "version": "current",
+              "sidebar_label": "Começo rápido",
+              "sidebar": "docs",
+              "next": {
+                "title": "Basic Tutorial",
+                "permalink": "/next/introduction/basic-tutorial"
+              }
+            },
+            {
+              "unversionedId": "introduction/why-use-react-redux",
+              "id": "introduction/why-use-react-redux",
+              "isDocsHomePage": false,
+              "title": "Por que usar React Redux?",
+              "description": "Por que usar React Redux?",
+              "source": "@site/..\\docs\\introduction\\why-use-react-redux.md",
+              "slug": "/introduction/why-use-react-redux",
+              "permalink": "/next/introduction/why-use-react-redux",
+              "version": "current",
+              "sidebar_label": "Por que usar React Redux?",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Basic Tutorial",
+                "permalink": "/next/introduction/basic-tutorial"
+              },
+              "next": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/next/using-react-redux/connect-mapstate"
+              }
+            },
+            {
+              "unversionedId": "troubleshooting",
+              "id": "troubleshooting",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Solução de problemas",
+              "source": "@site/..\\docs\\troubleshooting.md",
+              "slug": "/troubleshooting",
+              "permalink": "/next/troubleshooting",
+              "version": "current",
+              "sidebar_label": "Solução de problemas",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Hooks",
+                "permalink": "/next/api/hooks"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/accessing-store",
+              "id": "using-react-redux/accessing-store",
+              "isDocsHomePage": false,
+              "title": "Accessing the Store",
+              "description": "Accessing the Store",
+              "source": "@site/..\\docs\\using-react-redux\\accessing-store.md",
+              "slug": "/using-react-redux/accessing-store",
+              "permalink": "/next/using-react-redux/accessing-store",
+              "version": "current",
+              "sidebar_label": "Accessing the Store",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/next/using-react-redux/connect-mapdispatch"
+              },
+              "next": {
+                "title": "Static Typing",
+                "permalink": "/next/using-react-redux/static-typing"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapdispatch",
+              "id": "using-react-redux/connect-mapdispatch",
+              "isDocsHomePage": false,
+              "title": "Connect: Dispatching Actions with mapDispatchToProps",
+              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "source": "@site/..\\docs\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+              "slug": "/using-react-redux/connect-mapdispatch",
+              "permalink": "/next/using-react-redux/connect-mapdispatch",
+              "version": "current",
+              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/next/using-react-redux/connect-mapstate"
+              },
+              "next": {
+                "title": "Accessing the Store",
+                "permalink": "/next/using-react-redux/accessing-store"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapstate",
+              "id": "using-react-redux/connect-mapstate",
+              "isDocsHomePage": false,
+              "title": "Connect: Extracting Data with mapStateToProps",
+              "description": "Connect: Extracting Data with mapStateToProps",
+              "source": "@site/..\\docs\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
+              "slug": "/using-react-redux/connect-mapstate",
+              "permalink": "/next/using-react-redux/connect-mapstate",
+              "version": "current",
+              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Por que usar React Redux?",
+                "permalink": "/next/introduction/why-use-react-redux"
+              },
+              "next": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/next/using-react-redux/connect-mapdispatch"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/static-typing",
+              "id": "using-react-redux/static-typing",
+              "isDocsHomePage": false,
+              "title": "Static Typing",
+              "description": "Static Typing",
+              "source": "@site/..\\docs\\using-react-redux\\static-types.md",
+              "slug": "/using-react-redux/static-typing",
+              "permalink": "/next/using-react-redux/static-typing",
+              "version": "current",
+              "sidebar_label": "Static Typing",
+              "sidebar": "docs",
+              "previous": {
+                "title": "Accessing the Store",
+                "permalink": "/next/using-react-redux/accessing-store"
+              },
+              "next": {
+                "title": "Connect",
+                "permalink": "/next/api/connect"
+              }
+            }
+          ]
+        },
+        {
+          "versionName": "7.2",
+          "versionLabel": "7.2",
+          "versionPath": "/",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "C:\\traducoes\\react-redux\\website\\versioned_sidebars\\version-7.2-sidebars.json",
+          "docsDirPath": "C:\\traducoes\\react-redux\\website\\versioned_docs\\version-7.2",
+          "mainDocId": "introduction/quick-start",
+          "sidebars": {
+            "version-7.2/docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Introdução",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/introduction/quick-start"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/introduction/basic-tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/introduction/why-use-react-redux"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Usando React Redux",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/using-react-redux/connect-mapstate"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/using-react-redux/connect-mapdispatch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/using-react-redux/accessing-store"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/using-react-redux/static-typing"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Referência da API",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/api/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/api/provider"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/api/connect-advanced"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/api/batch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/api/hooks"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guias",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.2/troubleshooting"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/api/batch": "version-7.2/docs",
+            "/api/connect": "version-7.2/docs",
+            "/api/connect-advanced": "version-7.2/docs",
+            "/api/hooks": "version-7.2/docs",
+            "/api/provider": "version-7.2/docs",
+            "/introduction/basic-tutorial": "version-7.2/docs",
+            "/introduction/quick-start": "version-7.2/docs",
+            "/introduction/why-use-react-redux": "version-7.2/docs",
+            "/troubleshooting": "version-7.2/docs",
+            "/using-react-redux/accessing-store": "version-7.2/docs",
+            "/using-react-redux/connect-mapdispatch": "version-7.2/docs",
+            "/using-react-redux/connect-mapstate": "version-7.2/docs",
+            "/using-react-redux/static-typing": "version-7.2/docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api/batch",
+              "id": "version-7.2/api/batch",
+              "isDocsHomePage": false,
+              "title": "batch",
+              "description": "batch()",
+              "source": "@site/versioned_docs\\version-7.2\\api\\batch.md",
+              "slug": "/api/batch",
+              "permalink": "/api/batch",
+              "version": "7.2",
+              "sidebar_label": "batch()",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "connectAdvanced",
+                "permalink": "/api/connect-advanced"
+              },
+              "next": {
+                "title": "Hooks",
+                "permalink": "/api/hooks"
+              }
+            },
+            {
+              "unversionedId": "api/connect",
+              "id": "version-7.2/api/connect",
+              "isDocsHomePage": false,
+              "title": "Connect",
+              "description": "connect()",
+              "source": "@site/versioned_docs\\version-7.2\\api\\connect.md",
+              "slug": "/api/connect",
+              "permalink": "/api/connect",
+              "version": "7.2",
+              "sidebar_label": "connect()",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Static Typing",
+                "permalink": "/using-react-redux/static-typing"
+              },
+              "next": {
+                "title": "Provider",
+                "permalink": "/api/provider"
+              }
+            },
+            {
+              "unversionedId": "api/connect-advanced",
+              "id": "version-7.2/api/connect-advanced",
+              "isDocsHomePage": false,
+              "title": "connectAdvanced",
+              "description": "connectAdvanced()",
+              "source": "@site/versioned_docs\\version-7.2\\api\\connect-advanced.md",
+              "slug": "/api/connect-advanced",
+              "permalink": "/api/connect-advanced",
+              "version": "7.2",
+              "sidebar_label": "connectAdvanced()",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Provider",
+                "permalink": "/api/provider"
+              },
+              "next": {
+                "title": "batch",
+                "permalink": "/api/batch"
+              }
+            },
+            {
+              "unversionedId": "api/hooks",
+              "id": "version-7.2/api/hooks",
+              "isDocsHomePage": false,
+              "title": "Hooks",
+              "description": "Hooks",
+              "source": "@site/versioned_docs\\version-7.2\\api\\hooks.md",
+              "slug": "/api/hooks",
+              "permalink": "/api/hooks",
+              "version": "7.2",
+              "sidebar_label": "Hooks",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "batch",
+                "permalink": "/api/batch"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/troubleshooting"
+              }
+            },
+            {
+              "unversionedId": "api/provider",
+              "id": "version-7.2/api/provider",
+              "isDocsHomePage": false,
+              "title": "Provider",
+              "description": "Provider",
+              "source": "@site/versioned_docs\\version-7.2\\api\\Provider.md",
+              "slug": "/api/provider",
+              "permalink": "/api/provider",
+              "version": "7.2",
+              "sidebar_label": "Provider",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Connect",
+                "permalink": "/api/connect"
+              },
+              "next": {
+                "title": "connectAdvanced",
+                "permalink": "/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "introduction/basic-tutorial",
+              "id": "version-7.2/introduction/basic-tutorial",
+              "isDocsHomePage": false,
+              "title": "Basic Tutorial",
+              "description": "Basic Tutorial",
+              "source": "@site/versioned_docs\\version-7.2\\introduction\\basic-tutorial.md",
+              "slug": "/introduction/basic-tutorial",
+              "permalink": "/introduction/basic-tutorial",
+              "version": "7.2",
+              "sidebar_label": "Basic Tutorial",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/introduction/quick-start"
+              },
+              "next": {
+                "title": "Why Use React Redux?",
+                "permalink": "/introduction/why-use-react-redux"
+              }
+            },
+            {
+              "unversionedId": "introduction/quick-start",
+              "id": "version-7.2/introduction/quick-start",
+              "isDocsHomePage": false,
+              "title": "Quick Start",
+              "description": "Quick Start",
+              "source": "@site/versioned_docs\\version-7.2\\introduction\\quick-start.md",
+              "slug": "/introduction/quick-start",
+              "permalink": "/introduction/quick-start",
+              "version": "7.2",
+              "sidebar_label": "Quick Start",
+              "sidebar": "version-7.2/docs",
+              "next": {
+                "title": "Basic Tutorial",
+                "permalink": "/introduction/basic-tutorial"
+              }
+            },
+            {
+              "unversionedId": "introduction/why-use-react-redux",
+              "id": "version-7.2/introduction/why-use-react-redux",
+              "isDocsHomePage": false,
+              "title": "Why Use React Redux?",
+              "description": "Why Use React Redux?",
+              "source": "@site/versioned_docs\\version-7.2\\introduction\\why-use-react-redux.md",
+              "slug": "/introduction/why-use-react-redux",
+              "permalink": "/introduction/why-use-react-redux",
+              "version": "7.2",
+              "sidebar_label": "Why Use React Redux?",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Basic Tutorial",
+                "permalink": "/introduction/basic-tutorial"
+              },
+              "next": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/using-react-redux/connect-mapstate"
+              }
+            },
+            {
+              "unversionedId": "troubleshooting",
+              "id": "version-7.2/troubleshooting",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Solução de problemas",
+              "source": "@site/versioned_docs\\version-7.2\\troubleshooting.md",
+              "slug": "/troubleshooting",
+              "permalink": "/troubleshooting",
+              "version": "7.2",
+              "sidebar_label": "Troubleshooting",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Hooks",
+                "permalink": "/api/hooks"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/accessing-store",
+              "id": "version-7.2/using-react-redux/accessing-store",
+              "isDocsHomePage": false,
+              "title": "Accessing the Store",
+              "description": "Accessing the Store",
+              "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\accessing-store.md",
+              "slug": "/using-react-redux/accessing-store",
+              "permalink": "/using-react-redux/accessing-store",
+              "version": "7.2",
+              "sidebar_label": "Accessing the Store",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/using-react-redux/connect-mapdispatch"
+              },
+              "next": {
+                "title": "Static Typing",
+                "permalink": "/using-react-redux/static-typing"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapdispatch",
+              "id": "version-7.2/using-react-redux/connect-mapdispatch",
+              "isDocsHomePage": false,
+              "title": "Connect: Dispatching Actions with mapDispatchToProps",
+              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+              "slug": "/using-react-redux/connect-mapdispatch",
+              "permalink": "/using-react-redux/connect-mapdispatch",
+              "version": "7.2",
+              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/using-react-redux/connect-mapstate"
+              },
+              "next": {
+                "title": "Accessing the Store",
+                "permalink": "/using-react-redux/accessing-store"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapstate",
+              "id": "version-7.2/using-react-redux/connect-mapstate",
+              "isDocsHomePage": false,
+              "title": "Connect: Extracting Data with mapStateToProps",
+              "description": "Connect: Extracting Data with mapStateToProps",
+              "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
+              "slug": "/using-react-redux/connect-mapstate",
+              "permalink": "/using-react-redux/connect-mapstate",
+              "version": "7.2",
+              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Why Use React Redux?",
+                "permalink": "/introduction/why-use-react-redux"
+              },
+              "next": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/using-react-redux/connect-mapdispatch"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/static-typing",
+              "id": "version-7.2/using-react-redux/static-typing",
+              "isDocsHomePage": false,
+              "title": "Static Typing",
+              "description": "Static Typing",
+              "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\static-types.md",
+              "slug": "/using-react-redux/static-typing",
+              "permalink": "/using-react-redux/static-typing",
+              "version": "7.2",
+              "sidebar_label": "Static Typing",
+              "sidebar": "version-7.2/docs",
+              "previous": {
+                "title": "Accessing the Store",
+                "permalink": "/using-react-redux/accessing-store"
+              },
+              "next": {
+                "title": "Connect",
+                "permalink": "/api/connect"
+              }
+            }
+          ]
+        },
+        {
+          "versionName": "7.1",
+          "versionLabel": "7.1",
+          "versionPath": "/7.1",
+          "isLast": false,
+          "sidebarFilePath": "C:\\traducoes\\react-redux\\website\\versioned_sidebars\\version-7.1-sidebars.json",
+          "docsDirPath": "C:\\traducoes\\react-redux\\website\\versioned_docs\\version-7.1",
+          "mainDocId": "introduction/quick-start",
+          "sidebars": {
+            "version-7.1/docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Introduction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/introduction/quick-start"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/introduction/basic-tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/introduction/why-use-react-redux"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Using React Redux",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/using-react-redux/connect-mapstate"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/using-react-redux/connect-mapdispatch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/using-react-redux/accessing-store"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/using-react-redux/static-typing"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "API Reference",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/api/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/api/provider"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/api/connect-advanced"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/api/batch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/api/hooks"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guides",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.1/troubleshooting"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/7.1/api/batch": "version-7.1/docs",
+            "/7.1/api/connect": "version-7.1/docs",
+            "/7.1/api/connect-advanced": "version-7.1/docs",
+            "/7.1/api/hooks": "version-7.1/docs",
+            "/7.1/api/provider": "version-7.1/docs",
+            "/7.1/introduction/basic-tutorial": "version-7.1/docs",
+            "/7.1/introduction/quick-start": "version-7.1/docs",
+            "/7.1/introduction/why-use-react-redux": "version-7.1/docs",
+            "/7.1/troubleshooting": "version-7.1/docs",
+            "/7.1/using-react-redux/accessing-store": "version-7.1/docs",
+            "/7.1/using-react-redux/connect-mapdispatch": "version-7.1/docs",
+            "/7.1/using-react-redux/connect-mapstate": "version-7.1/docs",
+            "/7.1/using-react-redux/static-typing": "version-7.1/docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api/batch",
+              "id": "version-7.1/api/batch",
+              "isDocsHomePage": false,
+              "title": "batch",
+              "description": "batch()",
+              "source": "@site/versioned_docs\\version-7.1\\api\\batch.md",
+              "slug": "/api/batch",
+              "permalink": "/7.1/api/batch",
+              "version": "7.1",
+              "sidebar_label": "batch()",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "connectAdvanced",
+                "permalink": "/7.1/api/connect-advanced"
+              },
+              "next": {
+                "title": "Hooks",
+                "permalink": "/7.1/api/hooks"
+              }
+            },
+            {
+              "unversionedId": "api/connect",
+              "id": "version-7.1/api/connect",
+              "isDocsHomePage": false,
+              "title": "Connect",
+              "description": "connect()",
+              "source": "@site/versioned_docs\\version-7.1\\api\\connect.md",
+              "slug": "/api/connect",
+              "permalink": "/7.1/api/connect",
+              "version": "7.1",
+              "sidebar_label": "connect()",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Static Typing",
+                "permalink": "/7.1/using-react-redux/static-typing"
+              },
+              "next": {
+                "title": "Provider",
+                "permalink": "/7.1/api/provider"
+              }
+            },
+            {
+              "unversionedId": "api/connect-advanced",
+              "id": "version-7.1/api/connect-advanced",
+              "isDocsHomePage": false,
+              "title": "connectAdvanced",
+              "description": "connectAdvanced()",
+              "source": "@site/versioned_docs\\version-7.1\\api\\connect-advanced.md",
+              "slug": "/api/connect-advanced",
+              "permalink": "/7.1/api/connect-advanced",
+              "version": "7.1",
+              "sidebar_label": "connectAdvanced()",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Provider",
+                "permalink": "/7.1/api/provider"
+              },
+              "next": {
+                "title": "batch",
+                "permalink": "/7.1/api/batch"
+              }
+            },
+            {
+              "unversionedId": "api/hooks",
+              "id": "version-7.1/api/hooks",
+              "isDocsHomePage": false,
+              "title": "Hooks",
+              "description": "Hooks",
+              "source": "@site/versioned_docs\\version-7.1\\api\\hooks.md",
+              "slug": "/api/hooks",
+              "permalink": "/7.1/api/hooks",
+              "version": "7.1",
+              "sidebar_label": "Hooks",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "batch",
+                "permalink": "/7.1/api/batch"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/7.1/troubleshooting"
+              }
+            },
+            {
+              "unversionedId": "api/provider",
+              "id": "version-7.1/api/provider",
+              "isDocsHomePage": false,
+              "title": "Provider",
+              "description": "Provider",
+              "source": "@site/versioned_docs\\version-7.1\\api\\Provider.md",
+              "slug": "/api/provider",
+              "permalink": "/7.1/api/provider",
+              "version": "7.1",
+              "sidebar_label": "Provider",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Connect",
+                "permalink": "/7.1/api/connect"
+              },
+              "next": {
+                "title": "connectAdvanced",
+                "permalink": "/7.1/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "introduction/basic-tutorial",
+              "id": "version-7.1/introduction/basic-tutorial",
+              "isDocsHomePage": false,
+              "title": "Basic Tutorial",
+              "description": "Basic Tutorial",
+              "source": "@site/versioned_docs\\version-7.1\\introduction\\basic-tutorial.md",
+              "slug": "/introduction/basic-tutorial",
+              "permalink": "/7.1/introduction/basic-tutorial",
+              "version": "7.1",
+              "sidebar_label": "Basic Tutorial",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/7.1/introduction/quick-start"
+              },
+              "next": {
+                "title": "Why Use React Redux?",
+                "permalink": "/7.1/introduction/why-use-react-redux"
+              }
+            },
+            {
+              "unversionedId": "introduction/quick-start",
+              "id": "version-7.1/introduction/quick-start",
+              "isDocsHomePage": false,
+              "title": "Quick Start",
+              "description": "Quick Start",
+              "source": "@site/versioned_docs\\version-7.1\\introduction\\quick-start.md",
+              "slug": "/introduction/quick-start",
+              "permalink": "/7.1/introduction/quick-start",
+              "version": "7.1",
+              "sidebar_label": "Quick Start",
+              "sidebar": "version-7.1/docs",
+              "next": {
+                "title": "Basic Tutorial",
+                "permalink": "/7.1/introduction/basic-tutorial"
+              }
+            },
+            {
+              "unversionedId": "introduction/why-use-react-redux",
+              "id": "version-7.1/introduction/why-use-react-redux",
+              "isDocsHomePage": false,
+              "title": "Why Use React Redux?",
+              "description": "Why Use React Redux?",
+              "source": "@site/versioned_docs\\version-7.1\\introduction\\why-use-react-redux.md",
+              "slug": "/introduction/why-use-react-redux",
+              "permalink": "/7.1/introduction/why-use-react-redux",
+              "version": "7.1",
+              "sidebar_label": "Why Use React Redux?",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Basic Tutorial",
+                "permalink": "/7.1/introduction/basic-tutorial"
+              },
+              "next": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/7.1/using-react-redux/connect-mapstate"
+              }
+            },
+            {
+              "unversionedId": "troubleshooting",
+              "id": "version-7.1/troubleshooting",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Troubleshooting",
+              "source": "@site/versioned_docs\\version-7.1\\troubleshooting.md",
+              "slug": "/troubleshooting",
+              "permalink": "/7.1/troubleshooting",
+              "version": "7.1",
+              "sidebar_label": "Troubleshooting",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Hooks",
+                "permalink": "/7.1/api/hooks"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/accessing-store",
+              "id": "version-7.1/using-react-redux/accessing-store",
+              "isDocsHomePage": false,
+              "title": "Accessing the Store",
+              "description": "Accessing the Store",
+              "source": "@site/versioned_docs\\version-7.1\\using-react-redux\\accessing-store.md",
+              "slug": "/using-react-redux/accessing-store",
+              "permalink": "/7.1/using-react-redux/accessing-store",
+              "version": "7.1",
+              "sidebar_label": "Accessing the Store",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/7.1/using-react-redux/connect-mapdispatch"
+              },
+              "next": {
+                "title": "Static Typing",
+                "permalink": "/7.1/using-react-redux/static-typing"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapdispatch",
+              "id": "version-7.1/using-react-redux/connect-mapdispatch",
+              "isDocsHomePage": false,
+              "title": "Connect: Dispatching Actions with mapDispatchToProps",
+              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "source": "@site/versioned_docs\\version-7.1\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+              "slug": "/using-react-redux/connect-mapdispatch",
+              "permalink": "/7.1/using-react-redux/connect-mapdispatch",
+              "version": "7.1",
+              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/7.1/using-react-redux/connect-mapstate"
+              },
+              "next": {
+                "title": "Accessing the Store",
+                "permalink": "/7.1/using-react-redux/accessing-store"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapstate",
+              "id": "version-7.1/using-react-redux/connect-mapstate",
+              "isDocsHomePage": false,
+              "title": "Connect: Extracting Data with mapStateToProps",
+              "description": "Connect: Extracting Data with mapStateToProps",
+              "source": "@site/versioned_docs\\version-7.1\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
+              "slug": "/using-react-redux/connect-mapstate",
+              "permalink": "/7.1/using-react-redux/connect-mapstate",
+              "version": "7.1",
+              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Why Use React Redux?",
+                "permalink": "/7.1/introduction/why-use-react-redux"
+              },
+              "next": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/7.1/using-react-redux/connect-mapdispatch"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/static-typing",
+              "id": "version-7.1/using-react-redux/static-typing",
+              "isDocsHomePage": false,
+              "title": "Static Typing",
+              "description": "Static Typing",
+              "source": "@site/versioned_docs\\version-7.1\\using-react-redux\\static-types.md",
+              "slug": "/using-react-redux/static-typing",
+              "permalink": "/7.1/using-react-redux/static-typing",
+              "version": "7.1",
+              "sidebar_label": "Static Typing",
+              "sidebar": "version-7.1/docs",
+              "previous": {
+                "title": "Accessing the Store",
+                "permalink": "/7.1/using-react-redux/accessing-store"
+              },
+              "next": {
+                "title": "Connect",
+                "permalink": "/7.1/api/connect"
+              }
+            }
+          ]
+        },
+        {
+          "versionName": "7.0",
+          "versionLabel": "7.0",
+          "versionPath": "/7.0",
+          "isLast": false,
+          "sidebarFilePath": "C:\\traducoes\\react-redux\\website\\versioned_sidebars\\version-7.0-sidebars.json",
+          "docsDirPath": "C:\\traducoes\\react-redux\\website\\versioned_docs\\version-7.0",
+          "mainDocId": "introduction/quick-start",
+          "sidebars": {
+            "version-7.0/docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Introduction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/introduction/quick-start"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/introduction/basic-tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/introduction/why-use-react-redux"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Using React Redux",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/using-react-redux/connect-mapstate"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/using-react-redux/connect-mapdispatch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/using-react-redux/accessing-store"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "API Reference",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/api/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/api/provider"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/api/connect-advanced"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/api/batch"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guides",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-7.0/troubleshooting"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/7.0/api/batch": "version-7.0/docs",
+            "/7.0/api/connect": "version-7.0/docs",
+            "/7.0/api/connect-advanced": "version-7.0/docs",
+            "/7.0/api/provider": "version-7.0/docs",
+            "/7.0/introduction/basic-tutorial": "version-7.0/docs",
+            "/7.0/introduction/quick-start": "version-7.0/docs",
+            "/7.0/introduction/why-use-react-redux": "version-7.0/docs",
+            "/7.0/troubleshooting": "version-7.0/docs",
+            "/7.0/using-react-redux/accessing-store": "version-7.0/docs",
+            "/7.0/using-react-redux/connect-mapdispatch": "version-7.0/docs",
+            "/7.0/using-react-redux/connect-mapstate": "version-7.0/docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api/batch",
+              "id": "version-7.0/api/batch",
+              "isDocsHomePage": false,
+              "title": "batch",
+              "description": "batch()",
+              "source": "@site/versioned_docs\\version-7.0\\api\\batch.md",
+              "slug": "/api/batch",
+              "permalink": "/7.0/api/batch",
+              "version": "7.0",
+              "sidebar_label": "batch()",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "connectAdvanced",
+                "permalink": "/7.0/api/connect-advanced"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/7.0/troubleshooting"
+              }
+            },
+            {
+              "unversionedId": "api/connect",
+              "id": "version-7.0/api/connect",
+              "isDocsHomePage": false,
+              "title": "Connect",
+              "description": "connect()",
+              "source": "@site/versioned_docs\\version-7.0\\api\\connect.md",
+              "slug": "/api/connect",
+              "permalink": "/7.0/api/connect",
+              "version": "7.0",
+              "sidebar_label": "connect()",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Accessing the Store",
+                "permalink": "/7.0/using-react-redux/accessing-store"
+              },
+              "next": {
+                "title": "Provider",
+                "permalink": "/7.0/api/provider"
+              }
+            },
+            {
+              "unversionedId": "api/connect-advanced",
+              "id": "version-7.0/api/connect-advanced",
+              "isDocsHomePage": false,
+              "title": "connectAdvanced",
+              "description": "connectAdvanced()",
+              "source": "@site/versioned_docs\\version-7.0\\api\\connect-advanced.md",
+              "slug": "/api/connect-advanced",
+              "permalink": "/7.0/api/connect-advanced",
+              "version": "7.0",
+              "sidebar_label": "connectAdvanced()",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Provider",
+                "permalink": "/7.0/api/provider"
+              },
+              "next": {
+                "title": "batch",
+                "permalink": "/7.0/api/batch"
+              }
+            },
+            {
+              "unversionedId": "api/provider",
+              "id": "version-7.0/api/provider",
+              "isDocsHomePage": false,
+              "title": "Provider",
+              "description": "Provider",
+              "source": "@site/versioned_docs\\version-7.0\\api\\Provider.md",
+              "slug": "/api/provider",
+              "permalink": "/7.0/api/provider",
+              "version": "7.0",
+              "sidebar_label": "Provider",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Connect",
+                "permalink": "/7.0/api/connect"
+              },
+              "next": {
+                "title": "connectAdvanced",
+                "permalink": "/7.0/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "introduction/basic-tutorial",
+              "id": "version-7.0/introduction/basic-tutorial",
+              "isDocsHomePage": false,
+              "title": "Basic Tutorial",
+              "description": "Basic Tutorial",
+              "source": "@site/versioned_docs\\version-7.0\\introduction\\basic-tutorial.md",
+              "slug": "/introduction/basic-tutorial",
+              "permalink": "/7.0/introduction/basic-tutorial",
+              "version": "7.0",
+              "sidebar_label": "Basic Tutorial",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/7.0/introduction/quick-start"
+              },
+              "next": {
+                "title": "Why Use React Redux?",
+                "permalink": "/7.0/introduction/why-use-react-redux"
+              }
+            },
+            {
+              "unversionedId": "introduction/quick-start",
+              "id": "version-7.0/introduction/quick-start",
+              "isDocsHomePage": false,
+              "title": "Quick Start",
+              "description": "Quick Start",
+              "source": "@site/versioned_docs\\version-7.0\\introduction\\quick-start.md",
+              "slug": "/introduction/quick-start",
+              "permalink": "/7.0/introduction/quick-start",
+              "version": "7.0",
+              "sidebar_label": "Quick Start",
+              "sidebar": "version-7.0/docs",
+              "next": {
+                "title": "Basic Tutorial",
+                "permalink": "/7.0/introduction/basic-tutorial"
+              }
+            },
+            {
+              "unversionedId": "introduction/why-use-react-redux",
+              "id": "version-7.0/introduction/why-use-react-redux",
+              "isDocsHomePage": false,
+              "title": "Why Use React Redux?",
+              "description": "Why Use React Redux?",
+              "source": "@site/versioned_docs\\version-7.0\\introduction\\why-use-react-redux.md",
+              "slug": "/introduction/why-use-react-redux",
+              "permalink": "/7.0/introduction/why-use-react-redux",
+              "version": "7.0",
+              "sidebar_label": "Why Use React Redux?",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Basic Tutorial",
+                "permalink": "/7.0/introduction/basic-tutorial"
+              },
+              "next": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/7.0/using-react-redux/connect-mapstate"
+              }
+            },
+            {
+              "unversionedId": "troubleshooting",
+              "id": "version-7.0/troubleshooting",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Troubleshooting",
+              "source": "@site/versioned_docs\\version-7.0\\troubleshooting.md",
+              "slug": "/troubleshooting",
+              "permalink": "/7.0/troubleshooting",
+              "version": "7.0",
+              "sidebar_label": "Troubleshooting",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "batch",
+                "permalink": "/7.0/api/batch"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/accessing-store",
+              "id": "version-7.0/using-react-redux/accessing-store",
+              "isDocsHomePage": false,
+              "title": "Accessing the Store",
+              "description": "Accessing the Store",
+              "source": "@site/versioned_docs\\version-7.0\\using-react-redux\\accessing-store.md",
+              "slug": "/using-react-redux/accessing-store",
+              "permalink": "/7.0/using-react-redux/accessing-store",
+              "version": "7.0",
+              "sidebar_label": "Accessing the Store",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/7.0/using-react-redux/connect-mapdispatch"
+              },
+              "next": {
+                "title": "Connect",
+                "permalink": "/7.0/api/connect"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapdispatch",
+              "id": "version-7.0/using-react-redux/connect-mapdispatch",
+              "isDocsHomePage": false,
+              "title": "Connect: Dispatching Actions with mapDispatchToProps",
+              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "source": "@site/versioned_docs\\version-7.0\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+              "slug": "/using-react-redux/connect-mapdispatch",
+              "permalink": "/7.0/using-react-redux/connect-mapdispatch",
+              "version": "7.0",
+              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/7.0/using-react-redux/connect-mapstate"
+              },
+              "next": {
+                "title": "Accessing the Store",
+                "permalink": "/7.0/using-react-redux/accessing-store"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapstate",
+              "id": "version-7.0/using-react-redux/connect-mapstate",
+              "isDocsHomePage": false,
+              "title": "Connect: Extracting Data with mapStateToProps",
+              "description": "Connect: Extracting Data with mapStateToProps",
+              "source": "@site/versioned_docs\\version-7.0\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
+              "slug": "/using-react-redux/connect-mapstate",
+              "permalink": "/7.0/using-react-redux/connect-mapstate",
+              "version": "7.0",
+              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar": "version-7.0/docs",
+              "previous": {
+                "title": "Why Use React Redux?",
+                "permalink": "/7.0/introduction/why-use-react-redux"
+              },
+              "next": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/7.0/using-react-redux/connect-mapdispatch"
+              }
+            }
+          ]
+        },
+        {
+          "versionName": "6.x",
+          "versionLabel": "6.x",
+          "versionPath": "/6.x",
+          "isLast": false,
+          "sidebarFilePath": "C:\\traducoes\\react-redux\\website\\versioned_sidebars\\version-6.x-sidebars.json",
+          "docsDirPath": "C:\\traducoes\\react-redux\\website\\versioned_docs\\version-6.x",
+          "mainDocId": "introduction/quick-start",
+          "sidebars": {
+            "version-6.x/docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Introduction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/introduction/quick-start"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/introduction/basic-tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/introduction/why-use-react-redux"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Using React Redux",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/using-react-redux/connect-mapstate"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/using-react-redux/connect-mapdispatch"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/using-react-redux/accessing-store"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "API Reference",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/api/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/api/provider"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/api/connect-advanced"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guides",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-6.x/troubleshooting"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/6.x/api/connect": "version-6.x/docs",
+            "/6.x/api/connect-advanced": "version-6.x/docs",
+            "/6.x/api/provider": "version-6.x/docs",
+            "/6.x/introduction/basic-tutorial": "version-6.x/docs",
+            "/6.x/introduction/quick-start": "version-6.x/docs",
+            "/6.x/introduction/why-use-react-redux": "version-6.x/docs",
+            "/6.x/troubleshooting": "version-6.x/docs",
+            "/6.x/using-react-redux/accessing-store": "version-6.x/docs",
+            "/6.x/using-react-redux/connect-mapdispatch": "version-6.x/docs",
+            "/6.x/using-react-redux/connect-mapstate": "version-6.x/docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api/connect",
+              "id": "version-6.x/api/connect",
+              "isDocsHomePage": false,
+              "title": "Connect",
+              "description": "connect()",
+              "source": "@site/versioned_docs\\version-6.x\\api\\connect.md",
+              "slug": "/api/connect",
+              "permalink": "/6.x/api/connect",
+              "version": "6.x",
+              "sidebar_label": "connect()",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Accessing the Store",
+                "permalink": "/6.x/using-react-redux/accessing-store"
+              },
+              "next": {
+                "title": "Provider",
+                "permalink": "/6.x/api/provider"
+              }
+            },
+            {
+              "unversionedId": "api/connect-advanced",
+              "id": "version-6.x/api/connect-advanced",
+              "isDocsHomePage": false,
+              "title": "connectAdvanced",
+              "description": "connectAdvanced()",
+              "source": "@site/versioned_docs\\version-6.x\\api\\connect-advanced.md",
+              "slug": "/api/connect-advanced",
+              "permalink": "/6.x/api/connect-advanced",
+              "version": "6.x",
+              "sidebar_label": "connectAdvanced()",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Provider",
+                "permalink": "/6.x/api/provider"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/6.x/troubleshooting"
+              }
+            },
+            {
+              "unversionedId": "api/provider",
+              "id": "version-6.x/api/provider",
+              "isDocsHomePage": false,
+              "title": "Provider",
+              "description": "Provider",
+              "source": "@site/versioned_docs\\version-6.x\\api\\Provider.md",
+              "slug": "/api/provider",
+              "permalink": "/6.x/api/provider",
+              "version": "6.x",
+              "sidebar_label": "Provider",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Connect",
+                "permalink": "/6.x/api/connect"
+              },
+              "next": {
+                "title": "connectAdvanced",
+                "permalink": "/6.x/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "introduction/basic-tutorial",
+              "id": "version-6.x/introduction/basic-tutorial",
+              "isDocsHomePage": false,
+              "title": "Basic Tutorial",
+              "description": "Basic Tutorial",
+              "source": "@site/versioned_docs\\version-6.x\\introduction\\basic-tutorial.md",
+              "slug": "/introduction/basic-tutorial",
+              "permalink": "/6.x/introduction/basic-tutorial",
+              "version": "6.x",
+              "sidebar_label": "Basic Tutorial",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/6.x/introduction/quick-start"
+              },
+              "next": {
+                "title": "Why Use React Redux?",
+                "permalink": "/6.x/introduction/why-use-react-redux"
+              }
+            },
+            {
+              "unversionedId": "introduction/quick-start",
+              "id": "version-6.x/introduction/quick-start",
+              "isDocsHomePage": false,
+              "title": "Quick Start",
+              "description": "Quick Start",
+              "source": "@site/versioned_docs\\version-6.x\\introduction\\quick-start.md",
+              "slug": "/introduction/quick-start",
+              "permalink": "/6.x/introduction/quick-start",
+              "version": "6.x",
+              "sidebar_label": "Quick Start",
+              "sidebar": "version-6.x/docs",
+              "next": {
+                "title": "Basic Tutorial",
+                "permalink": "/6.x/introduction/basic-tutorial"
+              }
+            },
+            {
+              "unversionedId": "introduction/why-use-react-redux",
+              "id": "version-6.x/introduction/why-use-react-redux",
+              "isDocsHomePage": false,
+              "title": "Why Use React Redux?",
+              "description": "Why Use React Redux?",
+              "source": "@site/versioned_docs\\version-6.x\\introduction\\why-use-react-redux.md",
+              "slug": "/introduction/why-use-react-redux",
+              "permalink": "/6.x/introduction/why-use-react-redux",
+              "version": "6.x",
+              "sidebar_label": "Why Use React Redux?",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Basic Tutorial",
+                "permalink": "/6.x/introduction/basic-tutorial"
+              },
+              "next": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/6.x/using-react-redux/connect-mapstate"
+              }
+            },
+            {
+              "unversionedId": "troubleshooting",
+              "id": "version-6.x/troubleshooting",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Troubleshooting",
+              "source": "@site/versioned_docs\\version-6.x\\troubleshooting.md",
+              "slug": "/troubleshooting",
+              "permalink": "/6.x/troubleshooting",
+              "version": "6.x",
+              "sidebar_label": "Troubleshooting",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "connectAdvanced",
+                "permalink": "/6.x/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/accessing-store",
+              "id": "version-6.x/using-react-redux/accessing-store",
+              "isDocsHomePage": false,
+              "title": "Accessing the Store",
+              "description": "Accessing the Store",
+              "source": "@site/versioned_docs\\version-6.x\\using-react-redux\\accessing-store.md",
+              "slug": "/using-react-redux/accessing-store",
+              "permalink": "/6.x/using-react-redux/accessing-store",
+              "version": "6.x",
+              "sidebar_label": "Accessing the Store",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/6.x/using-react-redux/connect-mapdispatch"
+              },
+              "next": {
+                "title": "Connect",
+                "permalink": "/6.x/api/connect"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapdispatch",
+              "id": "version-6.x/using-react-redux/connect-mapdispatch",
+              "isDocsHomePage": false,
+              "title": "Connect: Dispatching Actions with mapDispatchToProps",
+              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "source": "@site/versioned_docs\\version-6.x\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+              "slug": "/using-react-redux/connect-mapdispatch",
+              "permalink": "/6.x/using-react-redux/connect-mapdispatch",
+              "version": "6.x",
+              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/6.x/using-react-redux/connect-mapstate"
+              },
+              "next": {
+                "title": "Accessing the Store",
+                "permalink": "/6.x/using-react-redux/accessing-store"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapstate",
+              "id": "version-6.x/using-react-redux/connect-mapstate",
+              "isDocsHomePage": false,
+              "title": "Connect: Extracting Data with mapStateToProps",
+              "description": "Connect: Extracting Data with mapStateToProps",
+              "source": "@site/versioned_docs\\version-6.x\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
+              "slug": "/using-react-redux/connect-mapstate",
+              "permalink": "/6.x/using-react-redux/connect-mapstate",
+              "version": "6.x",
+              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar": "version-6.x/docs",
+              "previous": {
+                "title": "Why Use React Redux?",
+                "permalink": "/6.x/introduction/why-use-react-redux"
+              },
+              "next": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/6.x/using-react-redux/connect-mapdispatch"
+              }
+            }
+          ]
+        },
+        {
+          "versionName": "5.x",
+          "versionLabel": "5.x",
+          "versionPath": "/5.x",
+          "isLast": false,
+          "sidebarFilePath": "C:\\traducoes\\react-redux\\website\\versioned_sidebars\\version-5.x-sidebars.json",
+          "docsDirPath": "C:\\traducoes\\react-redux\\website\\versioned_docs\\version-5.x",
+          "mainDocId": "introduction/quick-start",
+          "sidebars": {
+            "version-5.x/docs": [
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Introduction",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/introduction/quick-start"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/introduction/basic-tutorial"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/introduction/why-use-react-redux"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Using React-Redux",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/using-react-redux/connect-mapstate"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/using-react-redux/connect-mapdispatch"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "API Reference",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/api/api"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/api/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/api/connect-advanced"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/api/provider"
+                  }
+                ]
+              },
+              {
+                "collapsed": true,
+                "type": "category",
+                "label": "Guides",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "version-5.x/troubleshooting"
+                  }
+                ]
+              }
+            ]
+          },
+          "permalinkToSidebar": {
+            "/5.x/api/api": "version-5.x/docs",
+            "/5.x/api/connect": "version-5.x/docs",
+            "/5.x/api/connect-advanced": "version-5.x/docs",
+            "/5.x/api/provider": "version-5.x/docs",
+            "/5.x/introduction/basic-tutorial": "version-5.x/docs",
+            "/5.x/introduction/quick-start": "version-5.x/docs",
+            "/5.x/introduction/why-use-react-redux": "version-5.x/docs",
+            "/5.x/troubleshooting": "version-5.x/docs",
+            "/5.x/using-react-redux/connect-mapdispatch": "version-5.x/docs",
+            "/5.x/using-react-redux/connect-mapstate": "version-5.x/docs"
+          },
+          "docs": [
+            {
+              "unversionedId": "api/api",
+              "id": "version-5.x/api/api",
+              "isDocsHomePage": false,
+              "title": "Api",
+              "description": "API",
+              "source": "@site/versioned_docs\\version-5.x\\api\\api.md",
+              "slug": "/api/api",
+              "permalink": "/5.x/api/api",
+              "version": "5.x",
+              "sidebar_label": "API",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/5.x/using-react-redux/connect-mapdispatch"
+              },
+              "next": {
+                "title": "Connect",
+                "permalink": "/5.x/api/connect"
+              }
+            },
+            {
+              "unversionedId": "api/connect",
+              "id": "version-5.x/api/connect",
+              "isDocsHomePage": false,
+              "title": "Connect",
+              "description": "connect",
+              "source": "@site/versioned_docs\\version-5.x\\api\\connect.md",
+              "slug": "/api/connect",
+              "permalink": "/5.x/api/connect",
+              "version": "5.x",
+              "sidebar_label": "connect()",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Api",
+                "permalink": "/5.x/api/api"
+              },
+              "next": {
+                "title": "connectAdvanced",
+                "permalink": "/5.x/api/connect-advanced"
+              }
+            },
+            {
+              "unversionedId": "api/connect-advanced",
+              "id": "version-5.x/api/connect-advanced",
+              "isDocsHomePage": false,
+              "title": "connectAdvanced",
+              "description": "connectAdvanced",
+              "source": "@site/versioned_docs\\version-5.x\\api\\connect-advanced.md",
+              "slug": "/api/connect-advanced",
+              "permalink": "/5.x/api/connect-advanced",
+              "version": "5.x",
+              "sidebar_label": "connectAdvanced()",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Connect",
+                "permalink": "/5.x/api/connect"
+              },
+              "next": {
+                "title": "Provider",
+                "permalink": "/5.x/api/provider"
+              }
+            },
+            {
+              "unversionedId": "api/provider",
+              "id": "version-5.x/api/provider",
+              "isDocsHomePage": false,
+              "title": "Provider",
+              "description": "``",
+              "source": "@site/versioned_docs\\version-5.x\\api\\Provider.md",
+              "slug": "/api/provider",
+              "permalink": "/5.x/api/provider",
+              "version": "5.x",
+              "sidebar_label": "Provider",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "connectAdvanced",
+                "permalink": "/5.x/api/connect-advanced"
+              },
+              "next": {
+                "title": "Troubleshooting",
+                "permalink": "/5.x/troubleshooting"
+              }
+            },
+            {
+              "unversionedId": "introduction/basic-tutorial",
+              "id": "version-5.x/introduction/basic-tutorial",
+              "isDocsHomePage": false,
+              "title": "Basic Tutorial",
+              "description": "Basic Tutorial",
+              "source": "@site/versioned_docs\\version-5.x\\introduction\\basic-tutorial.md",
+              "slug": "/introduction/basic-tutorial",
+              "permalink": "/5.x/introduction/basic-tutorial",
+              "version": "5.x",
+              "sidebar_label": "Basic Tutorial",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Quick Start",
+                "permalink": "/5.x/introduction/quick-start"
+              },
+              "next": {
+                "title": "Why Use React-Redux?",
+                "permalink": "/5.x/introduction/why-use-react-redux"
+              }
+            },
+            {
+              "unversionedId": "introduction/quick-start",
+              "id": "version-5.x/introduction/quick-start",
+              "isDocsHomePage": false,
+              "title": "Quick Start",
+              "description": "Quick Start",
+              "source": "@site/versioned_docs\\version-5.x\\introduction\\quick-start.md",
+              "slug": "/introduction/quick-start",
+              "permalink": "/5.x/introduction/quick-start",
+              "version": "5.x",
+              "sidebar_label": "Quick Start",
+              "sidebar": "version-5.x/docs",
+              "next": {
+                "title": "Basic Tutorial",
+                "permalink": "/5.x/introduction/basic-tutorial"
+              }
+            },
+            {
+              "unversionedId": "introduction/why-use-react-redux",
+              "id": "version-5.x/introduction/why-use-react-redux",
+              "isDocsHomePage": false,
+              "title": "Why Use React-Redux?",
+              "description": "Why Use React-Redux?",
+              "source": "@site/versioned_docs\\version-5.x\\introduction\\why-use-react-redux.md",
+              "slug": "/introduction/why-use-react-redux",
+              "permalink": "/5.x/introduction/why-use-react-redux",
+              "version": "5.x",
+              "sidebar_label": "Why Use React-Redux?",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Basic Tutorial",
+                "permalink": "/5.x/introduction/basic-tutorial"
+              },
+              "next": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/5.x/using-react-redux/connect-mapstate"
+              }
+            },
+            {
+              "unversionedId": "troubleshooting",
+              "id": "version-5.x/troubleshooting",
+              "isDocsHomePage": false,
+              "title": "Troubleshooting",
+              "description": "Troubleshooting",
+              "source": "@site/versioned_docs\\version-5.x\\troubleshooting.md",
+              "slug": "/troubleshooting",
+              "permalink": "/5.x/troubleshooting",
+              "version": "5.x",
+              "sidebar_label": "Troubleshooting",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Provider",
+                "permalink": "/5.x/api/provider"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapdispatch",
+              "id": "version-5.x/using-react-redux/connect-mapdispatch",
+              "isDocsHomePage": false,
+              "title": "Connect: Dispatching Actions with mapDispatchToProps",
+              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "source": "@site/versioned_docs\\version-5.x\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
+              "slug": "/using-react-redux/connect-mapdispatch",
+              "permalink": "/5.x/using-react-redux/connect-mapdispatch",
+              "version": "5.x",
+              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Connect: Extracting Data with mapStateToProps",
+                "permalink": "/5.x/using-react-redux/connect-mapstate"
+              },
+              "next": {
+                "title": "Api",
+                "permalink": "/5.x/api/api"
+              }
+            },
+            {
+              "unversionedId": "using-react-redux/connect-mapstate",
+              "id": "version-5.x/using-react-redux/connect-mapstate",
+              "isDocsHomePage": false,
+              "title": "Connect: Extracting Data with mapStateToProps",
+              "description": "Connect: Extracting Data with mapStateToProps",
+              "source": "@site/versioned_docs\\version-5.x\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
+              "slug": "/using-react-redux/connect-mapstate",
+              "permalink": "/5.x/using-react-redux/connect-mapstate",
+              "version": "5.x",
+              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar": "version-5.x/docs",
+              "previous": {
+                "title": "Why Use React-Redux?",
+                "permalink": "/5.x/introduction/why-use-react-redux"
+              },
+              "next": {
+                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "permalink": "/5.x/using-react-redux/connect-mapdispatch"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": null
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src\\pages\\index.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-theme-classic": {
+    "default": null
+  },
+  "docusaurus-theme-search-algolia": {
+    "default": null
+  }
+}

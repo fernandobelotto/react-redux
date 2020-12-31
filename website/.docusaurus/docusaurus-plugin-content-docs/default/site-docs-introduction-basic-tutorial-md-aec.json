@@ -1,0 +1,21 @@
+{
+  "unversionedId": "introduction/basic-tutorial",
+  "id": "introduction/basic-tutorial",
+  "isDocsHomePage": false,
+  "title": "Basic Tutorial",
+  "description": "Basic Tutorial",
+  "source": "@site/..\\docs\\introduction\\basic-tutorial.md",
+  "slug": "/introduction/basic-tutorial",
+  "permalink": "/next/introduction/basic-tutorial",
+  "version": "current",
+  "sidebar_label": "Basic Tutorial",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Começo rápido",
+    "permalink": "/next/introduction/quick-start"
+  },
+  "next": {
+    "title": "Por que usar React Redux?",
+    "permalink": "/next/introduction/why-use-react-redux"
+  }
+}

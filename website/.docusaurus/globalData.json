@@ -1,0 +1,343 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": false,
+          "path": "/next",
+          "mainDocId": "introduction/quick-start",
+          "docs": [
+            {
+              "id": "api/batch",
+              "path": "/next/api/batch"
+            },
+            {
+              "id": "api/connect",
+              "path": "/next/api/connect"
+            },
+            {
+              "id": "api/connect-advanced",
+              "path": "/next/api/connect-advanced"
+            },
+            {
+              "id": "api/hooks",
+              "path": "/next/api/hooks"
+            },
+            {
+              "id": "api/provider",
+              "path": "/next/api/provider"
+            },
+            {
+              "id": "introduction/basic-tutorial",
+              "path": "/next/introduction/basic-tutorial"
+            },
+            {
+              "id": "introduction/quick-start",
+              "path": "/next/introduction/quick-start"
+            },
+            {
+              "id": "introduction/why-use-react-redux",
+              "path": "/next/introduction/why-use-react-redux"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/next/troubleshooting"
+            },
+            {
+              "id": "using-react-redux/accessing-store",
+              "path": "/next/using-react-redux/accessing-store"
+            },
+            {
+              "id": "using-react-redux/connect-mapdispatch",
+              "path": "/next/using-react-redux/connect-mapdispatch"
+            },
+            {
+              "id": "using-react-redux/connect-mapstate",
+              "path": "/next/using-react-redux/connect-mapstate"
+            },
+            {
+              "id": "using-react-redux/static-typing",
+              "path": "/next/using-react-redux/static-typing"
+            }
+          ]
+        },
+        {
+          "name": "7.2",
+          "label": "7.2",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "introduction/quick-start",
+          "docs": [
+            {
+              "id": "api/batch",
+              "path": "/api/batch"
+            },
+            {
+              "id": "api/connect",
+              "path": "/api/connect"
+            },
+            {
+              "id": "api/connect-advanced",
+              "path": "/api/connect-advanced"
+            },
+            {
+              "id": "api/hooks",
+              "path": "/api/hooks"
+            },
+            {
+              "id": "api/provider",
+              "path": "/api/provider"
+            },
+            {
+              "id": "introduction/basic-tutorial",
+              "path": "/introduction/basic-tutorial"
+            },
+            {
+              "id": "introduction/quick-start",
+              "path": "/introduction/quick-start"
+            },
+            {
+              "id": "introduction/why-use-react-redux",
+              "path": "/introduction/why-use-react-redux"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/troubleshooting"
+            },
+            {
+              "id": "using-react-redux/accessing-store",
+              "path": "/using-react-redux/accessing-store"
+            },
+            {
+              "id": "using-react-redux/connect-mapdispatch",
+              "path": "/using-react-redux/connect-mapdispatch"
+            },
+            {
+              "id": "using-react-redux/connect-mapstate",
+              "path": "/using-react-redux/connect-mapstate"
+            },
+            {
+              "id": "using-react-redux/static-typing",
+              "path": "/using-react-redux/static-typing"
+            }
+          ]
+        },
+        {
+          "name": "7.1",
+          "label": "7.1",
+          "isLast": false,
+          "path": "/7.1",
+          "mainDocId": "introduction/quick-start",
+          "docs": [
+            {
+              "id": "api/batch",
+              "path": "/7.1/api/batch"
+            },
+            {
+              "id": "api/connect",
+              "path": "/7.1/api/connect"
+            },
+            {
+              "id": "api/connect-advanced",
+              "path": "/7.1/api/connect-advanced"
+            },
+            {
+              "id": "api/hooks",
+              "path": "/7.1/api/hooks"
+            },
+            {
+              "id": "api/provider",
+              "path": "/7.1/api/provider"
+            },
+            {
+              "id": "introduction/basic-tutorial",
+              "path": "/7.1/introduction/basic-tutorial"
+            },
+            {
+              "id": "introduction/quick-start",
+              "path": "/7.1/introduction/quick-start"
+            },
+            {
+              "id": "introduction/why-use-react-redux",
+              "path": "/7.1/introduction/why-use-react-redux"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/7.1/troubleshooting"
+            },
+            {
+              "id": "using-react-redux/accessing-store",
+              "path": "/7.1/using-react-redux/accessing-store"
+            },
+            {
+              "id": "using-react-redux/connect-mapdispatch",
+              "path": "/7.1/using-react-redux/connect-mapdispatch"
+            },
+            {
+              "id": "using-react-redux/connect-mapstate",
+              "path": "/7.1/using-react-redux/connect-mapstate"
+            },
+            {
+              "id": "using-react-redux/static-typing",
+              "path": "/7.1/using-react-redux/static-typing"
+            }
+          ]
+        },
+        {
+          "name": "7.0",
+          "label": "7.0",
+          "isLast": false,
+          "path": "/7.0",
+          "mainDocId": "introduction/quick-start",
+          "docs": [
+            {
+              "id": "api/batch",
+              "path": "/7.0/api/batch"
+            },
+            {
+              "id": "api/connect",
+              "path": "/7.0/api/connect"
+            },
+            {
+              "id": "api/connect-advanced",
+              "path": "/7.0/api/connect-advanced"
+            },
+            {
+              "id": "api/provider",
+              "path": "/7.0/api/provider"
+            },
+            {
+              "id": "introduction/basic-tutorial",
+              "path": "/7.0/introduction/basic-tutorial"
+            },
+            {
+              "id": "introduction/quick-start",
+              "path": "/7.0/introduction/quick-start"
+            },
+            {
+              "id": "introduction/why-use-react-redux",
+              "path": "/7.0/introduction/why-use-react-redux"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/7.0/troubleshooting"
+            },
+            {
+              "id": "using-react-redux/accessing-store",
+              "path": "/7.0/using-react-redux/accessing-store"
+            },
+            {
+              "id": "using-react-redux/connect-mapdispatch",
+              "path": "/7.0/using-react-redux/connect-mapdispatch"
+            },
+            {
+              "id": "using-react-redux/connect-mapstate",
+              "path": "/7.0/using-react-redux/connect-mapstate"
+            }
+          ]
+        },
+        {
+          "name": "6.x",
+          "label": "6.x",
+          "isLast": false,
+          "path": "/6.x",
+          "mainDocId": "introduction/quick-start",
+          "docs": [
+            {
+              "id": "api/connect",
+              "path": "/6.x/api/connect"
+            },
+            {
+              "id": "api/connect-advanced",
+              "path": "/6.x/api/connect-advanced"
+            },
+            {
+              "id": "api/provider",
+              "path": "/6.x/api/provider"
+            },
+            {
+              "id": "introduction/basic-tutorial",
+              "path": "/6.x/introduction/basic-tutorial"
+            },
+            {
+              "id": "introduction/quick-start",
+              "path": "/6.x/introduction/quick-start"
+            },
+            {
+              "id": "introduction/why-use-react-redux",
+              "path": "/6.x/introduction/why-use-react-redux"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/6.x/troubleshooting"
+            },
+            {
+              "id": "using-react-redux/accessing-store",
+              "path": "/6.x/using-react-redux/accessing-store"
+            },
+            {
+              "id": "using-react-redux/connect-mapdispatch",
+              "path": "/6.x/using-react-redux/connect-mapdispatch"
+            },
+            {
+              "id": "using-react-redux/connect-mapstate",
+              "path": "/6.x/using-react-redux/connect-mapstate"
+            }
+          ]
+        },
+        {
+          "name": "5.x",
+          "label": "5.x",
+          "isLast": false,
+          "path": "/5.x",
+          "mainDocId": "introduction/quick-start",
+          "docs": [
+            {
+              "id": "api/api",
+              "path": "/5.x/api/api"
+            },
+            {
+              "id": "api/connect",
+              "path": "/5.x/api/connect"
+            },
+            {
+              "id": "api/connect-advanced",
+              "path": "/5.x/api/connect-advanced"
+            },
+            {
+              "id": "api/provider",
+              "path": "/5.x/api/provider"
+            },
+            {
+              "id": "introduction/basic-tutorial",
+              "path": "/5.x/introduction/basic-tutorial"
+            },
+            {
+              "id": "introduction/quick-start",
+              "path": "/5.x/introduction/quick-start"
+            },
+            {
+              "id": "introduction/why-use-react-redux",
+              "path": "/5.x/introduction/why-use-react-redux"
+            },
+            {
+              "id": "troubleshooting",
+              "path": "/5.x/troubleshooting"
+            },
+            {
+              "id": "using-react-redux/connect-mapdispatch",
+              "path": "/5.x/using-react-redux/connect-mapdispatch"
+            },
+            {
+              "id": "using-react-redux/connect-mapstate",
+              "path": "/5.x/using-react-redux/connect-mapstate"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

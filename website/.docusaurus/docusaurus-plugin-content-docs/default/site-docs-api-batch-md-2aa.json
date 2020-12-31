@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/batch",
+  "id": "api/batch",
+  "isDocsHomePage": false,
+  "title": "batch",
+  "description": "batch()",
+  "source": "@site/..\\docs\\api\\batch.md",
+  "slug": "/api/batch",
+  "permalink": "/next/api/batch",
+  "version": "current",
+  "sidebar_label": "batch()",
+  "sidebar": "docs",
+  "previous": {
+    "title": "connectAdvanced",
+    "permalink": "/next/api/connect-advanced"
+  },
+  "next": {
+    "title": "Hooks",
+    "permalink": "/next/api/hooks"
+  }
+}

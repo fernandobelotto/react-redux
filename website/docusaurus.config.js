@@ -35,7 +35,7 @@ const siteConfig = {
   ],
   title: 'React Redux', // Title for your website.
   onBrokenLinks: 'throw',
-  tagline: 'Official React bindings for Redux',
+  tagline: 'Ligações oficiais do React para Redux',
   url: 'https://react-redux.js.org', // Your website URL
   baseUrl: '/',
   // Used for publishing and more
@@ -106,12 +106,12 @@ const siteConfig = {
         },
         {
           to: 'introduction/quick-start',
-          label: 'Quick Start',
+          label: 'Começo rápido',
           position: 'right',
         },
         {
           to: 'using-react-redux/connect-mapstate',
-          label: 'Using React Redux',
+          label: 'Usando React Redux',
           position: 'right',
         },
         { to: 'api/connect', label: 'API', position: 'right' },
@@ -123,7 +123,7 @@ const siteConfig = {
         },
         {
           href: '/introduction/quick-start#help-and-discussion',
-          label: 'Need help?',
+          label: 'Preciso de ajuda?',
           position: 'right',
         },
       ],
@@ -135,31 +135,31 @@ const siteConfig = {
         src: 'img/redux_white.svg',
       },
       copyright:
-        'Copyright (c) 2015-present Dan Abramov and the Redux documentation authors.',
+        'Direito autorais (c) 2015-presente Dan Abramov e os autores da documentação Redux.',
       links: [
         {
           title: 'Docs',
           items: [
             {
-              label: 'Introduction',
+              label: 'Introdução',
               to: 'introduction/quick-start',
             },
             {
-              label: 'Using React Redux',
+              label: 'Usando React Redux',
               to: 'using-react-redux/connect-mapstate',
             },
             {
-              label: 'API Reference',
+              label: 'Referência da API',
               to: 'api/connect',
             },
             {
-              label: 'Guides',
+              label: 'Guias',
               to: 'troubleshooting',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Comunidade',
           items: [
             {
               label: 'Stack Overflow',
@@ -172,7 +172,7 @@ const siteConfig = {
           ],
         },
         {
-          title: 'More',
+          title: 'Mais',
           items: [
             {
               label: 'GitHub',

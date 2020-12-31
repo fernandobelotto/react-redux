@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/connect-advanced",
+  "id": "version-7.0/api/connect-advanced",
+  "isDocsHomePage": false,
+  "title": "connectAdvanced",
+  "description": "connectAdvanced()",
+  "source": "@site/versioned_docs\\version-7.0\\api\\connect-advanced.md",
+  "slug": "/api/connect-advanced",
+  "permalink": "/7.0/api/connect-advanced",
+  "version": "7.0",
+  "sidebar_label": "connectAdvanced()",
+  "sidebar": "version-7.0/docs",
+  "previous": {
+    "title": "Provider",
+    "permalink": "/7.0/api/provider"
+  },
+  "next": {
+    "title": "batch",
+    "permalink": "/7.0/api/batch"
+  }
+}

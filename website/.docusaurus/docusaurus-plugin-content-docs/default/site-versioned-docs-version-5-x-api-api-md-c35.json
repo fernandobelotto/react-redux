@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/api",
+  "id": "version-5.x/api/api",
+  "isDocsHomePage": false,
+  "title": "Api",
+  "description": "API",
+  "source": "@site/versioned_docs\\version-5.x\\api\\api.md",
+  "slug": "/api/api",
+  "permalink": "/5.x/api/api",
+  "version": "5.x",
+  "sidebar_label": "API",
+  "sidebar": "version-5.x/docs",
+  "previous": {
+    "title": "Connect: Dispatching Actions with mapDispatchToProps",
+    "permalink": "/5.x/using-react-redux/connect-mapdispatch"
+  },
+  "next": {
+    "title": "Connect",
+    "permalink": "/5.x/api/connect"
+  }
+}

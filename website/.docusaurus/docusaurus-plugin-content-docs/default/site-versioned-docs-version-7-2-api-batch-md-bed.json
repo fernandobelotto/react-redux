@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/batch",
+  "id": "version-7.2/api/batch",
+  "isDocsHomePage": false,
+  "title": "batch",
+  "description": "batch()",
+  "source": "@site/versioned_docs\\version-7.2\\api\\batch.md",
+  "slug": "/api/batch",
+  "permalink": "/api/batch",
+  "version": "7.2",
+  "sidebar_label": "batch()",
+  "sidebar": "version-7.2/docs",
+  "previous": {
+    "title": "connectAdvanced",
+    "permalink": "/api/connect-advanced"
+  },
+  "next": {
+    "title": "Hooks",
+    "permalink": "/api/hooks"
+  }
+}

@@ -1,29 +1,29 @@
 ---
 id: troubleshooting
 title: Troubleshooting
-sidebar_label: Troubleshooting
+sidebar_label: Solução de problemas
 hide_title: true
 ---
 
-## Troubleshooting
+## Solução de problemas
 
-Make sure to check out [Troubleshooting Redux](https://redux.js.org/troubleshooting) first.
+Certifique-se de verificar o link [Solução de problemas Redux](https://redux.js.org/troubleshooting) primeiro.
 
-### I'm getting the following alert: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
+### Estou recebendo o seguinte alerta: O acesso a PropTypes por meio do pacote React principal está obsoleto. Use ao invés o pacote prop-types do npm.
 
 This warning is shown when using react 15.5.\*. Basically, now it's just a warning, but in react16 the application might break. the PropTypes should now be imported from 'prop-types' package, and not from the react package.
 
-Update to the latest version of react-redux.
+Atualize para a versão mais recente do react-redux.
 
-### My views aren’t updating!
+### Minhas views não estão atualizando!
 
-See the link above.
-In short,
+Veja o link acima.
+Em resumo,
 
 - Reducers should never mutate state, they must return new objects, or React Redux won’t see the updates.
 - Make sure you either bind action creators with the `mapDispatchToProps` argument to `connect()` or with the `bindActionCreators()` method, or that you manually call `dispatch()`. Just calling your `MyActionCreators.addTodo()` function won’t work because it just _returns_ an action, but does not _dispatch_ it.
 
-### My views aren’t updating on route change with React Router 0.13
+### Minhas views não estão atualizando na mudança de rota com React Router 0.13
 
 If you’re using React Router 0.13, you might [bump into this problem](https://github.com/reduxjs/react-redux/issues/43). The solution is simple: whenever you use `<RouteHandler>` or the `Handler` provided by `Router.run`, pass the router state to it.
 
@@ -42,7 +42,7 @@ Router.run(routes, Router.HistoryLocation, (Handler, routerState) => {
 })
 ```
 
-Nested view:
+View aninhada:
 
 ```js
 render() {
@@ -113,4 +113,4 @@ Or by setting it globally:
 }
 ```
 
-See https://github.com/facebook/react/issues/14927#issuecomment-490426131
+Veja https://github.com/facebook/react/issues/14927#issuecomment-490426131

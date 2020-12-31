@@ -1,0 +1,17 @@
+{
+  "unversionedId": "introduction/quick-start",
+  "id": "version-5.x/introduction/quick-start",
+  "isDocsHomePage": false,
+  "title": "Quick Start",
+  "description": "Quick Start",
+  "source": "@site/versioned_docs\\version-5.x\\introduction\\quick-start.md",
+  "slug": "/introduction/quick-start",
+  "permalink": "/5.x/introduction/quick-start",
+  "version": "5.x",
+  "sidebar_label": "Quick Start",
+  "sidebar": "version-5.x/docs",
+  "next": {
+    "title": "Basic Tutorial",
+    "permalink": "/5.x/introduction/basic-tutorial"
+  }
+}

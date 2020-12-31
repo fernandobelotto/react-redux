@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/hooks",
+  "id": "api/hooks",
+  "isDocsHomePage": false,
+  "title": "Hooks",
+  "description": "Hooks",
+  "source": "@site/..\\docs\\api\\hooks.md",
+  "slug": "/api/hooks",
+  "permalink": "/next/api/hooks",
+  "version": "current",
+  "sidebar_label": "Hooks",
+  "sidebar": "docs",
+  "previous": {
+    "title": "batch",
+    "permalink": "/next/api/batch"
+  },
+  "next": {
+    "title": "Troubleshooting",
+    "permalink": "/next/troubleshooting"
+  }
+}

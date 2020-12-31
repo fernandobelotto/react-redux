@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/connect",
+  "id": "api/connect",
+  "isDocsHomePage": false,
+  "title": "Connect",
+  "description": "connect()",
+  "source": "@site/..\\docs\\api\\connect.md",
+  "slug": "/api/connect",
+  "permalink": "/next/api/connect",
+  "version": "current",
+  "sidebar_label": "connect()",
+  "sidebar": "docs",
+  "previous": {
+    "title": "Static Typing",
+    "permalink": "/next/using-react-redux/static-typing"
+  },
+  "next": {
+    "title": "Provider",
+    "permalink": "/next/api/provider"
+  }
+}

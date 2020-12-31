@@ -42,8 +42,8 @@ function NotFound() {
         <div className="error-message">
           <div className="error-message-container container">
             <span>404 </span>
-            <p>Page Not Found.</p>
-            <a href="/">Return to the front page</a>
+            <p>Página não encontrada.</p>
+            <a href="/">Voltar para a primeira página</a>
           </div>
         </div>
       </div>

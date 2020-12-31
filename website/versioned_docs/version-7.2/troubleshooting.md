@@ -5,7 +5,7 @@ sidebar_label: Troubleshooting
 hide_title: true
 ---
 
-## Troubleshooting
+## Solução de problemas
 
 Make sure to check out [Troubleshooting Redux](https://redux.js.org/troubleshooting) first.
 

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "api/connect",
+  "id": "version-5.x/api/connect",
+  "isDocsHomePage": false,
+  "title": "Connect",
+  "description": "connect",
+  "source": "@site/versioned_docs\\version-5.x\\api\\connect.md",
+  "slug": "/api/connect",
+  "permalink": "/5.x/api/connect",
+  "version": "5.x",
+  "sidebar_label": "connect()",
+  "sidebar": "version-5.x/docs",
+  "previous": {
+    "title": "Api",
+    "permalink": "/5.x/api/api"
+  },
+  "next": {
+    "title": "connectAdvanced",
+    "permalink": "/5.x/api/connect-advanced"
+  }
+}

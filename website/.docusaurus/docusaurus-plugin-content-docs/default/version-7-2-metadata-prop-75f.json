@@ -1,0 +1,117 @@
+{
+  "version": "7.2",
+  "label": "7.2",
+  "isLast": true,
+  "docsSidebars": {
+    "version-7.2/docs": [
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Introdução",
+        "items": [
+          {
+            "type": "link",
+            "label": "Quick Start",
+            "href": "/introduction/quick-start"
+          },
+          {
+            "type": "link",
+            "label": "Basic Tutorial",
+            "href": "/introduction/basic-tutorial"
+          },
+          {
+            "type": "link",
+            "label": "Why Use React Redux?",
+            "href": "/introduction/why-use-react-redux"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Usando React Redux",
+        "items": [
+          {
+            "type": "link",
+            "label": "Connect: Extracting Data with mapStateToProps",
+            "href": "/using-react-redux/connect-mapstate"
+          },
+          {
+            "type": "link",
+            "label": "Connect: Dispatching Actions with mapDispatchToProps",
+            "href": "/using-react-redux/connect-mapdispatch"
+          },
+          {
+            "type": "link",
+            "label": "Accessing the Store",
+            "href": "/using-react-redux/accessing-store"
+          },
+          {
+            "type": "link",
+            "label": "Static Typing",
+            "href": "/using-react-redux/static-typing"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Referência da API",
+        "items": [
+          {
+            "type": "link",
+            "label": "connect()",
+            "href": "/api/connect"
+          },
+          {
+            "type": "link",
+            "label": "Provider",
+            "href": "/api/provider"
+          },
+          {
+            "type": "link",
+            "label": "connectAdvanced()",
+            "href": "/api/connect-advanced"
+          },
+          {
+            "type": "link",
+            "label": "batch()",
+            "href": "/api/batch"
+          },
+          {
+            "type": "link",
+            "label": "Hooks",
+            "href": "/api/hooks"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Guias",
+        "items": [
+          {
+            "type": "link",
+            "label": "Troubleshooting",
+            "href": "/troubleshooting"
+          }
+        ]
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/api/batch": "version-7.2/docs",
+    "/api/connect": "version-7.2/docs",
+    "/api/connect-advanced": "version-7.2/docs",
+    "/api/hooks": "version-7.2/docs",
+    "/api/provider": "version-7.2/docs",
+    "/introduction/basic-tutorial": "version-7.2/docs",
+    "/introduction/quick-start": "version-7.2/docs",
+    "/introduction/why-use-react-redux": "version-7.2/docs",
+    "/troubleshooting": "version-7.2/docs",
+    "/using-react-redux/accessing-store": "version-7.2/docs",
+    "/using-react-redux/connect-mapdispatch": "version-7.2/docs",
+    "/using-react-redux/connect-mapstate": "version-7.2/docs",
+    "/using-react-redux/static-typing": "version-7.2/docs"
+  }
+}
