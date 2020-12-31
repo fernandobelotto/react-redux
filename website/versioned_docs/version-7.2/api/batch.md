@@ -11,16 +11,16 @@ hide_title: true
 batch(fn: Function)
 ```
 
-React's `unstable_batchedUpdates()` API allows any React updates in an event loop tick to be batched together into a single render pass. React already uses this internally for its own event handler callbacks. This API is actually part of the renderer packages like ReactDOM and React Native, not the React core itself.
+A API `unstable_batchedUpdates()` do React permite que qualquer atualização do React em um tick de loop de evento seja agrupada em uma única passagem de renderização. O React já usa isso internamente para seus próprios retornos de chamada do manipulador de eventos. Essa API é, na verdade, parte dos pacotes de renderização como ReactDOM e React Native, não o núcleo do React em si.
 
-Since React-Redux needs to work in both ReactDOM and React Native environments, we've taken care of importing this API from the correct renderer at build time for our own use. We also now re-export this function publicly ourselves, renamed to `batch()`. You can use it to ensure that multiple actions dispatched outside of React only result in a single render update, like this:
+Como o React-Redux precisa funcionar nos ambientes ReactDOM e React Native, cuidamos da importação dessa API do renderizador correto no momento da construção para nosso próprio uso. Agora também reexportamos esta função publicamente, renomeada para `batch()`. Você pode usá-lo para garantir que várias ações despachadas fora do React resultem apenas em uma única atualização de renderização, como esta:
 
 ```js
 import { batch } from 'react-redux'
 
 function myThunk() {
   return (dispatch, getState) => {
-    // should only result in one combined re-render, not two
+    // só deve resultar em uma re-renderização combinada, não duas
     batch(() => {
       dispatch(increment())
       dispatch(increment())
@@ -29,6 +29,6 @@ function myThunk() {
 }
 ```
 
-## References
+## Referências
 
-- [`unstable_batchedUpdates()` API from React](https://github.com/facebook/react/commit/b41883fc708cd24d77dcaa767cde814b50b457fe)
+- [`unstable_batchedUpdates()` API do React](https://github.com/facebook/react/commit/b41883fc708cd24d77dcaa767cde814b50b457fe)

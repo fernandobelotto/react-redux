@@ -1,35 +1,35 @@
 ---
 id: basic-tutorial
-title: Basic Tutorial
+title: Tutorial Básico
 hide_title: true
-sidebar_label: Basic Tutorial
+sidebar_label: Tutorial Básico
 ---
 
-# Basic Tutorial
+# Tutorial Básico
 
-To see how to use React Redux in practice, we’ll show a step-by-step example by creating a todo list app.
+Para ver como usar o React Redux na prática, mostraremos um exemplo passo a passo criando um aplicativo de lista de tarefas.
 
-## A Todo List Example
+## Um exemplo de lista de tarefas
 
-**Jump to**
+**Pule para**
 
-- 🤞 [Just show me the code](https://codesandbox.io/s/9on71rvnyo)
-- 👆 [Providing the store](#providing-the-store)
-- ✌️ [Connecting the Component](#connecting-the-components)
+- 🤞 [Apenas me mostre o código](https://codesandbox.io/s/9on71rvnyo)
+- 👆 [Provendo a store](#providing-the-store)
+- ✌️ [Conectando o Componente](#connecting-the-components)
 
-**The React UI Components**
+**Os componentes da UI do React**
 
-We have implemented our React UI components as follows:
+Implementamos nossos componentes React UI da seguinte maneira:
 
-- `TodoApp` is the entry component for our app. It renders the header, the `AddTodo`, `TodoList`, and `VisibilityFilters` components.
-- `AddTodo` is the component that allows a user to input a todo item and add to the list upon clicking its “Add Todo” button:
-  - It uses a controlled input that sets state upon `onChange`.
-  - When the user clicks on the “Add Todo” button, it dispatches the action (that we will provide using React Redux) to add the todo to the store.
-- `TodoList` is the component that renders the list of todos:
-  - It renders the filtered list of todos when one of the `VisibilityFilters` is selected.
-- `Todo` is the component that renders a single todo item:
-  - It renders the todo content, and shows that a todo is completed by crossing it out.
-  - It dispatches the action to toggle the todo's complete status upon `onClick`.
+- `TodoApp` é o componente de entrada para nosso aplicativo. Ele renderiza o cabeçalho, e os componentes `AddTodo`, `TodoList`, e `VisibilityFilters`.
+- `AddTodo` é o componente que permite ao usuário inserir um item de tarefa e adicioná-lo à lista ao clicar no botão “Add Todo”:
+  - Ele usa um input controlado que define o estado após `onChange`.
+  - Quando o usuário clica no botão “Add Todo”, ele despacha uma action (que forneceremos usando React Redux) para adicionar a tarefa à store.
+- `TodoList` é o componente que renderiza a lista de tarefas:
+  - Ele renderiza a lista filtrada de todos quando um dos `VisibilityFilters` está selecionado.
+- `Todo`é o componente que renderiza um único item de tarefa:
+  - Ele renderiza o conteúdo de tarefas e mostra que uma tarefa foi concluída riscando-a.
+  - Ele despacha uma action para alternar o status completo da tarefa em `onClick`.
 - `VisibilityFilters` renders a simple set of filters: _all_, _completed_, and _incomplete._ Clicking on each one of them filters the todos:
   - It accepts an `activeFilter` prop from the parent that indicates which filter is currently selected by the user. An active filter is rendered with an underscore.
   - It dispatches the `setFilter` action to update the selected filter.
@@ -38,7 +38,7 @@ We have implemented our React UI components as follows:
 
 <br />
 
-**The Redux Store**
+**A Redux Store**
 
 The Redux portion of the application has been set up using the [patterns recommended in the Redux docs](https://redux.js.org):
 
@@ -68,7 +68,7 @@ You may check out [this CodeSandbox](https://codesandbox.io/s/6vwyqrpqk3) for th
 
 We will now show how to connect this store to our app using React Redux.
 
-### Providing the Store
+### Provendo a Store
 
 First we need to make the `store` available to our app. To do this, we wrap our app with the `<Provider />` API provided by React Redux.
 
@@ -370,7 +370,7 @@ The `<VisibilityFilters />` component needs to be able to read from the store wh
 ```js
 // components/VisibilityFilters.js
 
-// ... other imports
+// ... outras importações
 import { connect } from "react-redux";
 import { setFilter } from "../redux/actions";
 
@@ -390,7 +390,7 @@ Meanwhile, we also need to update our `<TodoList />` component to filter todos a
 ```js
 // redux/selectors.js
 
-// ... other selectors
+// ... outros selectors
 export const getTodosByVisibilityFilter = (store, visibilityFilter) => {
   const allTodos = getTodos(store)
   switch (visibilityFilter) {
@@ -405,7 +405,7 @@ export const getTodosByVisibilityFilter = (store, visibilityFilter) => {
 }
 ```
 
-And connecting to the store with the help of the selector:
+E conectando-se à store com a ajuda do selector:
 
 ```js
 // components/TodoList.js
@@ -421,20 +421,20 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps)(TodoList)
 ```
 
-Now we've finished a very simple example of a todo app with React Redux. All our components are connected! Isn't that nice? 🎉🎊
+Agora terminamos um exemplo muito simples de um aplicativo de tarefas com React Redux. Todos os nossos componentes estão conectados! Isso não é incrível?🎉🎊
 
 ![](https://i.imgur.com/ONqer2R.png)
 
 ## Links
 
-- [Usage with React](https://redux.js.org/basics/usage-with-react)
-- [Using the React Redux Bindings](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/react-redux.html)
-- [Higher Order Components in Depth](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
-- [Computing Derived Data](https://redux.js.org/recipes/computing-derived-data#sharing-selectors-across-multiple-components)
-- [Idiomatic Redux: Using Reselect Selectors for Encapsulation and Performance](https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/)
+- [Uso com React](https://redux.js.org/basics/usage-with-react)
+- [Usando as ligações do React-Redux](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/react-redux.html)
+- [Componentes de ordem superior em profundidade](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
+- [Computando Dados Derivados](https://redux.js.org/recipes/computing-derived-data#sharing-selectors-across-multiple-components)
+- [Redux idiomático: usando Reselect Selectors para encapsulamento e desempenho](https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/)
 
-## Get More Help
+## Obtenha mais ajuda
 
-- [Reactiflux](https://www.reactiflux.com) Redux channel
+- [Reactiflux](https://www.reactiflux.com) canal do Redux
 - [StackOverflow](https://stackoverflow.com/questions/tagged/react-redux)
 - [GitHub Issues](https://github.com/reduxjs/react-redux/issues/)

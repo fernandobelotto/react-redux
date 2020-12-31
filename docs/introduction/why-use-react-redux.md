@@ -17,7 +17,7 @@ Para entender por que você deve usar o React Redux, pode ser útil entender o q
 
 > **Nota**: Se você tiver dúvidas sobre se deve usar Redux em geral, consulte estes artigos para uma discussão de quando e por que você pode querer usar Redux, e como ele deve ser usado:
 >
-> - [Redux docs: Motivation](https://redux.js.org/introduction/motivation)
+> - [Redux docs: Motivação](https://redux.js.org/introduction/motivation)
 > - [Redux docs: Perguntas Frequentes - Quando devo usar Redux?](https://redux.js.org/faq/general#when-should-i-use-redux)
 > - [Você pode não precisar de redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)
 > - [Redux idiomático: o Tao do Redux, Part 1 - Implementação e Intenção](https://blog.isquaredsoftware.com/2017/05/idiomatic-redux-tao-of-redux-part-1/)

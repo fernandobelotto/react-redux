@@ -7,7 +7,7 @@ hide_title: true
 
 # `Provider`
 
-## Overview
+## Visão geral
 
 The `<Provider />` makes the Redux `store` available to any nested components that have been wrapped in the `connect()` function.
 
@@ -41,18 +41,18 @@ render() {
   return (
     <ReactReduxContext.Consumer>
       {({ store }) => {
-        // do something with the store here
+        // faça algo com a store aqui
       }}
     </ReactReduxContext.Consumer>
   )
 }
 ```
 
-### Example Usage
+### Exemplo de uso
 
-In the example below, the `<App />` component is our root-level component. This means it’s at the very top of our component hierarchy.
+No exemplo abaixo, o componente `<App />` é nosso componente de nível raiz. Isso significa que está no topo da nossa hierarquia de componentes.
 
-**Vanilla React Example**
+**Exemplo com React Vanilla**
 
 ```jsx
 import React from 'react'
@@ -72,7 +72,7 @@ ReactDOM.render(
 )
 ```
 
-**Usage with React Router**
+**Uso com React Router**
 
 ```jsx
 import React from 'react'

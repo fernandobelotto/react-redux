@@ -7,52 +7,52 @@ hide_title: true
 
 # `Provider`
 
-## Overview
+## Visão geral
 
-The `<Provider />` makes the Redux `store` available to any nested components that have been wrapped in the `connect()` function.
+O `<Provider />` torna a Redux `store` disponível para quaisquer componentes aninhados que foram agrupados na função`connect()`.
 
-Since any React component in a React Redux app can be connected, most applications will render a `<Provider>` at the top level, with the entire app’s component tree inside of it.
+Como qualquer componente React em um aplicativo React Redux pode ser conectado, a maioria dos aplicativos renderizará um `<Provider>` no nível superior, com toda a árvore de componentes do aplicativo dentro dele.
 
-Normally, you can’t use a connected component unless it is nested inside of a `<Provider>`.
+Normalmente, você não pode usar um componente conectado, a menos que esteja aninhado dentro de um `<Provider>`.
 
 ### Props
 
 `store` ([Redux Store](https://redux.js.org/api/store))
-The single Redux `store` in your application.
+A única `store` do Redux em seu aplicativo.
 
 `children` (ReactElement)
-The root of your component hierarchy.
+A raiz de sua hierarquia de componentes.
 
 `context`
-You may provide a context instance. If you do so, you will need to provide the same context instance to all of your connected components as well. Failure to provide the correct context results in runtime error:
+Você pode fornecer uma instância de contexto. Se fizer isso, você precisará fornecer a mesma instância de contexto para todos os seus componentes conectados também. A falha em fornecer o contexto correto resulta em erro de tempo de execução:
 
 > Invariant Violation
 >
 > Could not find "store" in the context of "Connect(MyComponent)". Either wrap the root component in a `<Provider>`, or pass a custom React context provider to `<Provider>` and the corresponding React context consumer to Connect(Todo) in connect options.
 
-**Note:** You do not need to provide custom context in order to access the store.
-React Redux exports the context instance it uses by default so that you can access the store by:
+**Nota:** Você não precisa fornecer contexto personalizado para acessar a store.
+O React Redux exporta a instância de contexto que usa por padrão para que você possa acessar a store:
 
 ```js
 import { ReactReduxContext } from 'react-redux'
 
-// in your connected component
+// em seu componente conectado
 render() {
   return (
     <ReactReduxContext.Consumer>
       {({ store }) => {
-        // do something with the store here
+        // faça algo com a store aqui
       }}
     </ReactReduxContext.Consumer>
   )
 }
 ```
 
-### Example Usage
+### Exemplo de uso
 
-In the example below, the `<App />` component is our root-level component. This means it’s at the very top of our component hierarchy.
+No exemplo abaixo, o componente `<App />` é nosso componente de nível raiz. Isso significa que está no topo da nossa hierarquia de componentes.
 
-**Vanilla React Example**
+**Exemplo com React Vanilla**
 
 ```jsx
 import React from 'react'
@@ -72,7 +72,7 @@ ReactDOM.render(
 )
 ```
 
-**Usage with React Router**
+**Uso com React Router**
 
 ```jsx
 import React from 'react'
