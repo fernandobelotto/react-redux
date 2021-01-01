@@ -1,11 +1,11 @@
 ---
 id: connect-mapstate
-title: "Connect: Extracting Data with mapStateToProps"
+title: "Connect: Extraindo dados com mapStateToProps"
 hide_title: true
-sidebar_label: "Connect: Extracting Data with mapStateToProps"
+sidebar_label: "Connect: Extraindo dados com mapStateToProps"
 ---
 
-# Connect: Extracting Data with `mapStateToProps`
+# Connect: Extraindo dados com `mapStateToProps`
 
 As the first argument passed in to `connect`, `mapStateToProps` is used for selecting the part of the data from the store that the connected component needs. It’s frequently referred to as just `mapState` for short.
 

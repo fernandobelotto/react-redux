@@ -1,11 +1,11 @@
 ---
 id: static-typing
-title: Static Typing
+title: Tipagem Estática
 hide_title: true
-sidebar_label: Static Typing
+sidebar_label: Tipagem Estática
 ---
 
-# Static Typing
+# Tipagem Estática
 
 React-Redux is currently written in plain JavaScript. However, it works well with static type systems such as TypeScript and Flow.
 

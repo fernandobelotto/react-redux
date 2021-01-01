@@ -1,11 +1,11 @@
 ---
 id: connect-mapdispatch
-title: "Connect: Dispatching Actions with mapDispatchToProps"
+title: "Connect: Despachando Actions com mapDispatchToProps"
 hide_title: true
-sidebar_label: "Connect: Dispatching Actions with mapDispatchToProps"
+sidebar_label: "Connect: Despachando Actions com mapDispatchToProps"
 ---
 
-# Connect: Dispatching Actions with `mapDispatchToProps`
+# Connect: Despachando Actions com `mapDispatchToProps`
 
 As the second argument passed in to `connect`, `mapDispatchToProps` is used for dispatching actions to the store.
 

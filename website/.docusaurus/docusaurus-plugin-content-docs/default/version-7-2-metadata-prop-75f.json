@@ -11,17 +11,17 @@
         "items": [
           {
             "type": "link",
-            "label": "Quick Start",
+            "label": "Começo rápido",
             "href": "/introduction/quick-start"
           },
           {
             "type": "link",
-            "label": "Basic Tutorial",
+            "label": "Tutorial Básico",
             "href": "/introduction/basic-tutorial"
           },
           {
             "type": "link",
-            "label": "Why Use React Redux?",
+            "label": "Por que usar React Redux?",
             "href": "/introduction/why-use-react-redux"
           }
         ]
@@ -33,22 +33,22 @@
         "items": [
           {
             "type": "link",
-            "label": "Connect: Extracting Data with mapStateToProps",
+            "label": "Connect: Extraindo dados com mapStateToProps",
             "href": "/using-react-redux/connect-mapstate"
           },
           {
             "type": "link",
-            "label": "Connect: Dispatching Actions with mapDispatchToProps",
+            "label": "Connect: Despachando Actions com mapDispatchToProps",
             "href": "/using-react-redux/connect-mapdispatch"
           },
           {
             "type": "link",
-            "label": "Accessing the Store",
+            "label": "Acessando a store",
             "href": "/using-react-redux/accessing-store"
           },
           {
             "type": "link",
-            "label": "Static Typing",
+            "label": "Tipagem Estática",
             "href": "/using-react-redux/static-typing"
           }
         ]
@@ -92,7 +92,7 @@
         "items": [
           {
             "type": "link",
-            "label": "Troubleshooting",
+            "label": "Solução de problemas",
             "href": "/troubleshooting"
           }
         ]

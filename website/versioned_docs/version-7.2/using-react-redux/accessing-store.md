@@ -1,11 +1,11 @@
 ---
 id: accessing-store
-title: Accessing the Store
+title: Acessando a store
 hide_title: true
-sidebar_label: Accessing the Store
+sidebar_label: Acessando a store
 ---
 
-# Accessing the Store
+# Acessando a store
 
 React Redux provides APIs that allow your components to dispatch actions and subscribe to data updates from the store.
 

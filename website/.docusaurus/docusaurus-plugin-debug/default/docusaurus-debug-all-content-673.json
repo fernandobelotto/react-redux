@@ -520,7 +520,7 @@
               "sidebar_label": "connect()",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Static Typing",
+                "title": "Tipagem Estática",
                 "permalink": "/using-react-redux/static-typing"
               },
               "next": {
@@ -566,7 +566,7 @@
                 "permalink": "/api/batch"
               },
               "next": {
-                "title": "Troubleshooting",
+                "title": "Solução de problemas",
                 "permalink": "/troubleshooting"
               }
             },
@@ -595,20 +595,20 @@
               "unversionedId": "introduction/basic-tutorial",
               "id": "version-7.2/introduction/basic-tutorial",
               "isDocsHomePage": false,
-              "title": "Basic Tutorial",
-              "description": "Basic Tutorial",
+              "title": "Tutorial Básico",
+              "description": "Tutorial Básico",
               "source": "@site/versioned_docs\\version-7.2\\introduction\\basic-tutorial.md",
               "slug": "/introduction/basic-tutorial",
               "permalink": "/introduction/basic-tutorial",
               "version": "7.2",
-              "sidebar_label": "Basic Tutorial",
+              "sidebar_label": "Tutorial Básico",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Quick Start",
+                "title": "Começo rápido",
                 "permalink": "/introduction/quick-start"
               },
               "next": {
-                "title": "Why Use React Redux?",
+                "title": "Por que usar React Redux?",
                 "permalink": "/introduction/why-use-react-redux"
               }
             },
@@ -616,16 +616,16 @@
               "unversionedId": "introduction/quick-start",
               "id": "version-7.2/introduction/quick-start",
               "isDocsHomePage": false,
-              "title": "Quick Start",
-              "description": "Quick Start",
+              "title": "Começo rápido",
+              "description": "Começo rápido",
               "source": "@site/versioned_docs\\version-7.2\\introduction\\quick-start.md",
               "slug": "/introduction/quick-start",
               "permalink": "/introduction/quick-start",
               "version": "7.2",
-              "sidebar_label": "Quick Start",
+              "sidebar_label": "Começo rápido",
               "sidebar": "version-7.2/docs",
               "next": {
-                "title": "Basic Tutorial",
+                "title": "Tutorial Básico",
                 "permalink": "/introduction/basic-tutorial"
               }
             },
@@ -633,20 +633,20 @@
               "unversionedId": "introduction/why-use-react-redux",
               "id": "version-7.2/introduction/why-use-react-redux",
               "isDocsHomePage": false,
-              "title": "Why Use React Redux?",
-              "description": "Why Use React Redux?",
+              "title": "Por que usar React Redux?",
+              "description": "Por que usar React Redux?",
               "source": "@site/versioned_docs\\version-7.2\\introduction\\why-use-react-redux.md",
               "slug": "/introduction/why-use-react-redux",
               "permalink": "/introduction/why-use-react-redux",
               "version": "7.2",
-              "sidebar_label": "Why Use React Redux?",
+              "sidebar_label": "Por que usar React Redux?",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Basic Tutorial",
+                "title": "Tutorial Básico",
                 "permalink": "/introduction/basic-tutorial"
               },
               "next": {
-                "title": "Connect: Extracting Data with mapStateToProps",
+                "title": "Connect: Extraindo dados com mapStateToProps",
                 "permalink": "/using-react-redux/connect-mapstate"
               }
             },
@@ -654,13 +654,13 @@
               "unversionedId": "troubleshooting",
               "id": "version-7.2/troubleshooting",
               "isDocsHomePage": false,
-              "title": "Troubleshooting",
+              "title": "Solução de problemas",
               "description": "Solução de problemas",
               "source": "@site/versioned_docs\\version-7.2\\troubleshooting.md",
               "slug": "/troubleshooting",
               "permalink": "/troubleshooting",
               "version": "7.2",
-              "sidebar_label": "Troubleshooting",
+              "sidebar_label": "Solução de problemas",
               "sidebar": "version-7.2/docs",
               "previous": {
                 "title": "Hooks",
@@ -671,20 +671,20 @@
               "unversionedId": "using-react-redux/accessing-store",
               "id": "version-7.2/using-react-redux/accessing-store",
               "isDocsHomePage": false,
-              "title": "Accessing the Store",
-              "description": "Accessing the Store",
+              "title": "Acessando a store",
+              "description": "Acessando a store",
               "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\accessing-store.md",
               "slug": "/using-react-redux/accessing-store",
               "permalink": "/using-react-redux/accessing-store",
               "version": "7.2",
-              "sidebar_label": "Accessing the Store",
+              "sidebar_label": "Acessando a store",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "title": "Connect: Despachando Actions com mapDispatchToProps",
                 "permalink": "/using-react-redux/connect-mapdispatch"
               },
               "next": {
-                "title": "Static Typing",
+                "title": "Tipagem Estática",
                 "permalink": "/using-react-redux/static-typing"
               }
             },
@@ -692,20 +692,20 @@
               "unversionedId": "using-react-redux/connect-mapdispatch",
               "id": "version-7.2/using-react-redux/connect-mapdispatch",
               "isDocsHomePage": false,
-              "title": "Connect: Dispatching Actions with mapDispatchToProps",
-              "description": "Connect: Dispatching Actions with mapDispatchToProps",
+              "title": "Connect: Despachando Actions com mapDispatchToProps",
+              "description": "Connect: Despachando Actions com mapDispatchToProps",
               "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\connect-dispatching-actions-with-mapDispatchToProps.md",
               "slug": "/using-react-redux/connect-mapdispatch",
               "permalink": "/using-react-redux/connect-mapdispatch",
               "version": "7.2",
-              "sidebar_label": "Connect: Dispatching Actions with mapDispatchToProps",
+              "sidebar_label": "Connect: Despachando Actions com mapDispatchToProps",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Connect: Extracting Data with mapStateToProps",
+                "title": "Connect: Extraindo dados com mapStateToProps",
                 "permalink": "/using-react-redux/connect-mapstate"
               },
               "next": {
-                "title": "Accessing the Store",
+                "title": "Acessando a store",
                 "permalink": "/using-react-redux/accessing-store"
               }
             },
@@ -713,20 +713,20 @@
               "unversionedId": "using-react-redux/connect-mapstate",
               "id": "version-7.2/using-react-redux/connect-mapstate",
               "isDocsHomePage": false,
-              "title": "Connect: Extracting Data with mapStateToProps",
-              "description": "Connect: Extracting Data with mapStateToProps",
+              "title": "Connect: Extraindo dados com mapStateToProps",
+              "description": "Connect: Extraindo dados com mapStateToProps",
               "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
               "slug": "/using-react-redux/connect-mapstate",
               "permalink": "/using-react-redux/connect-mapstate",
               "version": "7.2",
-              "sidebar_label": "Connect: Extracting Data with mapStateToProps",
+              "sidebar_label": "Connect: Extraindo dados com mapStateToProps",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Why Use React Redux?",
+                "title": "Por que usar React Redux?",
                 "permalink": "/introduction/why-use-react-redux"
               },
               "next": {
-                "title": "Connect: Dispatching Actions with mapDispatchToProps",
+                "title": "Connect: Despachando Actions com mapDispatchToProps",
                 "permalink": "/using-react-redux/connect-mapdispatch"
               }
             },
@@ -734,16 +734,16 @@
               "unversionedId": "using-react-redux/static-typing",
               "id": "version-7.2/using-react-redux/static-typing",
               "isDocsHomePage": false,
-              "title": "Static Typing",
-              "description": "Static Typing",
+              "title": "Tipagem Estática",
+              "description": "Tipagem Estática",
               "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\static-types.md",
               "slug": "/using-react-redux/static-typing",
               "permalink": "/using-react-redux/static-typing",
               "version": "7.2",
-              "sidebar_label": "Static Typing",
+              "sidebar_label": "Tipagem Estática",
               "sidebar": "version-7.2/docs",
               "previous": {
-                "title": "Accessing the Store",
+                "title": "Acessando a store",
                 "permalink": "/using-react-redux/accessing-store"
               },
               "next": {

@@ -1,13 +1,13 @@
 ---
 id: troubleshooting
-title: Troubleshooting
-sidebar_label: Troubleshooting
+title: Solução de problemas
+sidebar_label: Solução de problemas
 hide_title: true
 ---
 
 ## Solução de problemas
 
-Make sure to check out [Troubleshooting Redux](https://redux.js.org/troubleshooting) first.
+Certifique-se de verificar a seção [Solução de problemas do Redux](https://redux.js.org/troubleshooting) primeiro.
 
 ### I'm getting the following alert: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
 

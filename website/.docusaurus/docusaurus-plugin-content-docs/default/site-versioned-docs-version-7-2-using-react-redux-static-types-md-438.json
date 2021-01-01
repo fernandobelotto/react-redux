@@ -2,16 +2,16 @@
   "unversionedId": "using-react-redux/static-typing",
   "id": "version-7.2/using-react-redux/static-typing",
   "isDocsHomePage": false,
-  "title": "Static Typing",
-  "description": "Static Typing",
+  "title": "Tipagem Estática",
+  "description": "Tipagem Estática",
   "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\static-types.md",
   "slug": "/using-react-redux/static-typing",
   "permalink": "/using-react-redux/static-typing",
   "version": "7.2",
-  "sidebar_label": "Static Typing",
+  "sidebar_label": "Tipagem Estática",
   "sidebar": "version-7.2/docs",
   "previous": {
-    "title": "Accessing the Store",
+    "title": "Acessando a store",
     "permalink": "/using-react-redux/accessing-store"
   },
   "next": {

@@ -1,35 +1,35 @@
 ---
 id: quick-start
-title: Quick Start
+title: Começo rápido
 hide_title: true
-sidebar_label: Quick Start
+sidebar_label: Começo rápido
 ---
 
-# Quick Start
+# Começo rápido
 
-[React Redux](https://github.com/reduxjs/react-redux) is the official [React](https://reactjs.org/) binding for [Redux](https://redux.js.org/). It lets your React components read data from a Redux store, and dispatch actions to the store to update data.
+[React Redux](https://github.com/reduxjs/react-redux) é a ligação oficial do [React](https://reactjs.org/) para o  [Redux](https://redux.js.org/). Ele permite que seus componentes React leiam dados de uma Redux store e despache actions para a store para atualizar os dados.
 
-## Installation
+## Instalação
 
-React Redux 7.1 requires **React 16.8.3 or later.**
+React Redux 7.2 requer **React 16.8.3 ou mais novo.**
 
-To use React Redux with your React app:
+Para usar o React Redux com seu aplicativo React:
 
 ```bash
 npm install react-redux
 ```
 
-or
+ou
 
 ```bash
 yarn add react-redux
 ```
 
-You'll also need to [install Redux](https://redux.js.org/introduction/installation) and [set up a Redux store](https://redux.js.org/recipes/configuring-your-store/) in your app.
+Você também precisará [instalar o Redux](https://redux.js.org/introduction/installation) e [configurar uma store Redux](https://redux.js.org/recipes/configuring-your-store/) em seu aplicativo.
 
 ## `Provider`
 
-React Redux provides `<Provider />`, which makes the Redux store available to the rest of your app:
+React Redux fornece o componente `<Provider />`, que disponibiliza a store Redux para o resto do seu aplicativo:
 
 ```js
 import React from 'react'
@@ -51,9 +51,9 @@ ReactDOM.render(
 
 ## `connect()`
 
-React Redux provides a `connect` function for you to connect your component to the store.
+React Redux fornece a função `connect()` para você conectar seu componente à loja.
 
-Normally, you’ll call `connect` in this way:
+Normalmente, você chamará `connect()` desta forma:
 
 ```js
 import { connect } from 'react-redux'
@@ -72,8 +72,8 @@ const mapDispatchToProps = { increment, decrement, reset }
 export default connect(mapStateToProps, mapDispatchToProps)(Counter)
 ```
 
-## Help and Discussion
+## Ajuda e discussão
 
-The **[#redux channel](https://discord.gg/0ZcbPKXt5bZ6au5t)** of the **[Reactiflux Discord community](http://www.reactiflux.com)** is our official resource for all questions related to learning and using Redux. Reactiflux is a great place to hang out, ask questions, and learn - come join us!
+O **[canal #redux](https://discord.gg/0ZcbPKXt5bZ6au5t)** da **[comunidade Reactiflux no Discord](http://www.reactiflux.com)** é nosso recurso oficial para todas as questões relacionadas ao aprendizado e ao uso do Redux. Reactiflux é um ótimo lugar para sair, fazer perguntas e aprender - junte-se a nós!
 
-You can also ask questions on [Stack Overflow](https://stackoverflow.com) using the **[#redux tag](https://stackoverflow.com/questions/tagged/redux)**.
+Você também pode fazer perguntas sobre [Stack Overflow](https://stackoverflow.com) usando a **[tag #redux](https://stackoverflow.com/questions/tagged/redux)**.

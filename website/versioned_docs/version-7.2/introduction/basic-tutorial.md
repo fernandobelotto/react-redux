@@ -1,27 +1,27 @@
 ---
 id: basic-tutorial
-title: Basic Tutorial
+title: Tutorial Básico
 hide_title: true
-sidebar_label: Basic Tutorial
+sidebar_label: Tutorial Básico
 ---
 
-# Basic Tutorial
+# Tutorial Básico
 
-To see how to use React Redux in practice, we’ll show a step-by-step example by creating a todo list app.
+Para ver como usar o React Redux na prática, mostraremos um exemplo passo a passo criando um aplicativo de lista de tarefas.
 
-## A Todo List Example
+## Um exemplo de lista de tarefas
 
-**Jump to**
+**Pule para**
 
-- 🤞 [Just show me the code](https://codesandbox.io/s/9on71rvnyo)
-- 👆 [Providing the store](#providing-the-store)
-- ✌️ [Connecting the Component](#connecting-the-components)
+- 🤞 [Apenas me mostre o código](https://codesandbox.io/s/9on71rvnyo)
+- 👆 [Fornecendo a store](#providing-the-store)
+- ✌️ [Conectando o Componente](#connecting-the-components)
 
-**The React UI Components**
+**Os componentes da IU do React**
 
-We have implemented our React UI components as follows:
+Implementamos nossos componentes React UI da seguinte maneira:
 
-- `TodoApp` is the entry component for our app. It renders the header, the `AddTodo`, `TodoList`, and `VisibilityFilters` components.
+- `TodoApp` é o componente de entrada para nosso aplicativo. Ele renderiza os header e os componentes `AddTodo`, `TodoList`, e `VisibilityFilters`.
 - `AddTodo` is the component that allows a user to input a todo item and add to the list upon clicking its “Add Todo” button:
   - It uses a controlled input that sets state upon `onChange`.
   - When the user clicks on the “Add Todo” button, it dispatches the action (that we will provide using React Redux) to add the todo to the store.
@@ -38,9 +38,9 @@ We have implemented our React UI components as follows:
 
 <br />
 
-**The Redux Store**
+**A Redux Store**
 
-The Redux portion of the application has been set up using the [patterns recommended in the Redux docs](https://redux.js.org):
+A parte Redux do aplicativo foi configurada usando os [padrões recomendados na documentação do Redux](https://redux.js.org):
 
 - Store
   - `todos`: A normalized reducer of todos. It contains a `byIds` map of all todos and a `allIds` that contains the list of all ids.
@@ -55,22 +55,22 @@ The Redux portion of the application has been set up using the [patterns recomme
     - Toggles the `completed` field for the todo upon receiving the `TOGGLE_TODO` action
   - The `visibilityFilters` reducer sets its slice of store to the new filter it receives from the `SET_FILTER` action payload
 - Action Types
-  - We use a file `actionTypes.js` to hold the constants of action types to be reused
+  - Usamos um arquivo `actionTypes.js` para manter as constantes dos actions types a serem reutilizados
 - Selectors
-  - `getTodoList` returns the `allIds` list from the `todos` store
-  - `getTodoById` finds the todo in the store given by `id`
-  - `getTodos` is slightly more complex. It takes all the `id`s from `allIds`, finds each todo in `byIds`, and returns the final array of todos
+  - `getTodoList` retorna a lista `allIds` da store `todos`
+  - `getTodoById` acha a tarefa na store dado um `id`
+  - `getTodos` é um pouco mais complexo. Ele pega todos os `id`s de` allIds`, encontra cada tarefa em `byIds` e retorna o array final de tarefas.
   - `getTodosByVisibilityFilter` filters the todos according to the visibility filter
 
-You may check out [this CodeSandbox](https://codesandbox.io/s/6vwyqrpqk3) for the source code of the UI components and the unconnected Redux store described above.
+Você pode verificar [este CodeSandbox](https://codesandbox.io/s/6vwyqrpqk3) para o código-fonte dos componentes UI e a Redux store desconectada descrita acima.
 
 <br />
 
-We will now show how to connect this store to our app using React Redux.
+Vamos agora mostrar como conectar esta store ao nosso aplicativo usando React Redux.
 
-### Providing the Store
+### Fornecendo a Store
 
-First we need to make the `store` available to our app. To do this, we wrap our app with the `<Provider />` API provided by React Redux.
+Primeiro, precisamos disponibilizar a `store` para nosso aplicativo. Para fazer isso, envolvemos nosso aplicativo com a API `<Provider />` fornecida pelo React Redux.
 
 ```jsx
 // index.js
@@ -90,17 +90,17 @@ ReactDOM.render(
 )
 ```
 
-Notice how our `<TodoApp />` is now wrapped with the `<Provider />` with `store` passed in as a prop.
+Observe como nosso `<TodoApp />` agora está envolvido com o `<Provider />` com `store` passado como um prop.
 
 ![](https://i.imgur.com/LV0XvwA.png)
 
-### Connecting the Components
+### Conectando os componentes
 
-React Redux provides a `connect` function for you to read values from the Redux store (and re-read the values when the store updates).
+React Redux fornece uma função `conectar` para você ler os valores da loja Redux (e reler os valores quando a loja for atualizada).
 
-The `connect` function takes two arguments, both optional:
+A função `conectar` leva dois argumentos, ambos opcionais:
 
-- `mapStateToProps`: called every time the store state changes. It receives the entire store state, and should return an object of data this component needs.
+- `mapStateToProps`: chamado toda vez que o estado da store muda. Ele recebe todo o estado da store e deve retornar um objeto de dados de que esse componente precisa.
 
 - `mapDispatchToProps`: this parameter can either be a function, or an object.
   - If it’s a function, it will be called once on component creation. It will receive `dispatch` as an argument, and should return an object full of functions that use `dispatch` to dispatch actions.
@@ -220,7 +220,7 @@ Now our `<AddTodo />` is connected to the store. When we add a todo it would dis
 
 ![](https://i.imgur.com/kHvkqhI.png)
 
-You should also see that the store has changed accordingly:
+Você também deve ver que a store mudou de acordo:
 
 ![](https://i.imgur.com/yx27RVC.png)
 
@@ -248,7 +248,7 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps)(TodoList);
 ```
 
-Luckily we have a selector that does exactly this. We may simply import the selector and use it here.
+Felizmente, temos um selector que faz exatamente isso. Podemos simplesmente importar o selector e usá-lo aqui.
 
 ```js
 // redux/selectors.js
@@ -439,20 +439,20 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps)(TodoList)
 ```
 
-Now we've finished a very simple example of a todo app with React Redux. All our components are connected! Isn't that nice? 🎉🎊
+Agora terminamos um exemplo muito simples de um aplicativo de tarefas com React Redux. Todos os nossos componentes estão conectados! Não é incrível? 🎉🎊
 
 ![](https://i.imgur.com/ONqer2R.png)
 
 ## Links
 
-- [Usage with React](https://redux.js.org/basics/usage-with-react)
-- [Using the React Redux Bindings](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/react-redux.html)
-- [Higher Order Components in Depth](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
-- [Computing Derived Data](https://redux.js.org/recipes/computing-derived-data#sharing-selectors-across-multiple-components)
-- [Idiomatic Redux: Using Reselect Selectors for Encapsulation and Performance](https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/)
+- [Uso com React](https://redux.js.org/basics/usage-with-react)
+- [Usando as ligações React Redux](https://blog.isquaredsoftware.com/presentations/workshops/redux-fundamentals/react-redux.html)
+- [Componentes de ordem superior a fundo](https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e)
+- [Computando Dados Derivados](https://redux.js.org/recipes/computing-derived-data#sharing-selectors-across-multiple-components)
+- [Redux idiomático: Usando Reselect Selectors para encapsulamento e desempenho](https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/)
 
-## Get More Help
+## Obtenha mais ajuda
 
-- [Reactiflux](https://www.reactiflux.com) Redux channel
+- [Reactiflux](https://www.reactiflux.com) canal do Redux
 - [StackOverflow](https://stackoverflow.com/questions/tagged/react-redux)
 - [GitHub Issues](https://github.com/reduxjs/react-redux/issues/)
