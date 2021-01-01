@@ -7,15 +7,15 @@ sidebar_label: Tipagem Estática
 
 # Tipagem Estática
 
-React-Redux is currently written in plain JavaScript. However, it works well with static type systems such as TypeScript and Flow.
+React-Redux é atualmente escrito em JavaScript simples. No entanto, ele funciona bem com sistemas de tipo estático, como TypeScript e Flow.
 
 ## TypeScript
 
-React-Redux doesn't ship with its own type definitions. If you are using Typescript you should install the [`@types/react-redux` type definitions](https://npm.im/@types/react-redux) from npm. In addition to typing the library functions, the types also export some helpers to make it easier to write typesafe interfaces between your Redux store and your React components.
+O React-Redux não vem com suas próprias definições de tipo. Se você estiver usando o Typescript, você deve instalar as [definições de tipo `@types/react-redux`](https://npm.im/@types/react-redux) do npm. Além de tipar as funções da biblioteca, os tipos também exportam alguns auxiliares para tornar mais fácil escrever interfaces seguras de tipos entre sua  Redux store e seus componentes React.
 
-### Defining the Root State Type
+### Definindo o tipo de estado raiz
 
-Both `mapState` and `useSelector` depend on declaring the type of the complete Redux store state value. While this type could be written by hand, the easiest way to define it is to have TypeScript infer it based on what your root reducer function returns. This way, the type is automatically updated as the reducer functions are modified.
+Ambos `mapState` e` useSelector` dependem da declaração do tipo do valor completo do estado da Redux store. Embora esse tipo possa ser escrito à mão, a maneira mais fácil de defini-lo é fazer o TypeScript inferir com base no que sua função reducer raiz retorna. Desta forma, o tipo é atualizado automaticamente conforme as funções do reducer são modificadas.
 
 ```ts
 // rootReducer.ts
@@ -29,9 +29,10 @@ export type RootState = ReturnType<typeof rootReducer>
 // {posts: PostsState, comments: CommentsState, users: UsersState}
 ```
 
-### Typing the `useSelector` hook
+### Tipando o hook `useSelector`
 
 When writing selector functions for use with `useSelector`, you should explicitly define the type of the `state` parameter. TS should be able to then infer the return type of the selector, which will be reused as the return type of the `useSelector` hook:
+Ao escrever funções selector para uso com `useSelector`, você deve definir explicitamente o tipo do parâmetro `state`. O TS deve ser capaz de inferir o tipo de retorno do selector, que será reutilizado como o tipo de retorno do gancho `useSelector`:
 
 ```ts
 interface RootState {
@@ -63,7 +64,7 @@ import { useTypedSelector } from './reducer.ts'
 const isOn = useTypedSelector(state => state.isOn)
 ```
 
-### Typing the `useDispatch` hook
+### Tipando o hook `useDispatch`
 
 By default, the return value of `useDispatch` is the standard `Dispatch` type defined by the Redux core types, so no declarations are needed:
 
@@ -81,9 +82,9 @@ export type AppDispatch = typeof store.dispatch
 const dispatch: AppDispatch = useDispatch()
 ```
 
-### Typing the `connect` higher order component
+### Tipando o higher order component `connect`
 
-#### Manually Typing `connect`
+#### Digitando Manualmente `connect`
 
 The `connect` higher-order component is somewhat complex to type, because there are 3 sources of props: `mapStateToProps`, `mapDispatchToProps`, and props passed in from the parent component. Here's a full example of what it looks like to do that manually.
 
@@ -146,7 +147,7 @@ type Props = StateProps & DispatchProps & OwnProps
 
 However, inferring the type of `mapDispatch` this way will break if it is defined as an object and also refers to thunks.
 
-#### Inferring The Connected Props Automatically
+#### Inferindo as props conectadas automaticamente
 
 `connect` consists of two functions that are called sequentially. The first function accepts `mapState` and `mapDispatch` as arguments, and returns a second function. The second function accepts the component to be wrapped, and returns a new wrapper component that passes down the props from `mapState` and `mapDispatch`. Normally, both functions are called together, like `connect(mapState, mapDispatch)(MyComponent)`.
 
@@ -212,17 +213,17 @@ type PropsFromRedux = ConnectedProps<typeof connector>
 export default connector(MyComponent)
 ```
 
-### Recommendations
+### Recomendações
 
 The hooks API is generally simpler to use with static types. **If you're looking for the easiest solution for using static types with React-Redux, use the hooks API.**
 
 If you're using `connect`, **we recommend using the `ConnectedProps<T>` approach for inferring the props from Redux**, as that requires the fewest explicit type declarations.
 
-## Resources
+## Recursos
 
-For additional information, see these additional resources:
+Para obter informações adicionais, consulte estes recursos adicionais:
 
-- [Redux docs: Usage with TypeScript](https://redux.js.org/recipes/usage-with-typescript): Examples of how to declare types for actions, reducers, and the store
-- [Redux Toolkit docs: Advanced Tutorial](https://redux-toolkit.js.org/tutorials/advanced-tutorial): shows how to use RTK and the React-Redux hooks API with TypeScript
-- [React+TypeScript Cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet): a comprehensive guide to using React with TypeScript
-- [React + Redux in TypeScript Guide](https://github.com/piotrwitek/react-redux-typescript-guide): extensive information on patterns for using React and Redux with TypeScript
+- [Redux docs: Usage with TypeScript](https://redux.js.org/recipes/usage-with-typescript): Exemplos de como declarar os tipos para actions, reducers e a para a store
+- [Redux Toolkit docs: Advanced Tutorial](https://redux-toolkit.js.org/tutorials/advanced-tutorial): mostra como usar RTK e a API dos hooks React-Redux com TypeScript
+- [React+TypeScript Cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet): um guia abrangente para usar React com TypeScript
+- [React + Redux in TypeScript Guide](https://github.com/piotrwitek/react-redux-typescript-guide): informações abrangentes sobre os padrões de uso do React e Redux com TypeScript

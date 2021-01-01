@@ -17,24 +17,24 @@ Para ver como usar o React Redux na prática, mostraremos um exemplo passo a pas
 - 👆 [Fornecendo a store](#providing-the-store)
 - ✌️ [Conectando o Componente](#connecting-the-components)
 
-**Os componentes da IU do React**
+**Os componentes da UI do React**
 
 Implementamos nossos componentes React UI da seguinte maneira:
 
 - `TodoApp` é o componente de entrada para nosso aplicativo. Ele renderiza os header e os componentes `AddTodo`, `TodoList`, e `VisibilityFilters`.
-- `AddTodo` is the component that allows a user to input a todo item and add to the list upon clicking its “Add Todo” button:
-  - It uses a controlled input that sets state upon `onChange`.
-  - When the user clicks on the “Add Todo” button, it dispatches the action (that we will provide using React Redux) to add the todo to the store.
-- `TodoList` is the component that renders the list of todos:
-  - It renders the filtered list of todos when one of the `VisibilityFilters` is selected.
-- `Todo` is the component that renders a single todo item:
-  - It renders the todo content, and shows that a todo is completed by crossing it out.
-  - It dispatches the action to toggle the todo's complete status upon `onClick`.
-- `VisibilityFilters` renders a simple set of filters: _all_, _completed_, and _incomplete._ Clicking on each one of them filters the todos:
-  - It accepts an `activeFilter` prop from the parent that indicates which filter is currently selected by the user. An active filter is rendered with an underscore.
-  - It dispatches the `setFilter` action to update the selected filter.
-- `constants` holds the constants data for our app.
-- And finally `index` renders our app to the DOM.
+- `AddTodo` é o componente que permite ao usuário inserir um item de tarefa e adicioná-lo à lista ao clicar no botão “Add todo”:
+  - Ele usa uma input controlado que define o estado após `onChange`.
+  - Quando o usuário clica no botão “Add Todo”, ele despacha a action (que iremos fornecer usando React Redux) para adicionar a tarefa à store.
+- `TodoList` é o componente que renderiza a lista de tarefas:
+  - Ele renderiza a lista filtrada de todos quando um dos `VisibilityFilters`(filtros de visibilidade) é selecionado.
+- `Todo` é o componente que renderiza um único item de tarefa:
+  - Ele renderiza o conteúdo de tarefas e mostra que uma tarefa foi concluída fazendo um risco.
+  - Ele despacha a action para alternar o status completo da tarefa após `onClick`.
+- `VisibilityFilters` renderiza um conjunto simples de filtros: _all_, _completed_ e _incomplete._ Clicar em cada um deles filtra os todos:
+  - Aceita uma prop `activeFilter` do pai que indica qual filtro está selecionado atualmente pelo usuário. Um filtro ativo é renderizado com um sublinhado.
+  - Ele despacha a action `setFilter` para atualizar o filtro selecionado.
+- `constantes` contém os dados constantes para nosso aplicativo.
+- E, finalmente, `index` renderiza nosso aplicativo para o DOM.
 
 <br />
 
@@ -43,17 +43,20 @@ Implementamos nossos componentes React UI da seguinte maneira:
 A parte Redux do aplicativo foi configurada usando os [padrões recomendados na documentação do Redux](https://redux.js.org):
 
 - Store
-  - `todos`: A normalized reducer of todos. It contains a `byIds` map of all todos and a `allIds` that contains the list of all ids.
+  - `todos`: um redutor normalizado de tarefas. Ele contém um mapa `byIds` de todos as tarefas e um `allIds` que contém a lista de todos os ids.
   - `visibilityFilters`: A simple string `all`, `completed`, or `incomplete`.
 - Action Creators
   - `addTodo` creates the action to add todos. It takes a single string variable `content` and returns an `ADD_TODO` action with `payload` containing a self-incremented `id` and `content`
   - `toggleTodo` creates the action to toggle todos. It takes a single number variable `id` and returns a `TOGGLE_TODO` action with `payload` containing `id` only
   - `setFilter` creates the action to set the app’s active filter. It takes a single string variable `filter` and returns a `SET_FILTER` action with `payload` containing the `filter` itself
+  - `addTodo` cria a ação para adicionar todos. Ele pega uma única variável de string `content` e retorna uma ação` ADD_TODO` com `payload` contendo um` id` e um `content`    auto-incrementados
+  - `toggleTodo` cria a ação para alternar todos. Leva um único número variável `id` e retorna uma ação` TOGGLE_TODO` com `carga` contendo apenas` id`
+  - `setFilter` cria a ação para definir o filtro ativo do aplicativo. Ele pega uma única variável de string `filter` e retorna uma ação` SET_FILTER` com `payload` contendo o próprio` filter`
 - Reducers
-  - The `todos` reducer
-    - Appends the `id` to its `allIds` field and sets the todo within its `byIds` field upon receiving the `ADD_TODO` action
-    - Toggles the `completed` field for the todo upon receiving the `TOGGLE_TODO` action
-  - The `visibilityFilters` reducer sets its slice of store to the new filter it receives from the `SET_FILTER` action payload
+  - O reducer `todos`
+    - Acrescenta o `id` ao campo `allIds` e define a tarefa dentro do campo `byIds` ao receber a action `ADD_TODO`
+    - Alterna o campo `completed` para a tarefa ao receber a action `TOGGLE_TODO`
+  - O redutor `visibilityFilters` define sua fatia de armazenamento para o novo filtro que recebe da carga útil da action `SET_FILTER`
 - Action Types
   - Usamos um arquivo `actionTypes.js` para manter as constantes dos actions types a serem reutilizados
 - Selectors
@@ -96,45 +99,45 @@ Observe como nosso `<TodoApp />` agora está envolvido com o `<Provider />` com 
 
 ### Conectando os componentes
 
-React Redux fornece uma função `conectar` para você ler os valores da loja Redux (e reler os valores quando a loja for atualizada).
+React Redux fornece uma função `connect` para você ler os valores da loja Redux (e reler os valores quando a loja for atualizada).
 
-A função `conectar` leva dois argumentos, ambos opcionais:
+A função `connect` leva dois argumentos, ambos opcionais:
 
 - `mapStateToProps`: chamado toda vez que o estado da store muda. Ele recebe todo o estado da store e deve retornar um objeto de dados de que esse componente precisa.
 
-- `mapDispatchToProps`: this parameter can either be a function, or an object.
-  - If it’s a function, it will be called once on component creation. It will receive `dispatch` as an argument, and should return an object full of functions that use `dispatch` to dispatch actions.
-  - If it’s an object full of action creators, each action creator will be turned into a prop function that automatically dispatches its action when called. **Note**: We recommend using this “object shorthand” form.
+- `mapDispatchToProps`: este parâmetro pode ser uma função ou um objeto.
+  - Se for uma função, será chamada uma vez na criação do componente. Ele receberá `dispatch` como um argumento e deve retornar um objeto cheio de funções que usam `dispatch` para despachar ações.
+  - Se for um objeto cheio de action creators, cada action creator será transformado em uma função prop que despacha automaticamente sua action quando chamada. **Nota**: Recomendamos o uso deste forma de “abreviação de objeto”.
 
-Normally, you’ll call `connect` in this way:
+Normalmente, você chamará `connect` desta forma:
 
 ```js
 const mapStateToProps = (state, ownProps) => ({
-  // ... computed data from state and optionally ownProps
+  // ... dados calculados do estado e opcionalmente ownProps
 })
 
 const mapDispatchToProps = {
-  // ... normally is an object full of action creators
+  // ... normalmente é um objeto cheio de action creators
 }
 
-// `connect` returns a new function that accepts the component to wrap:
+// `connect` retorna uma nova função que aceita o componente para envolver:
 const connectToStore = connect(
   mapStateToProps,
   mapDispatchToProps
 )
-// and that function returns the connected, wrapper component:
+// e essa função retorna o componente envolvido conectado:
 const ConnectedComponent = connectToStore(Component)
 
-// We normally do both in one step, like this:
+// Normalmente fazemos ambos em uma etapa, assim:
 connect(
   mapStateToProps,
   mapDispatchToProps
 )(Component)
 ```
 
-Let’s work on `<AddTodo />` first. It needs to trigger changes to the `store` to add new todos. Therefore, it needs to be able to `dispatch` actions to the store. Here’s how we do it.
+Vamos trabalhar no `<AddTodo />` primeiro. Ele precisa acionar mudanças na `store` para adicionar novas tarefas. Portanto, ele precisa ser capaz de `despachar` ações para a store. É assim que fazemos.
 
-Our `addTodo` action creator looks like this:
+Nosso action creator `addTodo` se parece com isto:
 
 ```js
 // redux/actions.js
@@ -149,20 +152,20 @@ export const addTodo = content => ({
   }
 })
 
-// ... other actions
+// ... outras action
 ```
 
-By passing it to `connect`, our component receives it as a prop, and it will automatically dispatch the action when it’s called.
+Ao passá-lo para `connect`, nosso componente o recebe como prop e irá despachar automaticamente a action quando for chamado.
 
 ```js
 // components/AddTodo.js
 
-// ... other imports
+// ... outras importações
 import { connect } from 'react-redux'
 import { addTodo } from '../redux/actions'
 
 class AddTodo extends React.Component {
-  // ... component implementation
+  // ... implementação de componente
 }
 
 export default connect(
@@ -170,12 +173,11 @@ export default connect(
   { addTodo }
 )(AddTodo)
 ```
-
-Notice now that `<AddTodo />` is wrapped with a parent component called `<Connect(AddTodo) />`. Meanwhile, `<AddTodo />` now gains one prop: the `addTodo` action.
+Observe agora que `<AddTodo />` é envolvido com um componente pai chamado `<Connect(AddTodo) />`. Enquanto isso, `<AddTodo />` agora ganha uma prop: a action `addTodo`.
 
 ![](https://i.imgur.com/u6aXbwl.png)
 
-We also need to implement the `handleAddTodo` function to let it dispatch the `addTodo` action and reset the input
+Também precisamos implementar a função `handleAddTodo` para deixá-la despachar a action `addTodo` e redefinir a entrada
 
 ```jsx
 // components/AddTodo.js
@@ -188,10 +190,10 @@ class AddTodo extends React.Component {
   // ...
 
   handleAddTodo = () => {
-    // dispatches actions to add todo
+    // despacha uma action para adicionar uma tarefa
     this.props.addTodo(this.state.input)
 
-    // sets state back to empty string
+    // define o estado de volta para uma string vazia
     this.setState({ input: '' })
   }
 
@@ -215,8 +217,7 @@ export default connect(
   { addTodo }
 )(AddTodo)
 ```
-
-Now our `<AddTodo />` is connected to the store. When we add a todo it would dispatch an action to change the store. We are not seeing it in the app because the other components are not connected yet. If you have the Redux DevTools Extension hooked up, you should see the action being dispatched:
+Agora nosso `<AddTodo />` está conectado à store. Quando adicionamos uma tarefa, ele despacha uma action para alterar a store. Não o vemos no aplicativo porque os outros componentes ainda não estão conectados. Se você tiver a extensão Redux DevTools conectada, deverá ver a action sendo despachada:
 
 ![](https://i.imgur.com/kHvkqhI.png)
 
@@ -228,13 +229,17 @@ The `<TodoList />` component is responsible for rendering the list of todos. The
 
 Our `<Todo />` component takes the todo item as props. We have this information from the `byIds` field of the `todos`. However, we also need the information from the `allIds` field of the store indicating which todos and in what order they should be rendered. Our `mapStateToProps` function may look like this:
 
+The `<TodoList />` component is responsible for rendering the list of todos. Therefore, it needs to read data from the store. We enable it by calling `connect` with the `mapStateToProps` parameter, a function describing which part of the data we need from the store.
+
+Our `<Todo />` component takes the todo item as props. We have this information from the `byIds` field of the `todos`. However, we also need the information from the `allIds` field of the store indicating which todos and in what order they should be rendered. Our `mapStateToProps` function may look like this:
+
 ```js
 // components/TodoList.js
 
-// ...other imports
+// ...outras importações
 import { connect } from "react-redux";
 
-const TodoList = // ... UI component implementation
+const TodoList = // ... Implementação do componente de UI
 
 const mapStateToProps = state => {
   const { byIds, allIds } = state.todos || {};
@@ -268,47 +273,46 @@ export const getTodos = store =>
 ```js
 // components/TodoList.js
 
-// ...other imports
+// ...outras importações
 import { connect } from "react-redux";
 import { getTodos } from "../redux/selectors";
 
-const TodoList = // ... UI component implementation
+const TodoList = // ... Implementação do componente de UI
 
-export default connect(state => ({ todos: getTodos(state) }))(TodoList);
+export default connect(state => ({ todos: getTodos(state) }))(TodoList);****
 ```
+Recomendamos encapsular quaisquer pesquisas ou cálculos complexos de dados em funções selectors. Além disso, você pode otimizar ainda mais o desempenho usando [Reselect](https://github.com/reduxjs/reselect) para escrever seletores “memoizados” que podem pular trabalhos desnecessários. (Veja [a página Redux docs em Computing Derived Data](https://redux.js.org/recipes/computingderiveddata#sharing-selectors-across-multiple-components) e a postagem do blog [Idiomatic Redux: Usando selectors do Relesect para encapsulamento e desempenho]​​(https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors) para obter mais informações sobre por que e como usar as funções selectors.)
 
-We recommend encapsulating any complex lookups or computations of data in selector functions. In addition, you can further optimize the performance by using [Reselect](https://github.com/reduxjs/reselect) to write “memoized” selectors that can skip unnecessary work. (See [the Redux docs page on Computing Derived Data](https://redux.js.org/recipes/computingderiveddata#sharing-selectors-across-multiple-components) and the blog post [Idiomatic Redux: Using Reselect Selectors for Encapsulation and Performance](https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/) for more information on why and how to use selector functions.)
-
-Now that our `<TodoList />` is connected to the store. It should receive the list of todos, map over them, and pass each todo to the `<Todo />` component. `<Todo />` will in turn render them to the screen. Now try adding a todo. It should come up on our todo list!
+Agora que nosso `<TodoList />` está conectado à loja. Ele deve receber a lista de tarefas, mapear sobre eles e passar cada tarefa para o componente `<Todo />`. `<Todo />`, por sua vez, os renderizará na tela. Agora tente adicionar uma tarefa. Deve aparecer na nossa lista de tarefas!
 
 ![](https://i.imgur.com/N68xvrG.png)
 
-We will connect more components. Before we do this, let’s pause and learn a bit more about `connect` first.
+Vamos conectar mais componentes. Antes de fazermos isso, vamos fazer uma pausa e aprender um pouco mais sobre `connect` primeiro.
 
-### Common ways of calling `connect`
+### Formas comuns de chamar `connect`
 
-Depending on what kind of components you are working with, there are different ways of calling `connect` , with the most common ones summarized as below:
+Dependendo dos tipos de componentes com os quais você está trabalhando, existem diferentes maneiras de chamar `connect`, com as mais comuns resumidas a seguir:
 
-|                               | Do Not Subscribe to the Store                  | Subscribe to the Store                                    |
+|                               | Não subscreve a Store                          | Subscreve a Store                                         |
 | ----------------------------- | ---------------------------------------------- | --------------------------------------------------------- |
-| Do Not Inject Action Creators | `connect()(Component)`                         | `connect(mapStateToProps)(Component)`                     |
-| Inject Action Creators        | `connect(null, mapDispatchToProps)(Component)` | `connect(mapStateToProps, mapDispatchToProps)(Component)` |
+| Não injeta action creators    | `connect()(Component)`                         | `connect(mapStateToProps)(Component)`                     |
+| Injeta action creators        | `connect(null, mapDispatchToProps)(Component)` | `connect(mapStateToProps, mapDispatchToProps)(Component)` |
 
-#### Do not subscribe to the store and do not inject action creators
+#### Não subscreva a store e não injete action creators
 
-If you call `connect` without providing any arguments, your component will:
+Se você chamar `connect` sem fornecer nenhum argumento, seu componente irá:
 
-- _not_ re-render when the store changes
-- receive `props.dispatch` that you may use to manually dispatch action
+- _não_ vai re-renderizar novamente quando a loja mudar
+- receber `props.dispatch` que você pode usar para despachar manualmente a ação
 
 ```js
-// ... Component
-export default connect()(Component) // Component will receive `dispatch` (just like our <TodoList />!)
+// ... Componente
+export default connect()(Component) // O componente receberá `dispatch` (assim como nosso <TodoList />!)
 ```
 
 #### Subscribe to the store and do not inject action creators
 
-If you call `connect` with only `mapStateToProps`, your component will:
+Se você chamar `connect` apenas com `mapStateToProps`, seu componente irá:
 
 - subscribe to the values that `mapStateToProps` extracts from the store, and re-render only when those values have changed
 - receive `props.dispatch` that you may use to manually dispatch action
