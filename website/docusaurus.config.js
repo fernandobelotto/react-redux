@@ -36,8 +36,8 @@ const siteConfig = {
   title: 'React Redux', // Title for your website.
   onBrokenLinks: 'throw',
   tagline: 'Ligações oficiais do React para Redux',
-  url: 'react-redux/', // Your website URL
-  baseUrl: 'https://fernandobelotto.github.io/',
+  baseUrl: '/react-redux/', // Your website URL
+  url: 'https://fernandobelotto.github.io',
   // Used for publishing and more
   projectName: 'react-redux',
   organizationName: 'fernandobelotto',
@@ -122,8 +122,8 @@ const siteConfig = {
           className: 'github',
         },
         {
-          href: '/introduction/quick-start#help-and-discussion',
-          label: 'Preciso de ajuda?',
+          href: '/introduction/quick-start/#ajuda-e-discussão',
+          label: 'Precisa de ajuda?',
           position: 'right',
         },
       ],

@@ -7,38 +7,38 @@ sidebar_label: "Connect: Despachando Actions com mapDispatchToProps"
 
 # Connect: Despachando Actions com `mapDispatchToProps`
 
-As the second argument passed in to `connect`, `mapDispatchToProps` is used for dispatching actions to the store.
+Como o segundo argumento passado para `connect`,`mapDispatchToProps` é usado para despachar actions para a store.
 
-`dispatch` is a function of the Redux store. You call `store.dispatch` to dispatch an action.
-This is the only way to trigger a state change.
+`dispatch` é uma função da Redux store. Você chama `store.dispatch` para despachar uma ação.
+Essa é a única maneira de acionar uma mudança de estado.
 
-With React Redux, your components never access the store directly - `connect` does it for you.
-React Redux gives you two ways to let components dispatch actions:
+Com React Redux, seus componentes nunca acessam a store diretamente - `connect` faz isso por você.
+O React Redux oferece duas maneiras de permitir que os componentes despachem actions:
 
-- By default, a connected component receives `props.dispatch` and can dispatch actions itself.
-- `connect` can accept an argument called `mapDispatchToProps`, which lets you create functions that dispatch when called, and pass those functions as props to your component.
+- Por padrão, um componente conectado recebe `props.dispatch` e pode despachar actions por conta própria.
+- `connect` pode aceitar um argumento chamado` mapDispatchToProps`, que permite criar funções que despacham quando chamadas, e passar essas funções como suportes para o seu componente.
 
-The `mapDispatchToProps` functions are normally referred to as `mapDispatch` for short, but the actual variable name used can be whatever you want.
+As funções `mapDispatchToProps` são normalmente referidas como `mapDispatch` para abreviaçào, mas o nome da variável real usado pode ser o que você quiser.
 
-## Approaches for Dispatching
+## Abordagens para despacho
 
-### Default: `dispatch` as a Prop
+### Padrão: `dispatch` como um Prop
 
-If you don't specify the second argument to `connect()`, your component will receive `dispatch` by default. For example:
+Se você não especificar o segundo argumento para `connect()`, seu componente receberá `dispatch` por padrão. Por exemplo:
 
 ```js
 connect()(MyComponent)
-// which is equivalent with
+// que é equivalente a
 connect(
   null,
   null
 )(MyComponent)
 
-// or
-connect(mapStateToProps /** no second argument */)(MyComponent)
+// ou
+connect(mapStateToProps /** nenhum segundo argumento */)(MyComponent)
 ```
 
-Once you have connected your component in this way, your component receives `props.dispatch`. You may use it to dispatch actions to the store.
+Uma vez que você conectou seu componente desta forma, ele recebe `props.dispatch`. Você pode usá-lo para despachar actions para a store.
 
 ```js
 function Counter({ count, dispatch }) {
@@ -53,36 +53,35 @@ function Counter({ count, dispatch }) {
 }
 ```
 
-### Providing A `mapDispatchToProps` Parameter
+### Fornecendo um parâmetro `mapDispatchToProps`
 
-Providing a `mapDispatchToProps` allows you to specify which actions your component might need to dispatch. It lets you provide action dispatching functions as props. Therefore, instead of calling `props.dispatch(() => increment())`, you may call `props.increment()` directly. There are a few reasons why you might want to do that.
+Fornecer um `mapDispatchToProps` permite que você especifique quais actions seu componente pode precisar despachar. Ele permite que você forneça funções de despacho de actions como props. Portanto, em vez de chamar `props.dispatch (() => increment ())`, você pode chamar `props.increment ()` diretamente. Existem alguns motivos pelos quais você pode querer fazer isso.
 
-#### More Declarative
+#### Mais Declarativo
 
-First, encapsulating the dispatch logic into function makes the implementation more declarative.
-Dispatching an action and letting the Redux store handle the data flow is _how to_ implement the behavior, rather than _what_ it does.
+Primeiro, encapsular a lógica de despacho em função torna a implementação mais declarativa.
+Despachar uma action e deixar a Redux store lidar com o fluxo de dados é _como_ implementar o comportamento, ao invés de _o que_ ele faz.
 
-A good example would be dispatching an action when a button is clicked. Connecting the button directly probably doesn't make sense conceptually, and neither does having the button reference `dispatch`.
+Um bom exemplo seria despachar uma ação quando um botão é clicado. Conectar o botão diretamente provavelmente não faz sentido conceitualmente, e nem mesmo ter a referência de botão `dispatch`.
 
 ```js
-// button needs to be aware of "dispatch"
+// botão precisa ter conhecimento da "dispatch"
 <button onClick={() => dispatch({ type: "SOMETHING" })} />
 
-// button unaware of "dispatch",
+// botão sem conhecer "dispatch",
 <button onClick={doSomething} />
 ```
+Depois de envolver todos os nossos action creators com funções que despacham as actions, o componente está livre da necessidade de `dispatch`.
+Portanto, **se você definir seu próprio `mapDispatchToProps`, o componente conectado não receberá mais` dispatch`.**
 
-Once you've wrapped all our action creators with functions that dispatch the actions, the component is free of the need of `dispatch`.
-Therefore, **if you define your own `mapDispatchToProps`, the connected component will no longer receive `dispatch`.**
+#### Passar Lógica de Despacho de action para Componentes Filhos (Desconectados)
 
-#### Pass Down Action Dispatching Logic to ( Unconnected ) Child Components
-
-In addition, you also gain the ability to pass down the action dispatching functions to child ( likely unconnected ) components.
-This allows more components to dispatch actions, while keeping them "unaware" of Redux.
+Além disso, você também ganha a capacidade de passar as funções de despacho de actions para componentes filhos (provavelmente não conectados).
+Isso permite que mais componentes despachem acions, mantendo-os "inconscientes" do Redux.
 
 ```jsx
-// pass down toggleTodo to child component
-// making Todo able to dispatch the toggleTodo action
+// passa toggleTodo para o componente filho
+// tornando Todo capaz de despachar a action toggleTodo
 const TodoList = ({ todos, toggleTodo }) => (
   <div>
     {todos.map(todo => (
@@ -91,67 +90,65 @@ const TodoList = ({ todos, toggleTodo }) => (
   </div>
 )
 ```
+Isso é o que o `connect` do React Redux faz - ele encapsula a lógica de falar com a store do Redux e permite que você não se preocupe com isso. E é disso que você deve fazer uso total em sua implementação.
 
-This is what React Redux’s `connect` does — it encapsulates the logic of talking to the Redux store and lets you not worry about it. And this is what you should totally make full use of in your implementation.
+## Duas formas de `mapDispatchToProps`
 
-## Two Forms of `mapDispatchToProps`
+O parâmetro `mapDispatchToProps` pode ser de duas formas. Enquanto o forma de função permite mais personalização, a forma de objeto é mais fácil de usar.
 
-The `mapDispatchToProps` parameter can be of two forms. While the function form allows more customization, the object form is easy to use.
+- **Forma de função**: permite mais personalização, ganha acesso a `dispatch` e, opcionalmente,` ownProps`
+- **Forma abreviada de objeto**: Mais declarativo e fácil de usar
 
-- **Function form**: Allows more customization, gains access to `dispatch` and optionally `ownProps`
-- **Object shorthand form**: More declarative and easier to use
+> ⭐ **Nota:** Recomendamos usar a forma de objeto de `mapDispatchToProps`, a menos que você precise personalizar especificamente o comportamento da dispatch de alguma forma.
 
-> ⭐ **Note:** We recommend using the object form of `mapDispatchToProps` unless you specifically need to customize dispatching behavior in some way.
+## Definindo `mapDispatchToProps` como uma função
 
-## Defining `mapDispatchToProps` As A Function
+Definir `mapDispatchToProps` como uma função oferece mais flexibilidade para personalizar as funções que seu componente recebe e como elas despacham as actions.
+Você ganha acesso a `dispatch` e `ownProps`.
+Você pode usar esta oportunidade para escrever funções personalizadas para serem chamadas por seus componentes conectados.
 
-Defining `mapDispatchToProps` as a function gives you the most flexibility in customizing the functions your component receives, and how they dispatch actions.
-You gain access to `dispatch` and `ownProps`.
-You may use this chance to write customized functions to be called by your connected components.
-
-### Arguments
+### Argumentos
 
 1. **`dispatch`**
-2. **`ownProps` (optional)**
+2. **`ownProps` (opicional)**
 
 **`dispatch`**
 
-The `mapDispatchToProps` function will be called with `dispatch` as the first argument.
-You will normally make use of this by returning new functions that call `dispatch()` inside themselves, and either pass in a plain action object directly or pass in the result of an action creator.
+A função `mapDispatchToProps` será chamada com `dispatch` como o primeiro argumento.
+Você normalmente fará uso disso retornando novas funções que chamam `dispatch()` dentro de si mesmas, e passam um objecto de action simples diretamente ou passam o resultado de um action creator.
 
 ```js
 const mapDispatchToProps = dispatch => {
   return {
-    // dispatching plain actions
+    // despachando ações simples
     increment: () => dispatch({ type: 'INCREMENT' }),
     decrement: () => dispatch({ type: 'DECREMENT' }),
     reset: () => dispatch({ type: 'RESET' })
   }
 }
 ```
-
-You will also likely want to forward arguments to your action creators:
+Provavelmente, você também desejará encaminhar argumentos para seus action creators:
 
 ```js
 const mapDispatchToProps = dispatch => {
   return {
-    // explicitly forwarding arguments
+    // encaminhando argumentos explicitamente
     onClick: event => dispatch(trackClick(event)),
 
-    // implicitly forwarding arguments
+    // encaminhando argumentos implicitamente
     onReceiveImpressions: (...impressions) =>
       dispatch(trackImpressions(impressions))
   }
 }
 ```
 
-**`ownProps` ( optional )**
+**`ownProps` ( opicional )**
 
-If your `mapDispatchToProps` function is declared as taking two parameters, it will be called with `dispatch` as the first parameter and the `props` passed to the connected component as the second parameter, and will be re-invoked whenever the connected component receives new props.
+Se sua função `mapDispatchToProps` for declarada como tendo dois parâmetros, ela será chamada com `dispatch` como o primeiro parâmetro e `props` passado para o componente conectado como o segundo parâmetro, e será novamente invocado sempre que o componente conectado recebe novos props.
 
-This means, instead of re-binding new `props` to action dispatchers upon component re-rendering, you may do so when your component's `props` change.
+Isso significa que, em vez de vincular novamente os novos `props` aos despachantes de actions após a re-renderização do componente, você pode fazer isso quando os `props` do seu componente mudarem.
 
-**Binds on component mount**
+**Vincula-se à montagem do componente**
 
 ```js
 render() {
@@ -164,8 +161,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 ```
-
-**Binds on `props` change**
+**Vincula-se à mudança de `props`**
 
 ```js
 render() {
@@ -179,12 +175,12 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 }
 ```
 
-### Return
+### Retorna
 
-Your `mapDispatchToProps` function should return a plain object:
+Sua função `mapDispatchToProps` deve retornar um objeto simples:
 
-- Each field in the object will become a separate prop for your own component, and the value should normally be a function that dispatches an action when called.
-- If you use action creators ( as oppose to plain object actions ) inside `dispatch`, it is a convention to simply name the field key the same name as the action creator:
+- Cada campo no objeto se tornará uma prop separada para seu próprio componente e o valor normalmente deve ser uma função que despacha uma action quando chamada.
+- Se você usar action creators (em oposição a objetos de action simples) dentro de `dispatch`, é uma convenção simplesmente nomear a chave de campo com o mesmo nome do action creator:
 
 ```js
 const increment = () => ({ type: 'INCREMENT' })
@@ -193,15 +189,14 @@ const reset = () => ({ type: 'RESET' })
 
 const mapDispatchToProps = dispatch => {
   return {
-    // dispatching actions returned by action creators
+    // despachando ações retornadas pelos action creators
     increment: () => dispatch(increment()),
     decrement: () => dispatch(decrement()),
     reset: () => dispatch(reset())
   }
 }
 ```
-
-The return of the `mapDispatchToProps` function will be merged to your connected component as props. You may call them directly to dispatch its action.
+O retorno da função `mapDispatchToProps` será mesclado ao seu componente conectado como props. Você pode chamá-los diretamente para despachar sua action.
 
 ```js
 function Counter({ count, increment, decrement, reset }) {
@@ -215,21 +210,21 @@ function Counter({ count, increment, decrement, reset }) {
   )
 }
 ```
+(O código completo do exemplo do contador esta [neste CodeSandbox](https://codesandbox.io/s/yv6kqo1yw9))
 
-(Full code of the Counter example is [in this CodeSandbox](https://codesandbox.io/s/yv6kqo1yw9))
+### Definindo a função `mapDispatchToProps` com` bindActionCreators`
 
-### Defining the `mapDispatchToProps` Function with `bindActionCreators`
-
-Wrapping these functions by hand is tedious, so Redux provides a function to simplify that.
+Envolver essas funções manualmente é entediante, então Redux fornece uma função para simplificar isso.
 
 > `bindActionCreators` turns an object whose values are [action creators](https://redux.js.org/glossary#action-creator), into an object with the same keys, but with every action creator wrapped into a [`dispatch`](https://redux.js.org/api/store#dispatch) call so they may be invoked directly. See [Redux Docs on `bindActionCreators`](https://redux.js.org/api/bindactioncreators)
+> `bindActionCreators` transforma um objeto cujos valores são [action creators](https://redux.js.org/glossary#action-creator), em um objeto com as mesmas chaves, mas com cada action creator envolvido em um [`dispatch`](https://redux.js.org/api/store#dispatch) chamada para que eles possam ser chamados diretamente. Veja [`bindActionCreators` no Docs do Redux](https://redux.js.org/api/bindactioncreators)
 
-`bindActionCreators` accepts two parameters:
+`bindActionCreators` aceita dois parâmetros:
 
-1. A **`function`** (an action creator) or an **`object`** (each field an action creator)
+1. Uma **`função`** (um action creator) ou um **`objeto`** (cada campo um action creator)
 2. `dispatch`
 
-The wrapper functions generated by `bindActionCreators` will automatically forward all of their arguments, so you don't need to do that by hand.
+As funções wrapper geradas por `bindActionCreators` irão encaminhar automaticamente todos os seus argumentos, então você não precisa fazer isso manualmente.
 
 ```js
 import { bindActionCreators } from 'redux'
@@ -238,16 +233,16 @@ const increment = () => ({ type: 'INCREMENT' })
 const decrement = () => ({ type: 'DECREMENT' })
 const reset = () => ({ type: 'RESET' })
 
-// binding an action creator
-// returns (...args) => dispatch(increment(...args))
+// liga um action creator
+// retorna (...args) => dispatch(increment(...args))
 const boundIncrement = bindActionCreators(increment, dispatch)
 
-// binding an object full of action creators
+// liga um objeto cheio de action creators
 const boundActionCreators = bindActionCreators(
   { increment, decrement, reset },
   dispatch
 )
-// returns
+// retorna
 // {
 //   increment: (...args) => dispatch(increment(...args)),
 //   decrement: (...args) => dispatch(decrement(...args)),
@@ -255,7 +250,7 @@ const boundActionCreators = bindActionCreators(
 // }
 ```
 
-To use `bindActionCreators` in our `mapDispatchToProps` function:
+Para usar `bindActionCreators` em nossa função` mapDispatchToProps`:
 
 ```js
 import { bindActionCreators } from 'redux'
@@ -265,16 +260,15 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ increment, decrement, reset }, dispatch)
 }
 
-// component receives props.increment, props.decrement, props.reset
+// componente recebe props.increment, props.decrement, props.reset
 connect(
   null,
   mapDispatchToProps
 )(Counter)
 ```
+### Injetando `dispatch` manualmente
 
-### Manually Injecting `dispatch`
-
-If the `mapDispatchToProps` argument is supplied, the component will no longer receive the default `dispatch`. You may bring it back by adding it manually to the return of your `mapDispatchToProps`, although most of the time you shouldn’t need to do this:
+Se o argumento `mapDispatchToProps` for fornecido, o componente não receberá mais o` dispatch` padrão. Você pode trazê-lo de volta adicionando-o manualmente ao retorno de seu `mapDispatchToProps`, embora na maioria das vezes você não precise fazer isso:
 
 ```js
 import { bindActionCreators } from 'redux'
@@ -288,25 +282,25 @@ function mapDispatchToProps(dispatch) {
 }
 ```
 
-## Defining `mapDispatchToProps` As An Object
+## Definindo `mapDispatchToProps` como um objeto
 
-You’ve seen that the setup for dispatching Redux actions in a React component follows a very similar process: define an action creator, wrap it in another function that looks like `(…args) => dispatch(actionCreator(…args))`, and pass that wrapper function as a prop to your component.
+Você viu que a configuração para despachar action em um componente React segue um processo muito semelhante: definir um action creator, envolvê-lo em outra função que se pareça com `(…args) => dispatch(actionCreator(…args))` e passe essa função como uma prop para seu componente.
 
-Because this is so common, `connect` supports an “object shorthand” form for the `mapDispatchToProps` argument: if you pass an object full of action creators instead of a function, `connect` will automatically call `bindActionCreators` for you internally.
+Por isso ser tão comum, `connect` suporta uma forma “abreviada de objeto”para o argumento `mapDispatchToProps`: se você passar um objeto cheio de action creators em vez de uma função, `connect` irá automaticamente chamar `bindActionCreators` para você internamente.
 
-**We recommend always using the “object shorthand” form of `mapDispatchToProps`, unless you have a specific reason to customize the dispatching behavior.**
+**Recomendamos sempre usar a forma “abreviada de objeto” de `mapDispatchToProps`, a menos que você tenha um motivo específico para personalizar o comportamento de despacho.**
 
-Note that:
+Observe que:
 
-- Each field of the `mapDispatchToProps` object is assumed to be an action creator
-- Your component will no longer receive `dispatch` as a prop
+- Cada campo do objeto `mapDispatchToProps` é considerado um action creator
+- Seu componente não receberá mais `dispatch` como prop
 
 ```js
-// React Redux does this for you automatically:
+// React Redux faz isso para você automaticamente:
 dispatch => bindActionCreators(mapDispatchToProps, dispatch)
 ```
 
-Therefore, our `mapDispatchToProps` can simply be:
+Portanto, nosso `mapDispatchToProps` pode ser simplesmente:
 
 ```js
 const mapDispatchToProps = {
@@ -315,8 +309,7 @@ const mapDispatchToProps = {
   reset
 }
 ```
-
-Since the actual name of the variable is up to you, you might want to give it a name like `actionCreators`, or even define the object inline in the call to `connect`:
+Uma vez que o nome real da variável depende de você, você pode querer dar a ela um nome como `actionCreators`, ou mesmo definir o objeto inline na chamada para` connect`:
 
 ```js
 import {increment, decrement, reset} from "./counterActions";
@@ -329,41 +322,39 @@ const actionCreators = {
 
 export default connect(mapState, actionCreators)(Counter);
 
-// or
+// ou
 export default connect(
   mapState,
   { increment, decrement, reset }
 )(Counter);
 ```
+## Problemas comuns
 
-## Common Problems
+### Por que meu componente não está recebendo `dispatch`?
 
-### Why is my component not receiving `dispatch`?
-
-Also known as
+Também conhecido como
 
 ```js
 TypeError: this.props.dispatch is not a function
 ```
+Este é um erro comum que acontece quando você tenta chamar `this.props.dispatch`, mas `dispatch` não é injetado em seu componente.
 
-This is a common error that happens when you try to call `this.props.dispatch` , but `dispatch` is not injected to your component.
+`dispatch` é injetado em seu componente _somente_ quando:
 
-`dispatch` is injected to your component _only_ when:
+**1. Você não fornece `mapDispatchToProps`**
 
-**1. You do not provide `mapDispatchToProps`**
+O `mapDispatchToProps` padrão é simplesmente `dispatch => ({dispatch}) `. Se você não fornecer `mapDispatchToProps`, `dispatch` será fornecido conforme mencionado acima.
 
-The default `mapDispatchToProps` is simply `dispatch => ({ dispatch })`. If you do not provide `mapDispatchToProps`, `dispatch` will be provided as mentioned above.
-
-In another words, if you do:
+Em outras palavras, se você:
 
 ```js
-// component receives `dispatch`
-connect(mapStateToProps /** no second argument*/)(Component)
+// componente recebe `dispatch`
+connect(mapStateToProps /** nenhum segundo argumento*/)(Component)
 ```
 
-**2. Your customized `mapDispatchToProps` function return specifically contains `dispatch`**
+**2. Seu retorno de função `mapDispatchToProps` personalizado contém especificamente `dispatch`**
 
-You may bring back `dispatch` by providing your customized `mapDispatchToProps` function:
+Você pode trazer de volta `dispatch` fornecendo sua função `mapDispatchToProps` personalizada:
 
 ```js
 const mapDispatchToProps = dispatch => {
@@ -375,8 +366,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 ```
-
-Or alternatively, with `bindActionCreators`:
+Ou, alternativamente, com `bindActionCreators`:
 
 ```js
 import { bindActionCreators } from 'redux'
@@ -389,13 +379,13 @@ function mapDispatchToProps(dispatch) {
 }
 ```
 
-See [this error in action in Redux’s GitHub issue #255](https://github.com/reduxjs/react-redux/issues/255).
+Veja [esse erro em ação no issue #255 no Github do Redux’s GitHub](https://github.com/reduxjs/react-redux/issues/255).
 
-There are discussions regarding whether to provide `dispatch` to your components when you specify `mapDispatchToProps` ( [Dan Abramov’s response to #255](https://github.com/reduxjs/react-redux/issues/255#issuecomment-172089874) ). You may read them for further understanding of the current implementation intention.
+Há discussões sobre se fornecer `dispatch` para seus componentes quando você especifica `mapDispatchToProps` ( [Dan Abramov’s response to #255](https://github.com/reduxjs/react-redux/issues/255#issuecomment-172089874) ). Você pode lê-los para uma melhor compreensão da intenção de implementação atual.
 
-### Can I `mapDispatchToProps` without `mapStateToProps` in Redux?
+### Posso `mapDispatchToProps` sem `mapStateToProps` no Redux?
 
-Yes. You can skip the first parameter by passing `undefined` or `null`. Your component will not subscribe to the store, and will still receive the dispatch props defined by `mapDispatchToProps`.
+Sim. Você pode pular o primeiro parâmetro passando `undefined` ou` null`. Seu componente não assinará a store, e ainda receberá os props de despacho definidos por `mapDispatchToProps`.
 
 ```js
 connect(
@@ -404,21 +394,21 @@ connect(
 )(MyComponent)
 ```
 
-### Can I call `store.dispatch`?
+### Posso chamar `store.dispatch`?
 
-It's an anti-pattern to interact with the store directly in a React component, whether it's an explicit import of the store or accessing it via context (see the [Redux FAQ entry on store setup](https://redux.js.org/faq/storesetup#can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself) for more details). Let React Redux’s `connect` handle the access to the store, and use the `dispatch` it passes to the props to dispatch actions.
+É fora de padrão interagir com a store diretamente em um componente React, seja uma importação explícita da store ou acessando-a via contexto ( consulte [Redux FAQ entry on store setup](https://redux.js.org/faq/storesetup#can-or-should-i-create-multiple-stores-can-i-import-my-store-directly-and-use-it-in-components-myself) para obter mais detalhes). Deixe o `connect` do React Redux lidar com o acesso à store e usae o `dispatch` que ele passa como props para despachar as actions.
 
-## Links and References
+## Links e referências
 
-**Tutorials**
+**Tutoriais**
 
 - [You Might Not Need the `mapDispatchToProps` Function](https://daveceddia.com/redux-mapdispatchtoprops-object-form/)
 
-**Related Docs**
+**Documentos relacionados**
 
 - [Redux Doc on `bindActionCreators`](https://redux.js.org/api/bindactioncreators)
 
-**Q&A**
+**Perguntas e Respostas**
 
 - [How to get simple dispatch from `this.props` using connect with Redux?](https://stackoverflow.com/questions/34458261/how-to-get-simple-dispatch-from-this-props-using-connect-w-redux)
 - [`this.props.dispatch` is `undefined` if using `mapDispatchToProps`](https://github.com/reduxjs/react-redux/issues/255)
