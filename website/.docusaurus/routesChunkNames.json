@@ -1,335 +1,313 @@
 {
   "https://fernandobelotto.github.io/-fab": {
-    "component": "component---site-src-pages-index-jsece-a18",
-    "config": "config---5-e-9-4f3"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug-6ab": {
-    "component": "component---theme-debug-config-23-a-2ff"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug/config-039": {
-    "component": "component---theme-debug-config-23-a-2ff"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug/content-bf9": {
-    "component": "component---theme-debug-contentba-8-ce7",
-    "allContent": "allContent---docusaurus-debug-content-4-c-9-f03"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug/globalData-e8c": {
-    "component": "component---theme-debug-global-dataede-0fa"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug/metadata-c94": {
-    "component": "component---theme-debug-site-metadata-68-e-3d4"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug/registry-87e": {
-    "component": "component---theme-debug-registry-679-501"
-  },
-  "https://fernandobelotto.github.io/__docusaurus/debug/routes-7b1": {
-    "component": "component---theme-debug-routes-946-699"
+    "component": "ece76bd1",
+    "config": "5e9f5e1a"
   },
   "https://fernandobelotto.github.io/search-aae": {
-    "component": "component---c-traducoes-react-redux-website-node-modules-docusaurus-theme-search-algolia-src-theme-search-page-index-js-61-e-672"
+    "component": "61e7ac06"
   },
   "https://fernandobelotto.github.io/5.x-d89": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---5-xe-19-fda"
+    "component": "1be78505",
+    "versionMetadata": "e19d6212"
   },
   "https://fernandobelotto.github.io/5.x/api/api-999": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-api-apic-35-317"
+    "component": "17896441",
+    "content": "c359b82c"
   },
   "https://fernandobelotto.github.io/5.x/api/connect-8be": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-api-connectbb-6-ade"
+    "component": "17896441",
+    "content": "bb60ce8c"
   },
   "https://fernandobelotto.github.io/5.x/api/connect-advanced-0bb": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-api-connect-advanced-6-ab-98d"
+    "component": "17896441",
+    "content": "6ab80f6e"
   },
   "https://fernandobelotto.github.io/5.x/api/provider-8b3": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-api-provider-053-443"
+    "component": "17896441",
+    "content": "0530c974"
   },
   "https://fernandobelotto.github.io/5.x/introduction/basic-tutorial-78d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-introduction-basic-tutorial-0-c-7-d6e"
+    "component": "17896441",
+    "content": "0c73656a"
   },
   "https://fernandobelotto.github.io/5.x/introduction/quick-start-113": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-introduction-quick-start-584-567"
+    "component": "17896441",
+    "content": "584a6e10"
   },
   "https://fernandobelotto.github.io/5.x/introduction/why-use-react-redux-58d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-introduction-why-use-react-redux-1-d-6-441"
+    "component": "17896441",
+    "content": "1d6050a9"
   },
   "https://fernandobelotto.github.io/5.x/troubleshooting-67f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-troubleshootinge-99-323"
+    "component": "17896441",
+    "content": "e9943303"
   },
   "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapdispatch-fea": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-using-react-redux-connect-mapdispatch-53-b-6eb"
+    "component": "17896441",
+    "content": "53bf3bcb"
   },
   "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapstate-39f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---5-x-using-react-redux-connect-mapstate-189-d3b"
+    "component": "17896441",
+    "content": "189ddcd7"
   },
   "https://fernandobelotto.github.io/6.x-8e0": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---6-xf-77-096"
+    "component": "1be78505",
+    "versionMetadata": "f77c358a"
   },
   "https://fernandobelotto.github.io/6.x/api/connect-c18": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-api-connectd-71-2ac"
+    "component": "17896441",
+    "content": "d7153793"
   },
   "https://fernandobelotto.github.io/6.x/api/connect-advanced-7ea": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-api-connect-advanced-5-cf-d41"
+    "component": "17896441",
+    "content": "5cfc9db2"
   },
   "https://fernandobelotto.github.io/6.x/api/provider-bbe": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-api-provider-66-e-b0e"
+    "component": "17896441",
+    "content": "66e367d0"
   },
   "https://fernandobelotto.github.io/6.x/introduction/basic-tutorial-27c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-introduction-basic-tutorial-8-ad-8da"
+    "component": "17896441",
+    "content": "8ad12e34"
   },
   "https://fernandobelotto.github.io/6.x/introduction/quick-start-bb1": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-introduction-quick-start-5-f-9-c9e"
+    "component": "17896441",
+    "content": "5f9de295"
   },
   "https://fernandobelotto.github.io/6.x/introduction/why-use-react-redux-6e7": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-introduction-why-use-react-redux-183-464"
+    "component": "17896441",
+    "content": "183927e1"
   },
   "https://fernandobelotto.github.io/6.x/troubleshooting-1bf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-troubleshootingdfb-38b"
+    "component": "17896441",
+    "content": "dfbe0b34"
   },
   "https://fernandobelotto.github.io/6.x/using-react-redux/accessing-store-6be": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-using-react-redux-accessing-store-9-df-b6b"
+    "component": "17896441",
+    "content": "9dfd1e34"
   },
   "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapdispatch-71a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-using-react-redux-connect-mapdispatch-63-c-81f"
+    "component": "17896441",
+    "content": "63c828fd"
   },
   "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapstate-5e9": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---6-x-using-react-redux-connect-mapstate-62-a-95b"
+    "component": "17896441",
+    "content": "62a362bb"
   },
   "https://fernandobelotto.github.io/7.0-e8c": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---7-021-a-259"
+    "component": "1be78505",
+    "versionMetadata": "21a3e8a3"
   },
   "https://fernandobelotto.github.io/7.0/api/batch-5f2": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-api-batch-922-087"
+    "component": "17896441",
+    "content": "922f53ad"
   },
   "https://fernandobelotto.github.io/7.0/api/connect-ed4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-api-connectdd-5-fba"
+    "component": "17896441",
+    "content": "dd524266"
   },
   "https://fernandobelotto.github.io/7.0/api/connect-advanced-26b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-api-connect-advanceded-4-0a8"
+    "component": "17896441",
+    "content": "ed494388"
   },
   "https://fernandobelotto.github.io/7.0/api/provider-859": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-api-provider-911-d4b"
+    "component": "17896441",
+    "content": "91148d34"
   },
   "https://fernandobelotto.github.io/7.0/introduction/basic-tutorial-f82": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-introduction-basic-tutorial-45-b-d60"
+    "component": "17896441",
+    "content": "45b1f398"
   },
   "https://fernandobelotto.github.io/7.0/introduction/quick-start-0da": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-introduction-quick-startdaa-f20"
+    "component": "17896441",
+    "content": "daabb285"
   },
   "https://fernandobelotto.github.io/7.0/introduction/why-use-react-redux-b05": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-introduction-why-use-react-reduxc-97-877"
+    "component": "17896441",
+    "content": "c9753269"
   },
   "https://fernandobelotto.github.io/7.0/troubleshooting-d5b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-troubleshooting-775-8b6"
+    "component": "17896441",
+    "content": "7754634e"
   },
   "https://fernandobelotto.github.io/7.0/using-react-redux/accessing-store-576": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-using-react-redux-accessing-store-282-0a8"
+    "component": "17896441",
+    "content": "28289c85"
   },
   "https://fernandobelotto.github.io/7.0/using-react-redux/connect-mapdispatch-ea6": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-using-react-redux-connect-mapdispatch-8-c-2-0c3"
+    "component": "17896441",
+    "content": "8c2dbcaa"
   },
   "https://fernandobelotto.github.io/7.0/using-react-redux/connect-mapstate-393": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-0-using-react-redux-connect-mapstate-166-7c3"
+    "component": "17896441",
+    "content": "166eeaf2"
   },
   "https://fernandobelotto.github.io/7.1-eac": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---7-1-aa-0-a6e"
+    "component": "1be78505",
+    "versionMetadata": "aa0e5f53"
   },
   "https://fernandobelotto.github.io/7.1/api/batch-b1f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-api-batch-6-ef-f32"
+    "component": "17896441",
+    "content": "6ef70181"
   },
   "https://fernandobelotto.github.io/7.1/api/connect-0e7": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-api-connect-754-e0e"
+    "component": "17896441",
+    "content": "75436813"
   },
   "https://fernandobelotto.github.io/7.1/api/connect-advanced-c23": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-api-connect-advanced-345-f83"
+    "component": "17896441",
+    "content": "34590e5e"
   },
   "https://fernandobelotto.github.io/7.1/api/hooks-78f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-api-hooksb-8-b-a00"
+    "component": "17896441",
+    "content": "b8b54fd0"
   },
   "https://fernandobelotto.github.io/7.1/api/provider-3e8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-api-provider-623-db6"
+    "component": "17896441",
+    "content": "623a20b9"
   },
   "https://fernandobelotto.github.io/7.1/introduction/basic-tutorial-fb4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-introduction-basic-tutorial-107-da4"
+    "component": "17896441",
+    "content": "10747bbd"
   },
   "https://fernandobelotto.github.io/7.1/introduction/quick-start-e3e": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-introduction-quick-start-1-e-1-701"
+    "component": "17896441",
+    "content": "1e15b86b"
   },
   "https://fernandobelotto.github.io/7.1/introduction/why-use-react-redux-99c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-introduction-why-use-react-reduxed-9-500"
+    "component": "17896441",
+    "content": "ed90ac53"
   },
   "https://fernandobelotto.github.io/7.1/troubleshooting-d3b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-troubleshooting-853-9b0"
+    "component": "17896441",
+    "content": "85361595"
   },
   "https://fernandobelotto.github.io/7.1/using-react-redux/accessing-store-d7c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-using-react-redux-accessing-store-91-b-e75"
+    "component": "17896441",
+    "content": "91b2d293"
   },
   "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapdispatch-e3b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-using-react-redux-connect-mapdispatch-5-e-9-1f5"
+    "component": "17896441",
+    "content": "5e92047c"
   },
   "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapstate-ba7": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-using-react-redux-connect-mapstate-48-c-1a3"
+    "component": "17896441",
+    "content": "48cfed6f"
   },
   "https://fernandobelotto.github.io/7.1/using-react-redux/static-typing-a72": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---7-1-using-react-redux-static-typing-9-dd-349"
+    "component": "17896441",
+    "content": "9dd3c4e5"
   },
   "https://fernandobelotto.github.io/next-bc8": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---nextf-97-bb6"
+    "component": "1be78505",
+    "versionMetadata": "f976f453"
   },
   "https://fernandobelotto.github.io/next/api/batch-d04": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-api-batch-2-aa-f3e"
+    "component": "17896441",
+    "content": "2aab7854"
   },
   "https://fernandobelotto.github.io/next/api/connect-ebb": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-api-connectfb-3-78b"
+    "component": "17896441",
+    "content": "fb37f5f7"
   },
   "https://fernandobelotto.github.io/next/api/connect-advanced-f37": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-api-connect-advancedb-3-d-afe"
+    "component": "17896441",
+    "content": "b3d8c260"
   },
   "https://fernandobelotto.github.io/next/api/hooks-5ae": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-api-hooks-770-889"
+    "component": "17896441",
+    "content": "770529cf"
   },
   "https://fernandobelotto.github.io/next/api/provider-88a": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-api-providere-18-b3d"
+    "component": "17896441",
+    "content": "e18f2882"
   },
   "https://fernandobelotto.github.io/next/introduction/basic-tutorial-7d6": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-introduction-basic-tutorialaec-a67"
+    "component": "17896441",
+    "content": "aec6cc04"
   },
   "https://fernandobelotto.github.io/next/introduction/quick-start-96d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-introduction-quick-starteaf-68e"
+    "component": "17896441",
+    "content": "eafd663b"
   },
   "https://fernandobelotto.github.io/next/introduction/why-use-react-redux-47b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-introduction-why-use-react-reduxfb-7-6d1"
+    "component": "17896441",
+    "content": "fb735ecc"
   },
   "https://fernandobelotto.github.io/next/troubleshooting-43f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-troubleshooting-2-ac-68e"
+    "component": "17896441",
+    "content": "2ac59c4f"
   },
   "https://fernandobelotto.github.io/next/using-react-redux/accessing-store-3e4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-using-react-redux-accessing-storef-25-5ff"
+    "component": "17896441",
+    "content": "f2548dfc"
   },
   "https://fernandobelotto.github.io/next/using-react-redux/connect-mapdispatch-da8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-using-react-redux-connect-mapdispatch-318-41f"
+    "component": "17896441",
+    "content": "3184d25a"
   },
   "https://fernandobelotto.github.io/next/using-react-redux/connect-mapstate-9e2": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-using-react-redux-connect-mapstateaf-7-cba"
+    "component": "17896441",
+    "content": "af7586ba"
   },
   "https://fernandobelotto.github.io/next/using-react-redux/static-typing-089": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---next-using-react-redux-static-typingccb-c1a"
+    "component": "17896441",
+    "content": "ccb819f1"
   },
   "https://fernandobelotto.github.io/-511": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---e-73-20d"
+    "component": "1be78505",
+    "versionMetadata": "e739592e"
   },
   "https://fernandobelotto.github.io/api/batch-bdf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---api-batchbed-82f"
+    "component": "17896441",
+    "content": "bed515a2"
   },
   "https://fernandobelotto.github.io/api/connect-0e4": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---api-connectff-3-610"
+    "component": "17896441",
+    "content": "ff38d382"
   },
   "https://fernandobelotto.github.io/api/connect-advanced-508": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---api-connect-advanced-4-ac-686"
+    "component": "17896441",
+    "content": "4acb9a30"
   },
   "https://fernandobelotto.github.io/api/hooks-ad6": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---api-hooksb-19-2d9"
+    "component": "17896441",
+    "content": "b19f01f6"
   },
   "https://fernandobelotto.github.io/api/provider-d34": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---api-providerf-95-685"
+    "component": "17896441",
+    "content": "f95a4bf5"
   },
   "https://fernandobelotto.github.io/introduction/basic-tutorial-61f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---introduction-basic-tutorial-69-e-6b3"
+    "component": "17896441",
+    "content": "69ee0b59"
   },
   "https://fernandobelotto.github.io/introduction/quick-start-1e9": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---introduction-quick-start-1-d-3-bf0"
+    "component": "17896441",
+    "content": "1d30a9e5"
   },
   "https://fernandobelotto.github.io/introduction/why-use-react-redux-b6d": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---introduction-why-use-react-reduxf-5-e-953"
+    "component": "17896441",
+    "content": "f5e811d0"
   },
   "https://fernandobelotto.github.io/troubleshooting-9c8": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---troubleshooting-39-e-bfc"
+    "component": "17896441",
+    "content": "39e72fd1"
   },
   "https://fernandobelotto.github.io/using-react-redux/accessing-store-6d5": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---using-react-redux-accessing-store-4-ab-776"
+    "component": "17896441",
+    "content": "4abb12b3"
   },
   "https://fernandobelotto.github.io/using-react-redux/connect-mapdispatch-99b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---using-react-redux-connect-mapdispatch-924-a84"
+    "component": "17896441",
+    "content": "924fc50a"
   },
   "https://fernandobelotto.github.io/using-react-redux/connect-mapstate-4a7": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---using-react-redux-connect-mapstate-381-564"
+    "component": "17896441",
+    "content": "38154516"
   },
   "https://fernandobelotto.github.io/using-react-redux/static-typing-b71": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---using-react-redux-static-typing-438-ada"
+    "component": "17896441",
+    "content": "43868816"
   }
 }

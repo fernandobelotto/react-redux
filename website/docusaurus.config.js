@@ -36,7 +36,7 @@ const siteConfig = {
   title: 'React Redux', // Title for your website.
   onBrokenLinks: 'throw',
   tagline: 'Ligações oficiais do React para Redux',
-  url: '/react-redux/', // Your website URL
+  url: 'react-redux/', // Your website URL
   baseUrl: 'https://fernandobelotto.github.io/',
   // Used for publishing and more
   projectName: 'react-redux',

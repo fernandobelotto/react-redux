@@ -8,41 +8,6 @@ export default [
   exact: true,
 },
 {
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug','6ab'),
-  exact: true,
-},
-{
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug/config',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug/config','039'),
-  exact: true,
-},
-{
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug/content',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug/content','bf9'),
-  exact: true,
-},
-{
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug/globalData',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug/globalData','e8c'),
-  exact: true,
-},
-{
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug/metadata',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug/metadata','c94'),
-  exact: true,
-},
-{
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug/registry',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug/registry','87e'),
-  exact: true,
-},
-{
-  path: 'https://fernandobelotto.github.io/__docusaurus/debug/routes',
-  component: ComponentCreator('https://fernandobelotto.github.io/__docusaurus/debug/routes','7b1'),
-  exact: true,
-},
-{
   path: 'https://fernandobelotto.github.io/search',
   component: ComponentCreator('https://fernandobelotto.github.io/search','aae'),
   exact: true,
