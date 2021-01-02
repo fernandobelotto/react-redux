@@ -9,7 +9,7 @@ sidebar_label: Por que usar React Redux?
 
 O próprio Redux é uma biblioteca independente que pode ser usada com qualquer estrutura ou camada de UI, incluindo React, Angular, Vue, Ember e vanilla JS. Embora Redux e React sejam comumente usados ​​juntos, eles são independentes um do outro.
 
-Se você estiver usando Redux com qualquer tipo de estrutura de UI, normalmente usará uma biblioteca de "ligação de UI" para amarrar Redux com sua estrutura de UI, em vez de interagir diretamente com a loja a partir de seu código de UI.
+Se você estiver usando Redux com qualquer tipo de estrutura de UI, normalmente usará uma biblioteca de "ligação de UI" para amarrar Redux com sua estrutura de UI, em vez de interagir diretamente com a store a partir de seu código de UI.
 
 **React Redux é a biblioteca oficial de ligação do React com o Redux**. Se estiver usando Redux e React juntos, você também deve usar React Redux para conectar essas duas bibliotecas.
 
@@ -37,9 +37,9 @@ Usar Redux com _qualquer_ camada de IU requer [o mesmo conjunto consistente de e
 
 Embora seja possível escrever essa lógica à mão, isso se tornaria muito repetitivo. Além disso, otimizar o desempenho da IU exigiria uma lógica complicada.
 
-O processo de assinatura da loja, verificação de dados atualizados e ativação de uma nova renderização pode ser mais genérico e reutilizável. **Uma biblioteca de ligação de IU como a React Redux lida com a lógica de interação coma a store, então você não precisa escrever esse código sozinho.**
+O processo de assinatura da store, verificação de dados atualizados e ativação de uma nova renderização pode ser mais genérico e reutilizável. **Uma biblioteca de ligação de IU como a React Redux lida com a lógica de interação coma a store, então você não precisa escrever esse código sozinho.**
 
-> **Nota**: Para uma visão mais aprofundada de como React Redux funciona internamente e como ele lida com a interação com a loja para você, consulte **[Redux idiomático: a história e a implementação do React Redux](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)**.
+> **Nota**: Para uma visão mais aprofundada de como React Redux funciona internamente e como ele lida com a interação com a store para você, consulte **[Redux idiomático: a história e a implementação do React Redux](https://blog.isquaredsoftware.com/2018/11/react-redux-history-implementation/)**.
 
 ## Razões para usar o React Redux
 

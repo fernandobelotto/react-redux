@@ -71,8 +71,8 @@ O seguinte erro de tempo de execução ocorre quando o React Redux não encontra
 
 ## Multiplas Stores
 
-[Redux foi projetado para usar uma única loja](https://redux.js.org/api/store#a-note-for-flux-users).
-No entanto, se você está em uma posição inevitável de precisar usar várias lojas, com a v6, você pode fazer isso fornecendo (vários) contexts personalizados.
+[Redux foi projetado para usar uma única store](https://redux.js.org/api/store#a-note-for-flux-users).
+No entanto, se você está em uma posição inevitável de precisar usar várias stores, com a v6, você pode fazer isso fornecendo (vários) contexts personalizados.
 Isso também fornece um isolamento natural das stores, pois elas vivem em instâncias de contexto separadas.
 
 ```js

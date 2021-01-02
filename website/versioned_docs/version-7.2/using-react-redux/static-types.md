@@ -149,7 +149,7 @@ No entanto, inferir o tipo de `mapDispatch` dessa forma será interrompido se el
 
 `conectar` consiste em duas funções que são chamadas sequencialmente. A primeira função aceita `mapState` e` mapDispatch` como argumentos e retorna uma segunda função. A segunda função aceita o componente a ser envolvido e retorna um novo componente envolvedor que passa os props de `mapState` e` mapDispatch`. Normalmente, as duas funções são chamadas juntas, como `connect(mapState, mapDispatch)(MyComponent)`.
 
-A partir da versão v7.1.2, o pacote `@types/react-redux` expõe um tipo auxiliar,`ConnectedProps`, que pode extrair os tipos de retorno de `mapStateToProps` e` mapDispatchToProps` da primeira função. Isso significa que se você dividir a chamada `connect` em duas etapas, todos os "adereços do Redux" podem ser inferidos automaticamente, sem ter que escrevê-los à mão. Embora essa abordagem possa parecer incomum se você estiver usando o React-Redux por um tempo, ela simplifica consideravelmente as declarações de tipo.
+A partir da versão v7.1.2, o pacote `@types/react-redux` expõe um tipo auxiliar,`ConnectedProps`, que pode extrair os tipos de retorno de `mapStateToProps` e` mapDispatchToProps` da primeira função. Isso significa que se você dividir a chamada `connect` em duas etapas, todos os "props do Redux" podem ser inferidos automaticamente, sem ter que escrevê-los à mão. Embora essa abordagem possa parecer incomum se você estiver usando o React-Redux por um tempo, ela simplifica consideravelmente as declarações de tipo.
 
 ```ts
 import { connect, ConnectedProps } from 'react-redux'

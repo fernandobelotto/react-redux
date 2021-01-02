@@ -7,15 +7,17 @@ hide_title: true
 
 # Hooks
 
-React's new ["hooks" APIs](https://reactjs.org/docs/hooks-intro.html) give function components the ability to use local component state, execute side effects, and more.
+As novas [API's "hooks"](https://reactjs.org/docs/hooks-intro.html) do React fornecem aos componentes de função a capacidade de usar o estado do componente local, executar efeitos colaterais e muito mais.
 
 React Redux now offers a set of hook APIs as an alternative to the existing `connect()` Higher Order Component. These APIs allow you to subscribe to the Redux store and dispatch actions, without having to wrap your components in `connect()`.
 
-These hooks were first added in v7.1.0.
+React Redux agora oferece um conjunto de APIs de hook como alternativa ao componente de ordem superior `connect()` existente. Essas APIs permitem que você asein na Redux store e despache actions, sem ter que envolver seus componentes em `connect()`.
 
-## Using Hooks in a React Redux App
+Esses hooks foram adicionados pela primeira vez na v7.1.0.
 
-As with `connect()`, you should start by wrapping your entire application in a `<Provider>` component to make the store available throughout the component tree:
+## Usando hooks em um aplicativo React Redux
+
+Tal como acontece com `connect()`, você deve começar envolvendo todo o seu aplicativo em um componente `<Provider>` para tornar a store disponível em toda a árvore de componentes:
 
 ```jsx
 const store = createStore(rootReducer)
@@ -28,63 +30,55 @@ ReactDOM.render(
 )
 ```
 
-From there, you may import any of the listed React Redux hooks APIs and use them within your function components.
+A partir daí, você pode importar qualquer uma das APIs de hooks do React Redux listadas e usá-las nos componentes de sua função.
 
 ## `useSelector()`
 
 ```js
 const result: any = useSelector(selector: Function, equalityFn?: Function)
 ```
+Permite extrair dados do estado da Redux store, usando uma função selector.
 
-Allows you to extract data from the Redux store state, using a selector function.
+> **Nota**: A função selector deve ser [pura](https://en.wikipedia.org/wiki/Pure_function), pois é potencialmente executada várias vezes e em momentos arbitrários.
 
-> **Note**: The selector function should be [pure](https://en.wikipedia.org/wiki/Pure_function) since it is potentially executed multiple times and at arbitrary points in time.
+O selector é aproximadamente equivalente ao argumento [`mapStateToProps` da `connect`](../using-react-redux/connect-mapstate) conceitualmente. O selector será chamado com todo o estado da Redux store como seu único argumento. O selector será executado sempre que o componente de função renderizar (a menos que sua referência não tenha mudado desde uma renderização anterior do componente para que um resultado armazenado em cache possa ser retornado pelo hook sem executar novamente o selector). `useSelector()` também assinará a mundanças na Redux store e executará seu selector sempre que uma action for despachada.
 
-The selector is approximately equivalent to the [`mapStateToProps` argument to `connect`](../using-react-redux/connect-mapstate) conceptually. The selector will be called with the entire Redux store state as its only argument. The selector will be run whenever the function component renders (unless its reference hasn't changed since a previous render of the component so that a cached result can be returned by the hook without re-running the selector). `useSelector()` will also subscribe to the Redux store, and run your selector whenever an action is dispatched.
+No entanto, existem algumas diferenças entre os selectors passados ​​para `useSelector()` e uma função `mapState`:
 
-However, there are some differences between the selectors passed to `useSelector()` and a `mapState` function:
+- O selector pode retornar qualquer valor como resultado, não apenas um objeto. O valor de retorno do selector será usado como o valor de retorno do hook `useSelector()`.
+- Quando uma ação é despachada, `useSelector()` fará uma comparação de referência do valor de resultado do selector anterior e o valor de resultado atual. Se eles forem diferentes, o componente será forçado a renderizar novamente. Se eles forem iguais, o componente não será renderizado novamente.
+- A função selector _não_ recebe um argumento `ownProps`. No entanto, os props podem ser usados ​​por meio de closure (veja os exemplos abaixo) ou usando um selector de curry.
+- Cuidado extra deve ser tomado ao usar selectors memoizados (veja exemplos abaixo para mais detalhes).
+- `useSelector()` usa verificações de igualdade de referência estritas `===` por padrão, não igualdade superficial (veja a seção seguinte para mais detalhes).
 
-- The selector may return any value as a result, not just an object. The return value of the selector will be used as the return value of the `useSelector()` hook.
-- When an action is dispatched, `useSelector()` will do a reference comparison of the previous selector result value and the current result value. If they are different, the component will be forced to re-render. If they are the same, the component will not re-render.
-- The selector function does _not_ receive an `ownProps` argument. However, props can be used through closure (see the examples below) or by using a curried selector.
-- Extra care must be taken when using memoizing selectors (see examples below for more details).
-- `useSelector()` uses strict `===` reference equality checks by default, not shallow equality (see the following section for more details).
+> **Nota**: Existem casos potenciais com o uso de props em selectors que podem causar erros. Consulte a seção [Avisos de uso](#avisos-de-uso) desta página para obter mais detalhes.
 
-> **Note**: There are potential edge cases with using props in selectors that may cause errors. See the [Usage Warnings](#usage-warnings) section of this page for further details.
+Você pode chamar `useSelector()` várias vezes em um único componente de função. Cada chamada para `useSelector()` cria uma assinatura individual para a store Redux. Por causa do comportamento de atualização em lote do React usado no React Redux v7, uma action despachada que faz com que vários `useSelector()`s no mesmo componente retornem novos valores _deve_ resultar apenas em uma única re-renderização.
 
-You may call `useSelector()` multiple times within a single function component. Each call to `useSelector()` creates an individual subscription to the Redux store. Because of the React update batching behavior used in React Redux v7, a dispatched action that causes multiple `useSelector()`s in the same component to return new values _should_ only result in a single re-render.
+### Comparações de igualdade e atualizações
 
-### Equality Comparisons and Updates
+Quando o componente da função for renderizado, a função selector fornecida será chamada e seu resultado será retornado do hook `useSelector()`. (Um resultado em cache pode ser retornado pelo hook sem executar novamente o selector se for a mesma referência de função que em uma renderização anterior do componente.)
 
-When the function component renders, the provided selector function will be called and its result will be returned
-from the `useSelector()` hook. (A cached result may be returned by the hook without re-running the selector if it's the same function reference as on a previous render of the component.)
+No entanto, quando uma action é despachada para a Redux store, `useSelector()` apenas força uma nova renderização se o resultado do selector parecer diferente do último resultado. A partir da v7.1.0-alpha.5, a comparação padrão é uma comparação de referência estrita `===`. Isso é diferente de `connect()`, que usa verificações de igualdade superficiais nos resultados das chamadas `mapState` para determinar se a re-renderização é necessária. Isso tem várias implicações sobre como você deve usar `useSelector ()`.
 
-However, when an action is dispatched to the Redux store, `useSelector()` only forces a re-render if the selector result
-appears to be different than the last result. As of v7.1.0-alpha.5, the default comparison is a strict `===` reference
-comparison. This is different than `connect()`, which uses shallow equality checks on the results of `mapState` calls
-to determine if re-rendering is needed. This has several implications on how you should use `useSelector()`.
+Com `mapState`, todos os campos individuais foram retornados em um objeto combinado. Não importava se o objeto de retorno era uma nova referência ou não - `connect()` apenas comparou os campos individuais. Com `useSelector()`, retornar um novo objeto toda vez _sempre_ forçará uma nova renderização por padrão. Se quiser recuperar vários valores da store, você pode:
 
-With `mapState`, all individual fields were returned in a combined object. It didn't matter if the return object was
-a new reference or not - `connect()` just compared the individual fields. With `useSelector()`, returning a new object
-every time will _always_ force a re-render by default. If you want to retrieve multiple values from the store, you can:
-
-- Call `useSelector()` multiple times, with each call returning a single field value
-- Use Reselect or a similar library to create a memoized selector that returns multiple values in one object, but
-  only returns a new object when one of the values has changed.
-- Use the `shallowEqual` function from React-Redux as the `equalityFn` argument to `useSelector()`, like:
+- Chamar `useSelector()` várias vezes, com cada chamada retornando um único valor de campo
+- Use Reselect ou uma biblioteca semelhante para criar um selectors memoizados que retornam vários valores em um objeto, mas só retorna um novo objeto quando um dos valores foi alterado.
+- Use a função `shallowEqual` do React-Redux como o argumento `equalityFn` para `useSelector())`, como:
 
 ```js
 import { shallowEqual, useSelector } from 'react-redux'
 
-// later
+// mais tarde
 const selectedData = useSelector(selectorReturningObject, shallowEqual)
 ```
 
-The optional comparison function also enables using something like Lodash's `_.isEqual()` or Immutable.js's comparison capabilities.
+A função de comparação opcional também permite usar algo como `_.isEqual ()` do Lodash ou os recursos de comparação do Immutable.js.
 
-### `useSelector` Examples
+### Exemplos do `useSelector`
 
-Basic usage:
+Uso básico:
 
 ```jsx
 import React from 'react'
@@ -95,8 +89,7 @@ export const CounterComponent = () => {
   return <div>{counter}</div>
 }
 ```
-
-Using props via closure to determine what to extract:
+Usando props por meio de closure para determinar o que extrair:
 
 ```jsx
 import React from 'react'
@@ -107,12 +100,11 @@ export const TodoListItem = props => {
   return <div>{todo.text}</div>
 }
 ```
+#### Usando Selectors memoizados
 
-#### Using memoizing selectors
+Ao usar `useSelector` com um selector inline como mostrado acima, uma nova instância do selector é criada sempre que o componente é renderizado. Isso funciona, desde que o selector não mantenha nenhum estado. No entanto, os selectors memoizados (por exemplo, criados por meio de `createSelector` de` reselect`) têm estado interno e, portanto, deve-se tomar cuidado ao usá-los. Abaixo, você pode encontrar cenários de uso típicos para selectors memoizados.
 
-When using `useSelector` with an inline selector as shown above, a new instance of the selector is created whenever the component is rendered. This works as long as the selector does not maintain any state. However, memoizing selectors (e.g. created via `createSelector` from `reselect`) do have internal state, and therefore care must be taken when using them. Below you can find typical usage scenarios for memoizing selectors.
-
-When the selector does only depend on the state, simply ensure that it is declared outside of the component so that the same selector instance is used for each render:
+Quando o selector depende apenas do estado, basta garantir que ele seja declarado fora do componente para que a mesma instância do selector seja usada para cada renderização:
 
 ```jsx
 import React from 'react'
@@ -138,8 +130,7 @@ export const App = () => {
   )
 }
 ```
-
-The same is true if the selector depends on the component's props, but will only ever be used in a single instance of a single component:
+O mesmo é verdade se o selector depende dos props do componente, mas só será usado em uma única instância de um único componente:
 
 ```jsx
 import React from 'react'
@@ -169,8 +160,7 @@ export const App = () => {
   )
 }
 ```
-
-However, when the selector is used in multiple component instances and depends on the component's props, you need to ensure that each component instance gets its own selector instance (see [here](https://github.com/reduxjs/reselect#accessing-react-props-in-selectors) for a more thorough explanation of why this is necessary):
+No entanto, quando o selector é usado em várias instâncias do componente e depende dos props do componente, você precisa garantir que cada instância do componente obtenha sua própria instância do selector (veja [aqui](https://github.com/reduxjs/reselect#accessing-react-props-in-selectors) para uma explicação mais completa de por que isso é necessário):
 
 ```jsx
 import React, { useMemo } from 'react'
@@ -209,19 +199,18 @@ export const App = () => {
 }
 ```
 
-## Removed: `useActions()`
+## Removido: `useActions()`
 
 ## `useDispatch()`
 
 ```js
 const dispatch = useDispatch()
 ```
+Este hook retorna uma referência à função `dispatch` da Redux store. Você pode usá-lo para despachar actions conforme necessário.
 
-This hook returns a reference to the `dispatch` function from the Redux store. You may use it to dispatch actions as needed.
+*Observação: como no [`useReducer`](https://reactjs.org/docs/hooks-reference.html#usereducer), a identidade da função `dispatch` retornada é estável e não mudará nos renderizadas seguidas ( a menos que você altere o `store` sendo passado para o` <Provider>`, o que seria extremamente incomum).*
 
-*Note: like in [React's `useReducer`](https://reactjs.org/docs/hooks-reference.html#usereducer), the returned `dispatch` function identity is stable and won't change on re-renders (unless you change the `store` being passed to the `<Provider>`, which would be extremely unusual).*
-
-#### Examples
+#### Exemplos
 
 ```jsx
 import React from 'react'
@@ -240,8 +229,7 @@ export const CounterComponent = ({ value }) => {
   )
 }
 ```
-
-Reminder: when passing a callback using `dispatch` to a child component, you should memoize it with [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback), just like you should memoize any passed callback. This avoids unnecessary rendering of child components due to the changed callback reference. You can safely pass `[dispatch]` in the dependency array for the `useCallback` call - since `dispatch` won't change, the callback will be reused properly (as it should). For example:
+Lembrete: ao passar um retorno de chamada usando `dispatch` para um componente filho, você deve memoizá-lo com [`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback), assim como você deve memoizar qualquer retorno de chamada passado. Isso evita a renderização desnecessária de componentes filhos devido à referência de retorno de chamada alterada. Você pode passar com segurança `[dispatch]` no array de dependência para a chamada `useCallback` - visto que `dispatch` não mudará, o callback será reutilizado corretamente (como deveria). Por exemplo:
 
 ```jsx
 import React, { useCallback } from 'react'
@@ -272,12 +260,11 @@ export const MyIncrementButton = React.memo(({ onIncrement }) => (
 ```js
 const store = useStore()
 ```
+Este hook retorna uma referência da mesma Redux store que foi passada para o componente `<Provider>`.
 
-This hook returns a reference to the same Redux store that was passed in to the `<Provider>` component.
+Este hook provavelmente não deve ser usado com freqüência. Prefira `useSelector()` como sua escolha principal. No entanto, isso pode ser útil para cenários menos comuns que exigem acesso à store, como a substituição de reducers.
 
-This hook should probably not be used frequently. Prefer `useSelector()` as your primary choice. However, this may be useful for less common scenarios that do require access to the store, such as replacing reducers.
-
-#### Examples
+#### Exemplos
 
 ```jsx
 import React from 'react'
@@ -286,17 +273,17 @@ import { useStore } from 'react-redux'
 export const CounterComponent = ({ value }) => {
   const store = useStore()
 
-  // EXAMPLE ONLY! Do not do this in a real app.
-  // The component will not automatically update if the store state changes
+  // EXEMPLO APENAS! Não faça isso em um aplicativo real.
+  // O componente não será atualizado automaticamente se o estado da store mudar
   return <div>{store.getState()}</div>
 }
 ```
 
-## Custom context
+## Contexto personalizado
 
-The `<Provider>` component allows you to specify an alternate context via the `context` prop. This is useful if you're building a complex reusable component, and you don't want your store to collide with any Redux store your consumers' applications might use.
+O componente `<Provider>` permite que você especifique um contexto alternativo por meio da prop `context`. Isso é útil se você estiver construindo um componente reutilizável complexo e não quiser que sua store entre em conflito com nenhuma Redux store que os aplicativos de seus consumidores possam usar.
 
-To access an alternate context via the hooks API, use the hook creator functions:
+Para acessar um context alternativo por meio da API de hooks, use as funções do hooks creators:
 
 ```js
 import React from 'react'
@@ -309,7 +296,7 @@ import {
 
 const MyContext = React.createContext(null)
 
-// Export your custom hooks if you wish to use them in other files.
+// Exporte seus hooks personalizados se desejar usá-los em outros arquivos.
 export const useStore = createStoreHook(MyContext)
 export const useDispatch = createDispatchHook(MyContext)
 export const useSelector = createSelectorHook(MyContext)
@@ -325,46 +312,47 @@ export function MyProvider({ children }) {
 }
 ```
 
-## Usage Warnings
+## Avisos de uso
 
-### Stale Props and "Zombie Children"
+### Stale Props e "Zombie Children"
 
-One of the most difficult aspects of React Redux's implementation is ensuring that if your `mapStateToProps` function is defined as `(state, ownProps)`, it will be called with the "latest" props every time. Up through version 4, there were recurring bugs reported involving edge case situations, such as errors thrown from a `mapState` function for a list item whose data had just been deleted.
+Um dos aspectos mais difíceis da implementação do React Redux é garantir que se sua função `mapStateToProps` for definida como `(state, ownProps)`, ela será chamada com os "últimos" props todas as vezes. Até a versão 4, havia bugs recorrentes relatados envolvendo situações extremas, como erros lançados de uma função `mapState` para um item da lista cujos dados acabaram de ser excluídos.
 
-Starting with version 5, React Redux has attempted to guarantee that consistency with `ownProps`. In version 7, that is implemented using a custom `Subscription` class internally in `connect()`, which forms a nested hierarchy. This ensures that connected components lower in the tree will only receive store update notifications once the nearest connected ancestor has been updated. However, this relies on each `connect()` instance overriding part of the internal React context, supplying its own unique `Subscription` instance to form that nesting, and rendering the `<ReactReduxContext.Provider>` with that new context value.
+A partir da versão 5, React Redux tentou garantir essa consistência com `ownProps`. Na versão 7, isso é implementado usando uma classe `Subscription` personalizada internamente em `connect ()`, que forma uma hierarquia aninhada. Isso garante que os componentes conectados na parte inferior da árvore receberão notificações de atualização da store apenas depois que o ancestral conectado mais próximo tiver sido atualizado. No entanto, isso depende de cada instância `connect()` substituindo parte do context interno do React, fornecendo sua própria instância `Subscription` para formar esse aninhamento e renderizando o `<ReactReduxContext.Provider>` com esse novo valor de contexto.
 
-With hooks, there is no way to render a context provider, which means there's also no nested hierarchy of subscriptions. Because of this, the "stale props" and "zombie child" issues may potentially re-occur in an app that relies on using hooks instead of `connect()`.
+Com hooks, não há como renderizar um provedor de context, o que significa que também não há hierarquia aninhada de assinaturas. Por causa disso, os problemas de "props obsoletos" e "zombie children" podem ocorrer novamente em um aplicativo que depende do uso de hooks em vez de `connect()`.
 
-Specifically, "stale props" means any case where:
+Especificamente, "props obsoletos" significa qualquer caso em que:
 
-- a selector function relies on this component's props to extract data
-- a parent component _would_ re-render and pass down new props as a result of an action
-- but this component's selector function executes before this component has had a chance to re-render with those new props
+- uma função selector depende dos props deste componente para extrair dados
+- um componente pai _deveria_ renderizar novamente e passar novos props como resultado de uma action
+- mas a função selector deste componente é executada antes que este componente tenha a chance de renderizar novamente com os novos props
 
-Depending on what props were used and what the current store state is, this _may_ result in incorrect data being returned from the selector, or even an error being thrown.
+Dependendo de quais props foram usados ​​e qual é o estado da store atual, isso _pode_ resultar no retorno de dados incorretos do selector ou até mesmo em um erro sendo gerado.
 
-"Zombie child" refers specifically to the case where:
+"Zombie child" refere-se especificamente ao caso em que:
 
-- Multiple nested connected components are mounted in a first pass, causing a child component to subscribe to the store before its parent
-- An action is dispatched that deletes data from the store, such as a todo item
-- The parent component _would_ stop rendering that child as a result
-- However, because the child subscribed first, its subscription runs before the parent stops rendering it. When it reads a value from the store based on props, that data no longer exists, and if the extraction logic is not careful, this may result in an error being thrown.
+- Vários componentes conectados aninhados são montados em uma primeira passagem, fazendo com que um componente filho se inscreva na store antes de seu pai
+- Uma action é despachada que exclui dados da store, como um item de tarefa
+- O componente pai _deveria_ parar de renderizar aquele filho como resultado
+- No entanto, como o filho se inscreveu primeiro, sua inscrição é executada antes que o pai pare de renderizá-la. Quando ele lê um valor da store com base em props, esses dados não existem mais e, se a lógica de extração não for cuidadosa, isso pode resultar em um erro.
 
-`useSelector()` tries to deal with this by catching all errors that are thrown when the selector is executed due to a store update (but not when it is executed during rendering). When an error occurs, the component will be forced to render, at which point the selector is executed again. This works as long as the selector is a pure function and you do not depend on the selector throwing errors.
+`useSelector()` tenta lidar com isso pegando todos os erros que são lançados quando o selector é executado devido a uma atualização da store (mas não quando é executado durante a renderização). Quando ocorre um erro, o componente será forçado a renderizar, momento em que o secletor é executado novamente. Isso funciona contanto que o selector seja uma função pura e você não dependa dos erros de lançamento do selector.
 
-If you prefer to deal with this issue yourself, here are some possible options for avoiding these problems altogether with `useSelector()`:
+Se você preferir lidar com este problema sozinho, aqui estão algumas opções possíveis para evitar esses problemas juntamente com `useSelector()`:
 
-- Don't rely on props in your selector function for extracting data
-- In cases where you do rely on props in your selector function _and_ those props may change over time, _or_ the data you're extracting may be based on items that can be deleted, try writing the selector functions defensively. Don't just reach straight into `state.todos[props.id].name` - read `state.todos[props.id]` first, and verify that it exists before trying to read `todo.name`.
-- Because `connect` adds the necessary `Subscription` to the context provider and delays evaluating child subscriptions until the connected component has re-rendered, putting a connected component in the component tree just above the component using `useSelector` will prevent these issues as long as the connected component gets re-rendered due to the same store update as the hooks component.
+- Não confie em props em sua função selector para extrair dados
+- Nos casos em que você depende de props em sua função selector _e_ esses props podem mudar ao longo do tempo, _ou_ os dados que você está extraindo podem ser baseados em itens que podem ser excluídos, tente escrever as funções selector defensivamente. Não vá direto para `state.todos[props.id].name` - leia `state.todos[props.id]` primeiro e verifique se ele existe antes de tentar ler `todo.name`.
+- Como `connect` adiciona a `Subscription` necessária ao provedor de context e atrasa a avaliação das assinaturas filhas até que o componente conectado seja renderizado novamente, colocar um componente conectado na árvore de componentes logo acima do componente usando `useSelector` irá prevenir esses problemas, pois desde que o componente conectado seja renderizado novamente devido à mesma atualização de armazenamento do componente hooks.
 
 > **Note**: For a longer description of this issue, see ["Stale props and zombie children in Redux" by Kai Hao](https://kaihao.dev/posts/Stale-props-and-zombie-children-in-Redux), [this chat log that describes the problems in more detail](https://gist.github.com/markerikson/faac6ae4aca7b82a058e13216a7888ec), and [issue #1179](https://github.com/reduxjs/react-redux/issues/1179).
+> **Observação**: para obter uma descrição mais detalhada desse problema, consulte ["Props obsoletas e zombie children em Redux" por Kai Hao](https://kaihao.dev/posts/Stale-props-and-zombie-children-in-Redux), [este log de bate-papo que descreve os problemas com mais detalhes](https://gist.github.com/markerikson/faac6ae4aca7b82a058e13216a7888ec) e a [issue #1179](https://github.com/reduxjs/react-redux/issues/1179).
 
-### Performance
+### Desempenho
 
-As mentioned earlier, by default `useSelector()` will do a reference equality comparison of the selected value when running the selector function after an action is dispatched, and will only cause the component to re-render if the selected value changed. However, unlike `connect()`, `useSelector()` does not prevent the component from re-rendering due to its parent re-rendering, even if the component's props did not change.
+Como mencionado anteriormente, por padrão `useSelector()` fará uma comparação de igualdade de referência do valor selecionado ao executar a função selector após uma action ser despachada, e só fará com que o componente seja renderizado novamente se o valor selecionado for alterado. No entanto, ao contrário de `connect()`, `useSelector()` não evita que o componente seja renderizado novamente devido à sua re-renderização pai, mesmo se os props do componente não mudaram.
 
-If further performance optimizations are necessary, you may consider wrapping your function component in `React.memo()`:
+Se mais otimizações de desempenho forem necessárias, você pode considerar envolver seu componente de função com `React.memo()`:
 
 ```jsx
 const CounterComponent = ({ name }) => {
@@ -379,25 +367,45 @@ const CounterComponent = ({ name }) => {
 export const MemoizedCounterComponent = React.memo(CounterComponent)
 ```
 
-## Hooks Recipes
+## Receita de Hooks
 
-We've pared down our hooks API from the original alpha release, focusing on a more minimal set of API primitives.
-However, you may still wish to use some of the approaches we tried in your own apps. These examples should be ready
-to copy and paste into your own codebase.
+Nós reduzimos nossa API de hooks da versão alfa original, focando em um conjunto mínimo de primitivas de API. No entanto, você ainda pode querer usar algumas das abordagens que tentamos em seus próprios aplicativos. Esses exemplos devem estar prontos para copiar e colar em sua própria base de código.
 
-### Recipe: `useActions()`
+### Receita: `useActions()`
 
-This hook was in our original alpha release, but removed in `v7.1.0-alpha.4`, based on [Dan Abramov's suggestion](https://github.com/reduxjs/react-redux/issues/1252#issuecomment-488160930).
-That suggestion was based on "binding action creators" not being as useful in a hooks-based use case, and causing too
-much conceptual overhead and syntactic complexity.
+Este hook estava em nossa versão alfa original, mas foi removido em `v7.1.0-alpha.4`, com base na [sugestão de Dan Abramov](https://github.com/reduxjs/react-redux/issues/1252#issuecomment-488160930).
+Essa sugestão foi baseada em "binding action creators" não sendo tão úteis em um caso de uso baseado em hooks, e causando muita sobrecarga conceitual e complexidade sintática.
 
-You should probably prefer to call the [`useDispatch`](#usedispatch) hook in your components to retrieve a reference to `dispatch`,
-and manually call `dispatch(someActionCreator())` in callbacks and effects as needed. You may also use the Redux
-[`bindActionCreators`](https://redux.js.org/api/bindactioncreators) function in your own code to bind action creators,
-or "manually" bind them like `const boundAddTodo = (text) => dispatch(addTodo(text))`.
+You should probably prefer to call the [`useDispatch`](#usedispatch) hook in your components to retrieve a reference to `dispatch`, and manually call `dispatch(someActionCreator())` in callbacks and effects as needed. You may also use the Redux [`bindActionCreators`](https://redux.js.org/api/bindactioncreators) function in your own code to bind action creators, or "manually" bind them like `const boundAddTodo = (text) => dispatch(addTodo(text))`.
 
 However, if you'd like to still use this hook yourself, here's a copy-pastable version that supports passing in action
 creators as a single function, an array, or an object.
+
+```js
+import { bindActionCreators } from 'redux'
+import { useDispatch } from 'react-redux'
+import { useMemo } from 'react'
+
+export function useActions(actions, deps) {
+  const dispatch = useDispatch()
+  return useMemo(
+    () => {
+      if (Array.isArray(actions)) {
+        return actions.map(a => bindActionCreators(a, dispatch))
+      }
+      return bindActionCreators(actions, dispatch)
+    },
+    deps ? [dispatch, ...deps] : [dispatch]
+  )
+}
+```
+
+Este hook estava em nossa versão alfa original, mas foi removido em `v7.1.0-alpha.4`, com base na [sugestão de Dan Abramov](https://github.com/reduxjs/react-redux/issues/1252#issuecomment-488160930).
+Essa sugestão foi baseada em "binding action creators" não sendo tão úteis em um caso de uso baseado em hooks, e causando muita sobrecarga conceitual e complexidade sintática.
+
+Você provavelmente deve preferir chamar o hook [`useDispatch`](#usedispatch) em seus componentes para recuperar uma referência a `dispatch`, e chamar manualmente `dispatch (someActionCreator())` em callbacks e efeitos conforme necessário. Você também pode usar a função Redux [`bindActionCreators`](https://redux.js.org/api/bindactioncreators) em seu próprio código para vincular action creators, ou vinculá-los "manualmente" como `const boundAddTodo = (text) => dispatch(addTodo(text)) `.
+
+No entanto, se você ainda quiser usar esse hook, aqui está uma versão que pode ser copiada e colada, que suporta a passagem de action creators como uma única função, um array ou um objeto.
 
 ```js
 import { bindActionCreators } from 'redux'
@@ -427,7 +435,6 @@ export function useShallowEqualSelector(selector) {
   return useSelector(selector, shallowEqual)
 }
 ```
+### Considerações adicionais ao usar hooks
 
-### Additional considerations when using hooks
-
-There are some architectural trade offs to take into consideration when deciding whether to use hooks or not. Mark Erikson summarizes these nicely in his two blog posts [Thoughts on React Hooks, Redux, and Separation of Concerns](https://blog.isquaredsoftware.com/2019/07/blogged-answers-thoughts-on-hooks/) and [Hooks, HOCs, and Tradeoffs](https://blog.isquaredsoftware.com/2019/09/presentation-hooks-hocs-tradeoffs/).
+Existem algumas compensações arquitetônicas a serem levadas em consideração ao decidir se usará hooks ou não. Mark Erikson resume isso muito bem em suas duas postagens de blog [Thoughts on React Hooks, Redux e Separation of Concerns](https://blog.isquaredsoftware.com/2019/07/blogged-answers-thoughts-on-hooks/) e [Hooks, HOCs e Tradeoffs](https://blog.isquaredsoftware.com/2019/09/presentation-hooks-hocs-tradeoffs/).

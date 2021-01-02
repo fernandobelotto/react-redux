@@ -285,7 +285,7 @@ Quando puro, compara o resultado de `mapStateToProps` com seu valor anterior.
 
 Quando puro, compara o resultado de `mergeProps` com seu valor anterior.
 
-Você pode querer sobrescrever `areStatePropsEqual` para usar `strictEqual` se seu `mapStateToProps` usar um seletor memoizado que só retornará um novo objeto se um prop relevante mudou. Isso seria uma pequena melhoria de desempenho, pois evitaria verificações extras de igualdade em props individuais cada vez que `mapStateToProps` fosse chamado.
+Você pode querer sobrescrever `areStatePropsEqual` para usar `strictEqual` se seu `mapStateToProps` usar um selector memoizado que só retornará um novo objeto se um prop relevante mudou. Isso seria uma pequena melhoria de desempenho, pois evitaria verificações extras de igualdade em props individuais cada vez que `mapStateToProps` fosse chamado.
 
 Você pode querer substituir `areMergedPropsEqual` para implementar um `deepEqual` se seus selectors produzirem props complexos. ex: objetos aninhados, novas matrizes, etc. (A verificação de igualdade profunda pode ser mais rápida do que apenas uma nova renderização.)
 
@@ -344,7 +344,7 @@ Como `connect` é tão flexível, pode ser útil ver alguns exemplos adicionais 
 export default connect()(TodoApp)
 ```
 
-- Injetar todos os action creators (`addTodo`,` completeTodo`, ...) sem assinar na loja
+- Injetar todos os action creators (`addTodo`,` completeTodo`, ...) sem assinar na store
 
 ```js
 import * as actionCreators from './actionCreators'

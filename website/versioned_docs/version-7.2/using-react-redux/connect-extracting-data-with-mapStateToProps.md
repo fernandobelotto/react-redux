@@ -100,7 +100,7 @@ As funções `mapStateToProps` podem, e devem, fazer muito mais do que apenas `r
 
 ### Use funções selectors para extrair e transformar dados
 
-Nós encorajamos o uso de funções "seletoras" para ajudar a encapsular o processo de extração de valores de locais específicos na árvore de estado. As funções selectors memorizadas também desempenham um papel importante na melhoria do desempenho do aplicativo (consulte as seguintes seções nesta página e a página [Uso avançado: Desempenho]​​(./) para obter mais detalhes sobre por que e como usar os selectors.)
+Nós encorajamos o uso de funções "selectoras" para ajudar a encapsular o processo de extração de valores de locais específicos na árvore de estado. As funções selectors memorizadas também desempenham um papel importante na melhoria do desempenho do aplicativo (consulte as seguintes seções nesta página e a página [Uso avançado: Desempenho]​​(./) para obter mais detalhes sobre por que e como usar os selectors.)
 
 ### Funções `mapStateToProps` devem ser rápidas
 
