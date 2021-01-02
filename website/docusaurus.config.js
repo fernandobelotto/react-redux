@@ -122,7 +122,7 @@ const siteConfig = {
           className: 'github',
         },
         {
-          href: '/introduction/quick-start/#ajuda-e-discussão',
+          href: '/introduction/quick-start',
           label: 'Precisa de ajuda?',
           position: 'right',
         },

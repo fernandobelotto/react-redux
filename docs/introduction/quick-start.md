@@ -59,7 +59,7 @@ ReactDOM.render(
 
 ## `connect()`
 
-React Redux disponibiliza a função `connect` para você conectar seu componente à loja.
+React Redux disponibiliza a função `connect` para você conectar seu componente à store.
 
 Normalmente, você chamará `connect` desta forma:
 
