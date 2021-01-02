@@ -36,11 +36,11 @@ const siteConfig = {
   title: 'React Redux', // Title for your website.
   onBrokenLinks: 'throw',
   tagline: 'Ligações oficiais do React para Redux',
-  url: 'https://react-redux.js.org', // Your website URL
-  baseUrl: '/',
+  url: '/react-redux/', // Your website URL
+  baseUrl: 'https://fernandobelotto.github.io/',
   // Used for publishing and more
   projectName: 'react-redux',
-  organizationName: 'reduxjs',
+  organizationName: 'fernandobelotto',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'

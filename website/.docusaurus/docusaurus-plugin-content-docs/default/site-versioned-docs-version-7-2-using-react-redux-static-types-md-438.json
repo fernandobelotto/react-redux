@@ -6,16 +6,16 @@
   "description": "Tipagem Estática",
   "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\static-types.md",
   "slug": "/using-react-redux/static-typing",
-  "permalink": "/using-react-redux/static-typing",
+  "permalink": "https://fernandobelotto.github.io/using-react-redux/static-typing",
   "version": "7.2",
   "sidebar_label": "Tipagem Estática",
   "sidebar": "version-7.2/docs",
   "previous": {
     "title": "Acessando a store",
-    "permalink": "/using-react-redux/accessing-store"
+    "permalink": "https://fernandobelotto.github.io/using-react-redux/accessing-store"
   },
   "next": {
     "title": "Connect",
-    "permalink": "/api/connect"
+    "permalink": "https://fernandobelotto.github.io/api/connect"
   }
 }

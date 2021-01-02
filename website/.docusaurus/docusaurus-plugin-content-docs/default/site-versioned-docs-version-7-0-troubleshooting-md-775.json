@@ -6,12 +6,12 @@
   "description": "Troubleshooting",
   "source": "@site/versioned_docs\\version-7.0\\troubleshooting.md",
   "slug": "/troubleshooting",
-  "permalink": "/7.0/troubleshooting",
+  "permalink": "https://fernandobelotto.github.io/7.0/troubleshooting",
   "version": "7.0",
   "sidebar_label": "Troubleshooting",
   "sidebar": "version-7.0/docs",
   "previous": {
     "title": "batch",
-    "permalink": "/7.0/api/batch"
+    "permalink": "https://fernandobelotto.github.io/7.0/api/batch"
   }
 }

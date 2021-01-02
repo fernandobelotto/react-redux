@@ -6,16 +6,16 @@
   "description": "Connect: Extraindo dados com mapStateToProps",
   "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\connect-extracting-data-with-mapStateToProps.md",
   "slug": "/using-react-redux/connect-mapstate",
-  "permalink": "/using-react-redux/connect-mapstate",
+  "permalink": "https://fernandobelotto.github.io/using-react-redux/connect-mapstate",
   "version": "7.2",
   "sidebar_label": "Connect: Extraindo dados com mapStateToProps",
   "sidebar": "version-7.2/docs",
   "previous": {
     "title": "Por que usar React Redux?",
-    "permalink": "/introduction/why-use-react-redux"
+    "permalink": "https://fernandobelotto.github.io/introduction/why-use-react-redux"
   },
   "next": {
     "title": "Connect: Despachando Actions com mapDispatchToProps",
-    "permalink": "/using-react-redux/connect-mapdispatch"
+    "permalink": "https://fernandobelotto.github.io/using-react-redux/connect-mapdispatch"
   }
 }

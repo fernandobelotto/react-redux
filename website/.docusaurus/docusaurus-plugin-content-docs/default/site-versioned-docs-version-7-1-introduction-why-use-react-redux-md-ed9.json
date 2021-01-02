@@ -6,16 +6,16 @@
   "description": "Why Use React Redux?",
   "source": "@site/versioned_docs\\version-7.1\\introduction\\why-use-react-redux.md",
   "slug": "/introduction/why-use-react-redux",
-  "permalink": "/7.1/introduction/why-use-react-redux",
+  "permalink": "https://fernandobelotto.github.io/7.1/introduction/why-use-react-redux",
   "version": "7.1",
   "sidebar_label": "Why Use React Redux?",
   "sidebar": "version-7.1/docs",
   "previous": {
     "title": "Basic Tutorial",
-    "permalink": "/7.1/introduction/basic-tutorial"
+    "permalink": "https://fernandobelotto.github.io/7.1/introduction/basic-tutorial"
   },
   "next": {
     "title": "Connect: Extracting Data with mapStateToProps",
-    "permalink": "/7.1/using-react-redux/connect-mapstate"
+    "permalink": "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapstate"
   }
 }

@@ -6,12 +6,12 @@
   "description": "Solução de problemas",
   "source": "@site/versioned_docs\\version-7.2\\troubleshooting.md",
   "slug": "/troubleshooting",
-  "permalink": "/troubleshooting",
+  "permalink": "https://fernandobelotto.github.io/troubleshooting",
   "version": "7.2",
   "sidebar_label": "Solução de problemas",
   "sidebar": "version-7.2/docs",
   "previous": {
     "title": "Hooks",
-    "permalink": "/api/hooks"
+    "permalink": "https://fernandobelotto.github.io/api/hooks"
   }
 }

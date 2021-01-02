@@ -6,16 +6,16 @@
   "description": "Static Typing",
   "source": "@site/versioned_docs\\version-7.1\\using-react-redux\\static-types.md",
   "slug": "/using-react-redux/static-typing",
-  "permalink": "/7.1/using-react-redux/static-typing",
+  "permalink": "https://fernandobelotto.github.io/7.1/using-react-redux/static-typing",
   "version": "7.1",
   "sidebar_label": "Static Typing",
   "sidebar": "version-7.1/docs",
   "previous": {
     "title": "Accessing the Store",
-    "permalink": "/7.1/using-react-redux/accessing-store"
+    "permalink": "https://fernandobelotto.github.io/7.1/using-react-redux/accessing-store"
   },
   "next": {
     "title": "Connect",
-    "permalink": "/7.1/api/connect"
+    "permalink": "https://fernandobelotto.github.io/7.1/api/connect"
   }
 }

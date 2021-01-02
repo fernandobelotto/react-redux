@@ -6,16 +6,16 @@
   "description": "Hooks",
   "source": "@site/versioned_docs\\version-7.1\\api\\hooks.md",
   "slug": "/api/hooks",
-  "permalink": "/7.1/api/hooks",
+  "permalink": "https://fernandobelotto.github.io/7.1/api/hooks",
   "version": "7.1",
   "sidebar_label": "Hooks",
   "sidebar": "version-7.1/docs",
   "previous": {
     "title": "batch",
-    "permalink": "/7.1/api/batch"
+    "permalink": "https://fernandobelotto.github.io/7.1/api/batch"
   },
   "next": {
     "title": "Troubleshooting",
-    "permalink": "/7.1/troubleshooting"
+    "permalink": "https://fernandobelotto.github.io/7.1/troubleshooting"
   }
 }

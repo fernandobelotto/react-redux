@@ -6,12 +6,12 @@
   "description": "Quick Start",
   "source": "@site/versioned_docs\\version-7.0\\introduction\\quick-start.md",
   "slug": "/introduction/quick-start",
-  "permalink": "/7.0/introduction/quick-start",
+  "permalink": "https://fernandobelotto.github.io/7.0/introduction/quick-start",
   "version": "7.0",
   "sidebar_label": "Quick Start",
   "sidebar": "version-7.0/docs",
   "next": {
     "title": "Basic Tutorial",
-    "permalink": "/7.0/introduction/basic-tutorial"
+    "permalink": "https://fernandobelotto.github.io/7.0/introduction/basic-tutorial"
   }
 }

@@ -12,17 +12,17 @@
           {
             "type": "link",
             "label": "Começo rápido",
-            "href": "/next/introduction/quick-start"
+            "href": "https://fernandobelotto.github.io/next/introduction/quick-start"
           },
           {
             "type": "link",
             "label": "Tutorial Básico",
-            "href": "/next/introduction/basic-tutorial"
+            "href": "https://fernandobelotto.github.io/next/introduction/basic-tutorial"
           },
           {
             "type": "link",
             "label": "Por que usar React Redux?",
-            "href": "/next/introduction/why-use-react-redux"
+            "href": "https://fernandobelotto.github.io/next/introduction/why-use-react-redux"
           }
         ]
       },
@@ -34,22 +34,22 @@
           {
             "type": "link",
             "label": "Connect: Extracting Data with mapStateToProps",
-            "href": "/next/using-react-redux/connect-mapstate"
+            "href": "https://fernandobelotto.github.io/next/using-react-redux/connect-mapstate"
           },
           {
             "type": "link",
             "label": "Connect: Dispatching Actions with mapDispatchToProps",
-            "href": "/next/using-react-redux/connect-mapdispatch"
+            "href": "https://fernandobelotto.github.io/next/using-react-redux/connect-mapdispatch"
           },
           {
             "type": "link",
             "label": "Accessing the Store",
-            "href": "/next/using-react-redux/accessing-store"
+            "href": "https://fernandobelotto.github.io/next/using-react-redux/accessing-store"
           },
           {
             "type": "link",
             "label": "Static Typing",
-            "href": "/next/using-react-redux/static-typing"
+            "href": "https://fernandobelotto.github.io/next/using-react-redux/static-typing"
           }
         ]
       },
@@ -61,27 +61,27 @@
           {
             "type": "link",
             "label": "connect()",
-            "href": "/next/api/connect"
+            "href": "https://fernandobelotto.github.io/next/api/connect"
           },
           {
             "type": "link",
             "label": "Provider",
-            "href": "/next/api/provider"
+            "href": "https://fernandobelotto.github.io/next/api/provider"
           },
           {
             "type": "link",
             "label": "connectAdvanced()",
-            "href": "/next/api/connect-advanced"
+            "href": "https://fernandobelotto.github.io/next/api/connect-advanced"
           },
           {
             "type": "link",
             "label": "batch()",
-            "href": "/next/api/batch"
+            "href": "https://fernandobelotto.github.io/next/api/batch"
           },
           {
             "type": "link",
             "label": "Hooks",
-            "href": "/next/api/hooks"
+            "href": "https://fernandobelotto.github.io/next/api/hooks"
           }
         ]
       },
@@ -93,25 +93,25 @@
           {
             "type": "link",
             "label": "Solução de problemas",
-            "href": "/next/troubleshooting"
+            "href": "https://fernandobelotto.github.io/next/troubleshooting"
           }
         ]
       }
     ]
   },
   "permalinkToSidebar": {
-    "/next/api/batch": "docs",
-    "/next/api/connect": "docs",
-    "/next/api/connect-advanced": "docs",
-    "/next/api/hooks": "docs",
-    "/next/api/provider": "docs",
-    "/next/introduction/basic-tutorial": "docs",
-    "/next/introduction/quick-start": "docs",
-    "/next/introduction/why-use-react-redux": "docs",
-    "/next/troubleshooting": "docs",
-    "/next/using-react-redux/accessing-store": "docs",
-    "/next/using-react-redux/connect-mapdispatch": "docs",
-    "/next/using-react-redux/connect-mapstate": "docs",
-    "/next/using-react-redux/static-typing": "docs"
+    "https://fernandobelotto.github.io/next/api/batch": "docs",
+    "https://fernandobelotto.github.io/next/api/connect": "docs",
+    "https://fernandobelotto.github.io/next/api/connect-advanced": "docs",
+    "https://fernandobelotto.github.io/next/api/hooks": "docs",
+    "https://fernandobelotto.github.io/next/api/provider": "docs",
+    "https://fernandobelotto.github.io/next/introduction/basic-tutorial": "docs",
+    "https://fernandobelotto.github.io/next/introduction/quick-start": "docs",
+    "https://fernandobelotto.github.io/next/introduction/why-use-react-redux": "docs",
+    "https://fernandobelotto.github.io/next/troubleshooting": "docs",
+    "https://fernandobelotto.github.io/next/using-react-redux/accessing-store": "docs",
+    "https://fernandobelotto.github.io/next/using-react-redux/connect-mapdispatch": "docs",
+    "https://fernandobelotto.github.io/next/using-react-redux/connect-mapstate": "docs",
+    "https://fernandobelotto.github.io/next/using-react-redux/static-typing": "docs"
   }
 }

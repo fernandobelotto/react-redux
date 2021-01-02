@@ -6,16 +6,16 @@
   "description": "``",
   "source": "@site/versioned_docs\\version-5.x\\api\\Provider.md",
   "slug": "/api/provider",
-  "permalink": "/5.x/api/provider",
+  "permalink": "https://fernandobelotto.github.io/5.x/api/provider",
   "version": "5.x",
   "sidebar_label": "Provider",
   "sidebar": "version-5.x/docs",
   "previous": {
     "title": "connectAdvanced",
-    "permalink": "/5.x/api/connect-advanced"
+    "permalink": "https://fernandobelotto.github.io/5.x/api/connect-advanced"
   },
   "next": {
     "title": "Troubleshooting",
-    "permalink": "/5.x/troubleshooting"
+    "permalink": "https://fernandobelotto.github.io/5.x/troubleshooting"
   }
 }

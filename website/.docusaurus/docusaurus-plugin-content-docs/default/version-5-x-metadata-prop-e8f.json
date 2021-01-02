@@ -12,17 +12,17 @@
           {
             "type": "link",
             "label": "Quick Start",
-            "href": "/5.x/introduction/quick-start"
+            "href": "https://fernandobelotto.github.io/5.x/introduction/quick-start"
           },
           {
             "type": "link",
             "label": "Basic Tutorial",
-            "href": "/5.x/introduction/basic-tutorial"
+            "href": "https://fernandobelotto.github.io/5.x/introduction/basic-tutorial"
           },
           {
             "type": "link",
             "label": "Why Use React-Redux?",
-            "href": "/5.x/introduction/why-use-react-redux"
+            "href": "https://fernandobelotto.github.io/5.x/introduction/why-use-react-redux"
           }
         ]
       },
@@ -34,12 +34,12 @@
           {
             "type": "link",
             "label": "Connect: Extracting Data with mapStateToProps",
-            "href": "/5.x/using-react-redux/connect-mapstate"
+            "href": "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapstate"
           },
           {
             "type": "link",
             "label": "Connect: Dispatching Actions with mapDispatchToProps",
-            "href": "/5.x/using-react-redux/connect-mapdispatch"
+            "href": "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapdispatch"
           }
         ]
       },
@@ -51,22 +51,22 @@
           {
             "type": "link",
             "label": "API",
-            "href": "/5.x/api/api"
+            "href": "https://fernandobelotto.github.io/5.x/api/api"
           },
           {
             "type": "link",
             "label": "connect()",
-            "href": "/5.x/api/connect"
+            "href": "https://fernandobelotto.github.io/5.x/api/connect"
           },
           {
             "type": "link",
             "label": "connectAdvanced()",
-            "href": "/5.x/api/connect-advanced"
+            "href": "https://fernandobelotto.github.io/5.x/api/connect-advanced"
           },
           {
             "type": "link",
             "label": "Provider",
-            "href": "/5.x/api/provider"
+            "href": "https://fernandobelotto.github.io/5.x/api/provider"
           }
         ]
       },
@@ -78,22 +78,22 @@
           {
             "type": "link",
             "label": "Troubleshooting",
-            "href": "/5.x/troubleshooting"
+            "href": "https://fernandobelotto.github.io/5.x/troubleshooting"
           }
         ]
       }
     ]
   },
   "permalinkToSidebar": {
-    "/5.x/api/api": "version-5.x/docs",
-    "/5.x/api/connect": "version-5.x/docs",
-    "/5.x/api/connect-advanced": "version-5.x/docs",
-    "/5.x/api/provider": "version-5.x/docs",
-    "/5.x/introduction/basic-tutorial": "version-5.x/docs",
-    "/5.x/introduction/quick-start": "version-5.x/docs",
-    "/5.x/introduction/why-use-react-redux": "version-5.x/docs",
-    "/5.x/troubleshooting": "version-5.x/docs",
-    "/5.x/using-react-redux/connect-mapdispatch": "version-5.x/docs",
-    "/5.x/using-react-redux/connect-mapstate": "version-5.x/docs"
+    "https://fernandobelotto.github.io/5.x/api/api": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/api/connect": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/api/connect-advanced": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/api/provider": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/introduction/basic-tutorial": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/introduction/quick-start": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/introduction/why-use-react-redux": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/troubleshooting": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapdispatch": "version-5.x/docs",
+    "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapstate": "version-5.x/docs"
   }
 }

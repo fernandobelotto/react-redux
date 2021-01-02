@@ -6,16 +6,16 @@
   "description": "connect()",
   "source": "@site/versioned_docs\\version-7.2\\api\\connect.md",
   "slug": "/api/connect",
-  "permalink": "/api/connect",
+  "permalink": "https://fernandobelotto.github.io/api/connect",
   "version": "7.2",
   "sidebar_label": "connect()",
   "sidebar": "version-7.2/docs",
   "previous": {
     "title": "Tipagem Estática",
-    "permalink": "/using-react-redux/static-typing"
+    "permalink": "https://fernandobelotto.github.io/using-react-redux/static-typing"
   },
   "next": {
     "title": "Provider",
-    "permalink": "/api/provider"
+    "permalink": "https://fernandobelotto.github.io/api/provider"
   }
 }

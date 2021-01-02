@@ -6,16 +6,16 @@
   "description": "connectAdvanced",
   "source": "@site/versioned_docs\\version-5.x\\api\\connect-advanced.md",
   "slug": "/api/connect-advanced",
-  "permalink": "/5.x/api/connect-advanced",
+  "permalink": "https://fernandobelotto.github.io/5.x/api/connect-advanced",
   "version": "5.x",
   "sidebar_label": "connectAdvanced()",
   "sidebar": "version-5.x/docs",
   "previous": {
     "title": "Connect",
-    "permalink": "/5.x/api/connect"
+    "permalink": "https://fernandobelotto.github.io/5.x/api/connect"
   },
   "next": {
     "title": "Provider",
-    "permalink": "/5.x/api/provider"
+    "permalink": "https://fernandobelotto.github.io/5.x/api/provider"
   }
 }

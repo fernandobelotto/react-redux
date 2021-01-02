@@ -31,22 +31,20 @@ export type RootState = ReturnType<typeof rootReducer>
 
 ### Tipando o hook `useSelector`
 
-When writing selector functions for use with `useSelector`, you should explicitly define the type of the `state` parameter. TS should be able to then infer the return type of the selector, which will be reused as the return type of the `useSelector` hook:
-Ao escrever funções selector para uso com `useSelector`, você deve definir explicitamente o tipo do parâmetro `state`. O TS deve ser capaz de inferir o tipo de retorno do selector, que será reutilizado como o tipo de retorno do gancho `useSelector`:
+Ao escrever funções selector para uso com `useSelector`, você deve definir explicitamente o tipo do parâmetro `state`. O TS deve ser capaz de inferir o tipo de retorno do selector, que será reutilizado como o tipo de retorno do hook `useSelector`:
 
 ```ts
 interface RootState {
   isOn: boolean
 }
 
-// TS infers type: (state: RootState) => boolean
+// TS infere o tipo: (state: RootState) => boolean
 const selectIsOn = (state: RootState) => state.isOn
 
-// TS infers `isOn` is boolean
+// TS infere que `isOn` é booleano
 const isOn = useSelector(selectIsOn)
 ```
-
-If you want to avoid repeating the `state` type declaration, you can define a typed `useSelector` hook using a helper type exported by `@types/react-redux`:
+Se você quiser evitar repetir a declaração do tipo `state`, você pode definir um hook `useSelector` digitado usando um tipo auxiliar exportado por `@types/react-redux`:
 
 ```ts
 // reducer.ts
@@ -66,13 +64,13 @@ const isOn = useTypedSelector(state => state.isOn)
 
 ### Tipando o hook `useDispatch`
 
-By default, the return value of `useDispatch` is the standard `Dispatch` type defined by the Redux core types, so no declarations are needed:
+Por padrão, o valor de retorno de `useDispatch` é o tipo `Dispatch` padrão definido pelos tipos do core do Redux, portanto, nenhuma declaração é necessária:
 
 ```ts
 const dispatch = useDispatch()
 ```
 
-If you have a customized version of the `Dispatch` type, you may use that type explicitly:
+Se você tiver uma versão personalizada do tipo `Dispatch`, poderá usar esse tipo explicitamente:
 
 ```ts
 // store.ts
@@ -82,11 +80,11 @@ export type AppDispatch = typeof store.dispatch
 const dispatch: AppDispatch = useDispatch()
 ```
 
-### Tipando o higher order component `connect`
+### Tipando o componente de ordem superior `connect`
 
-#### Digitando Manualmente `connect`
+#### Tipando Manualmente `connect`
 
-The `connect` higher-order component is somewhat complex to type, because there are 3 sources of props: `mapStateToProps`, `mapDispatchToProps`, and props passed in from the parent component. Here's a full example of what it looks like to do that manually.
+O componente de ordem superior `connect` é um tanto complexo de tipar, porque há 3 fontes de props: ` mapStateToProps`, `mapDispatchToProps` e props passados ​​do componente pai. Aqui está um exemplo completo de como seria fazer isso manualmente.
 
 ```tsx
 import { connect } from 'react-redux'
@@ -121,14 +119,14 @@ const MyComponent = (props: Props) => (
   </div>
 )
 
-// Typical usage: `connect` is called after the component is defined
+// Uso típico: `connect` é chamado após o componente ser definido
 export default connect<StateProps, DispatchProps, OwnProps>(
   mapState,
   mapDispatch
 )(MyComponent)
 ```
 
-It is also possible to shorten this somewhat, by inferring the types of `mapState` and `mapDispatch`:
+Também é possível abreviar um pouco, inferindo os tipos de `mapState` e` mapDispatch`:
 
 ```ts
 const mapState = (state: RootState) => ({
@@ -145,13 +143,13 @@ type DispatchProps = typeof mapDispatch
 type Props = StateProps & DispatchProps & OwnProps
 ```
 
-However, inferring the type of `mapDispatch` this way will break if it is defined as an object and also refers to thunks.
+No entanto, inferir o tipo de `mapDispatch` dessa forma será interrompido se ele for definido como um objeto e também se referir a thunks.
 
 #### Inferindo as props conectadas automaticamente
 
-`connect` consists of two functions that are called sequentially. The first function accepts `mapState` and `mapDispatch` as arguments, and returns a second function. The second function accepts the component to be wrapped, and returns a new wrapper component that passes down the props from `mapState` and `mapDispatch`. Normally, both functions are called together, like `connect(mapState, mapDispatch)(MyComponent)`.
+`conectar` consiste em duas funções que são chamadas sequencialmente. A primeira função aceita `mapState` e` mapDispatch` como argumentos e retorna uma segunda função. A segunda função aceita o componente a ser envolvido e retorna um novo componente envolvedor que passa os props de `mapState` e` mapDispatch`. Normalmente, as duas funções são chamadas juntas, como `connect(mapState, mapDispatch)(MyComponent)`.
 
-As of v7.1.2, the `@types/react-redux` package exposes a helper type, `ConnectedProps`, that can extract the return types of `mapStateToProps` and `mapDispatchToProps` from the first function. This means that if you split the `connect` call into two steps, all of the "props from Redux" can be inferred automatically without having to write them by hand. While this approach may feel unusual if you've been using React-Redux for a while, it does simplify the type declarations considerably.
+A partir da versão v7.1.2, o pacote `@types/react-redux` expõe um tipo auxiliar,`ConnectedProps`, que pode extrair os tipos de retorno de `mapStateToProps` e` mapDispatchToProps` da primeira função. Isso significa que se você dividir a chamada `connect` em duas etapas, todos os "adereços do Redux" podem ser inferidos automaticamente, sem ter que escrevê-los à mão. Embora essa abordagem possa parecer incomum se você estiver usando o React-Redux por um tempo, ela simplifica consideravelmente as declarações de tipo.
 
 ```ts
 import { connect, ConnectedProps } from 'react-redux'
@@ -173,12 +171,12 @@ const connector = connect(
   mapDispatch
 )
 
-// The inferred type will look like:
+// O tipo inferido será semelhante a:
 // {isOn: boolean, toggleOn: () => void}
 type PropsFromRedux = ConnectedProps<typeof connector>
 ```
 
-The return type of `ConnectedProps` can then be used to type your props object.
+O tipo de retorno de `ConnectedProps` pode então ser usado para tipar seu objeto de props.
 
 ```tsx
 interface Props extends PropsFromRedux {
@@ -196,17 +194,17 @@ const MyComponent = (props: Props) => (
 export default connector(MyComponent)
 ```
 
-Because types can be defined in any order, you can still declare your component before declaring the connector if you want.
+Como os tipos podem ser definidos em qualquer ordem, você ainda pode declarar seu componente antes de declarar o conector, se desejar.
 
 ```tsx
-// alternately, declare `type Props = PropsFromRedux & {backgroundColor: string}`
+// alternativamente, declare `type Props = PropsFromRedux & {backgroundColor: string}`
 interface Props extends PropsFromRedux {
   backgroundColor: string;
 }
 
-const MyComponent = (props: Props) => /* same as above */
+const MyComponent = (props: Props) => /* o mesmo que acima */
 
-const connector = connect(/* same as above*/)
+const connector = connect(/* o mesmo que acima*/)
 
 type PropsFromRedux = ConnectedProps<typeof connector>
 
@@ -215,9 +213,9 @@ export default connector(MyComponent)
 
 ### Recomendações
 
-The hooks API is generally simpler to use with static types. **If you're looking for the easiest solution for using static types with React-Redux, use the hooks API.**
+A API de ganchos é geralmente mais simples de usar com tipos estáticos. **Se você está procurando a solução mais fácil para usar tipos estáticos com React-Redux, use a API de hooks.**
 
-If you're using `connect`, **we recommend using the `ConnectedProps<T>` approach for inferring the props from Redux**, as that requires the fewest explicit type declarations.
+Se você estiver usando `connect`, **recomendamos usar a abordagem` ConnectedProps <T> `para inferir os props do Redux**, pois isso requer o mínimo de declarações de tipo explícitas.
 
 ## Recursos
 

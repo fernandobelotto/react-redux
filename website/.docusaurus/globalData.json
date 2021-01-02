@@ -1,66 +1,66 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/",
+      "path": "https://fernandobelotto.github.io/",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": false,
-          "path": "/next",
+          "path": "https://fernandobelotto.github.io/next",
           "mainDocId": "introduction/quick-start",
           "docs": [
             {
               "id": "api/batch",
-              "path": "/next/api/batch"
+              "path": "https://fernandobelotto.github.io/next/api/batch"
             },
             {
               "id": "api/connect",
-              "path": "/next/api/connect"
+              "path": "https://fernandobelotto.github.io/next/api/connect"
             },
             {
               "id": "api/connect-advanced",
-              "path": "/next/api/connect-advanced"
+              "path": "https://fernandobelotto.github.io/next/api/connect-advanced"
             },
             {
               "id": "api/hooks",
-              "path": "/next/api/hooks"
+              "path": "https://fernandobelotto.github.io/next/api/hooks"
             },
             {
               "id": "api/provider",
-              "path": "/next/api/provider"
+              "path": "https://fernandobelotto.github.io/next/api/provider"
             },
             {
               "id": "introduction/basic-tutorial",
-              "path": "/next/introduction/basic-tutorial"
+              "path": "https://fernandobelotto.github.io/next/introduction/basic-tutorial"
             },
             {
               "id": "introduction/quick-start",
-              "path": "/next/introduction/quick-start"
+              "path": "https://fernandobelotto.github.io/next/introduction/quick-start"
             },
             {
               "id": "introduction/why-use-react-redux",
-              "path": "/next/introduction/why-use-react-redux"
+              "path": "https://fernandobelotto.github.io/next/introduction/why-use-react-redux"
             },
             {
               "id": "troubleshooting",
-              "path": "/next/troubleshooting"
+              "path": "https://fernandobelotto.github.io/next/troubleshooting"
             },
             {
               "id": "using-react-redux/accessing-store",
-              "path": "/next/using-react-redux/accessing-store"
+              "path": "https://fernandobelotto.github.io/next/using-react-redux/accessing-store"
             },
             {
               "id": "using-react-redux/connect-mapdispatch",
-              "path": "/next/using-react-redux/connect-mapdispatch"
+              "path": "https://fernandobelotto.github.io/next/using-react-redux/connect-mapdispatch"
             },
             {
               "id": "using-react-redux/connect-mapstate",
-              "path": "/next/using-react-redux/connect-mapstate"
+              "path": "https://fernandobelotto.github.io/next/using-react-redux/connect-mapstate"
             },
             {
               "id": "using-react-redux/static-typing",
-              "path": "/next/using-react-redux/static-typing"
+              "path": "https://fernandobelotto.github.io/next/using-react-redux/static-typing"
             }
           ]
         },
@@ -68,60 +68,60 @@
           "name": "7.2",
           "label": "7.2",
           "isLast": true,
-          "path": "/",
+          "path": "https://fernandobelotto.github.io/",
           "mainDocId": "introduction/quick-start",
           "docs": [
             {
               "id": "api/batch",
-              "path": "/api/batch"
+              "path": "https://fernandobelotto.github.io/api/batch"
             },
             {
               "id": "api/connect",
-              "path": "/api/connect"
+              "path": "https://fernandobelotto.github.io/api/connect"
             },
             {
               "id": "api/connect-advanced",
-              "path": "/api/connect-advanced"
+              "path": "https://fernandobelotto.github.io/api/connect-advanced"
             },
             {
               "id": "api/hooks",
-              "path": "/api/hooks"
+              "path": "https://fernandobelotto.github.io/api/hooks"
             },
             {
               "id": "api/provider",
-              "path": "/api/provider"
+              "path": "https://fernandobelotto.github.io/api/provider"
             },
             {
               "id": "introduction/basic-tutorial",
-              "path": "/introduction/basic-tutorial"
+              "path": "https://fernandobelotto.github.io/introduction/basic-tutorial"
             },
             {
               "id": "introduction/quick-start",
-              "path": "/introduction/quick-start"
+              "path": "https://fernandobelotto.github.io/introduction/quick-start"
             },
             {
               "id": "introduction/why-use-react-redux",
-              "path": "/introduction/why-use-react-redux"
+              "path": "https://fernandobelotto.github.io/introduction/why-use-react-redux"
             },
             {
               "id": "troubleshooting",
-              "path": "/troubleshooting"
+              "path": "https://fernandobelotto.github.io/troubleshooting"
             },
             {
               "id": "using-react-redux/accessing-store",
-              "path": "/using-react-redux/accessing-store"
+              "path": "https://fernandobelotto.github.io/using-react-redux/accessing-store"
             },
             {
               "id": "using-react-redux/connect-mapdispatch",
-              "path": "/using-react-redux/connect-mapdispatch"
+              "path": "https://fernandobelotto.github.io/using-react-redux/connect-mapdispatch"
             },
             {
               "id": "using-react-redux/connect-mapstate",
-              "path": "/using-react-redux/connect-mapstate"
+              "path": "https://fernandobelotto.github.io/using-react-redux/connect-mapstate"
             },
             {
               "id": "using-react-redux/static-typing",
-              "path": "/using-react-redux/static-typing"
+              "path": "https://fernandobelotto.github.io/using-react-redux/static-typing"
             }
           ]
         },
@@ -129,60 +129,60 @@
           "name": "7.1",
           "label": "7.1",
           "isLast": false,
-          "path": "/7.1",
+          "path": "https://fernandobelotto.github.io/7.1",
           "mainDocId": "introduction/quick-start",
           "docs": [
             {
               "id": "api/batch",
-              "path": "/7.1/api/batch"
+              "path": "https://fernandobelotto.github.io/7.1/api/batch"
             },
             {
               "id": "api/connect",
-              "path": "/7.1/api/connect"
+              "path": "https://fernandobelotto.github.io/7.1/api/connect"
             },
             {
               "id": "api/connect-advanced",
-              "path": "/7.1/api/connect-advanced"
+              "path": "https://fernandobelotto.github.io/7.1/api/connect-advanced"
             },
             {
               "id": "api/hooks",
-              "path": "/7.1/api/hooks"
+              "path": "https://fernandobelotto.github.io/7.1/api/hooks"
             },
             {
               "id": "api/provider",
-              "path": "/7.1/api/provider"
+              "path": "https://fernandobelotto.github.io/7.1/api/provider"
             },
             {
               "id": "introduction/basic-tutorial",
-              "path": "/7.1/introduction/basic-tutorial"
+              "path": "https://fernandobelotto.github.io/7.1/introduction/basic-tutorial"
             },
             {
               "id": "introduction/quick-start",
-              "path": "/7.1/introduction/quick-start"
+              "path": "https://fernandobelotto.github.io/7.1/introduction/quick-start"
             },
             {
               "id": "introduction/why-use-react-redux",
-              "path": "/7.1/introduction/why-use-react-redux"
+              "path": "https://fernandobelotto.github.io/7.1/introduction/why-use-react-redux"
             },
             {
               "id": "troubleshooting",
-              "path": "/7.1/troubleshooting"
+              "path": "https://fernandobelotto.github.io/7.1/troubleshooting"
             },
             {
               "id": "using-react-redux/accessing-store",
-              "path": "/7.1/using-react-redux/accessing-store"
+              "path": "https://fernandobelotto.github.io/7.1/using-react-redux/accessing-store"
             },
             {
               "id": "using-react-redux/connect-mapdispatch",
-              "path": "/7.1/using-react-redux/connect-mapdispatch"
+              "path": "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapdispatch"
             },
             {
               "id": "using-react-redux/connect-mapstate",
-              "path": "/7.1/using-react-redux/connect-mapstate"
+              "path": "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapstate"
             },
             {
               "id": "using-react-redux/static-typing",
-              "path": "/7.1/using-react-redux/static-typing"
+              "path": "https://fernandobelotto.github.io/7.1/using-react-redux/static-typing"
             }
           ]
         },
@@ -190,52 +190,52 @@
           "name": "7.0",
           "label": "7.0",
           "isLast": false,
-          "path": "/7.0",
+          "path": "https://fernandobelotto.github.io/7.0",
           "mainDocId": "introduction/quick-start",
           "docs": [
             {
               "id": "api/batch",
-              "path": "/7.0/api/batch"
+              "path": "https://fernandobelotto.github.io/7.0/api/batch"
             },
             {
               "id": "api/connect",
-              "path": "/7.0/api/connect"
+              "path": "https://fernandobelotto.github.io/7.0/api/connect"
             },
             {
               "id": "api/connect-advanced",
-              "path": "/7.0/api/connect-advanced"
+              "path": "https://fernandobelotto.github.io/7.0/api/connect-advanced"
             },
             {
               "id": "api/provider",
-              "path": "/7.0/api/provider"
+              "path": "https://fernandobelotto.github.io/7.0/api/provider"
             },
             {
               "id": "introduction/basic-tutorial",
-              "path": "/7.0/introduction/basic-tutorial"
+              "path": "https://fernandobelotto.github.io/7.0/introduction/basic-tutorial"
             },
             {
               "id": "introduction/quick-start",
-              "path": "/7.0/introduction/quick-start"
+              "path": "https://fernandobelotto.github.io/7.0/introduction/quick-start"
             },
             {
               "id": "introduction/why-use-react-redux",
-              "path": "/7.0/introduction/why-use-react-redux"
+              "path": "https://fernandobelotto.github.io/7.0/introduction/why-use-react-redux"
             },
             {
               "id": "troubleshooting",
-              "path": "/7.0/troubleshooting"
+              "path": "https://fernandobelotto.github.io/7.0/troubleshooting"
             },
             {
               "id": "using-react-redux/accessing-store",
-              "path": "/7.0/using-react-redux/accessing-store"
+              "path": "https://fernandobelotto.github.io/7.0/using-react-redux/accessing-store"
             },
             {
               "id": "using-react-redux/connect-mapdispatch",
-              "path": "/7.0/using-react-redux/connect-mapdispatch"
+              "path": "https://fernandobelotto.github.io/7.0/using-react-redux/connect-mapdispatch"
             },
             {
               "id": "using-react-redux/connect-mapstate",
-              "path": "/7.0/using-react-redux/connect-mapstate"
+              "path": "https://fernandobelotto.github.io/7.0/using-react-redux/connect-mapstate"
             }
           ]
         },
@@ -243,48 +243,48 @@
           "name": "6.x",
           "label": "6.x",
           "isLast": false,
-          "path": "/6.x",
+          "path": "https://fernandobelotto.github.io/6.x",
           "mainDocId": "introduction/quick-start",
           "docs": [
             {
               "id": "api/connect",
-              "path": "/6.x/api/connect"
+              "path": "https://fernandobelotto.github.io/6.x/api/connect"
             },
             {
               "id": "api/connect-advanced",
-              "path": "/6.x/api/connect-advanced"
+              "path": "https://fernandobelotto.github.io/6.x/api/connect-advanced"
             },
             {
               "id": "api/provider",
-              "path": "/6.x/api/provider"
+              "path": "https://fernandobelotto.github.io/6.x/api/provider"
             },
             {
               "id": "introduction/basic-tutorial",
-              "path": "/6.x/introduction/basic-tutorial"
+              "path": "https://fernandobelotto.github.io/6.x/introduction/basic-tutorial"
             },
             {
               "id": "introduction/quick-start",
-              "path": "/6.x/introduction/quick-start"
+              "path": "https://fernandobelotto.github.io/6.x/introduction/quick-start"
             },
             {
               "id": "introduction/why-use-react-redux",
-              "path": "/6.x/introduction/why-use-react-redux"
+              "path": "https://fernandobelotto.github.io/6.x/introduction/why-use-react-redux"
             },
             {
               "id": "troubleshooting",
-              "path": "/6.x/troubleshooting"
+              "path": "https://fernandobelotto.github.io/6.x/troubleshooting"
             },
             {
               "id": "using-react-redux/accessing-store",
-              "path": "/6.x/using-react-redux/accessing-store"
+              "path": "https://fernandobelotto.github.io/6.x/using-react-redux/accessing-store"
             },
             {
               "id": "using-react-redux/connect-mapdispatch",
-              "path": "/6.x/using-react-redux/connect-mapdispatch"
+              "path": "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapdispatch"
             },
             {
               "id": "using-react-redux/connect-mapstate",
-              "path": "/6.x/using-react-redux/connect-mapstate"
+              "path": "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapstate"
             }
           ]
         },
@@ -292,48 +292,48 @@
           "name": "5.x",
           "label": "5.x",
           "isLast": false,
-          "path": "/5.x",
+          "path": "https://fernandobelotto.github.io/5.x",
           "mainDocId": "introduction/quick-start",
           "docs": [
             {
               "id": "api/api",
-              "path": "/5.x/api/api"
+              "path": "https://fernandobelotto.github.io/5.x/api/api"
             },
             {
               "id": "api/connect",
-              "path": "/5.x/api/connect"
+              "path": "https://fernandobelotto.github.io/5.x/api/connect"
             },
             {
               "id": "api/connect-advanced",
-              "path": "/5.x/api/connect-advanced"
+              "path": "https://fernandobelotto.github.io/5.x/api/connect-advanced"
             },
             {
               "id": "api/provider",
-              "path": "/5.x/api/provider"
+              "path": "https://fernandobelotto.github.io/5.x/api/provider"
             },
             {
               "id": "introduction/basic-tutorial",
-              "path": "/5.x/introduction/basic-tutorial"
+              "path": "https://fernandobelotto.github.io/5.x/introduction/basic-tutorial"
             },
             {
               "id": "introduction/quick-start",
-              "path": "/5.x/introduction/quick-start"
+              "path": "https://fernandobelotto.github.io/5.x/introduction/quick-start"
             },
             {
               "id": "introduction/why-use-react-redux",
-              "path": "/5.x/introduction/why-use-react-redux"
+              "path": "https://fernandobelotto.github.io/5.x/introduction/why-use-react-redux"
             },
             {
               "id": "troubleshooting",
-              "path": "/5.x/troubleshooting"
+              "path": "https://fernandobelotto.github.io/5.x/troubleshooting"
             },
             {
               "id": "using-react-redux/connect-mapdispatch",
-              "path": "/5.x/using-react-redux/connect-mapdispatch"
+              "path": "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapdispatch"
             },
             {
               "id": "using-react-redux/connect-mapstate",
-              "path": "/5.x/using-react-redux/connect-mapstate"
+              "path": "https://fernandobelotto.github.io/5.x/using-react-redux/connect-mapstate"
             }
           ]
         }

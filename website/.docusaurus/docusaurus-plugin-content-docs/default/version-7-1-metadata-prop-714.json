@@ -12,17 +12,17 @@
           {
             "type": "link",
             "label": "Quick Start",
-            "href": "/7.1/introduction/quick-start"
+            "href": "https://fernandobelotto.github.io/7.1/introduction/quick-start"
           },
           {
             "type": "link",
             "label": "Basic Tutorial",
-            "href": "/7.1/introduction/basic-tutorial"
+            "href": "https://fernandobelotto.github.io/7.1/introduction/basic-tutorial"
           },
           {
             "type": "link",
             "label": "Why Use React Redux?",
-            "href": "/7.1/introduction/why-use-react-redux"
+            "href": "https://fernandobelotto.github.io/7.1/introduction/why-use-react-redux"
           }
         ]
       },
@@ -34,22 +34,22 @@
           {
             "type": "link",
             "label": "Connect: Extracting Data with mapStateToProps",
-            "href": "/7.1/using-react-redux/connect-mapstate"
+            "href": "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapstate"
           },
           {
             "type": "link",
             "label": "Connect: Dispatching Actions with mapDispatchToProps",
-            "href": "/7.1/using-react-redux/connect-mapdispatch"
+            "href": "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapdispatch"
           },
           {
             "type": "link",
             "label": "Accessing the Store",
-            "href": "/7.1/using-react-redux/accessing-store"
+            "href": "https://fernandobelotto.github.io/7.1/using-react-redux/accessing-store"
           },
           {
             "type": "link",
             "label": "Static Typing",
-            "href": "/7.1/using-react-redux/static-typing"
+            "href": "https://fernandobelotto.github.io/7.1/using-react-redux/static-typing"
           }
         ]
       },
@@ -61,27 +61,27 @@
           {
             "type": "link",
             "label": "connect()",
-            "href": "/7.1/api/connect"
+            "href": "https://fernandobelotto.github.io/7.1/api/connect"
           },
           {
             "type": "link",
             "label": "Provider",
-            "href": "/7.1/api/provider"
+            "href": "https://fernandobelotto.github.io/7.1/api/provider"
           },
           {
             "type": "link",
             "label": "connectAdvanced()",
-            "href": "/7.1/api/connect-advanced"
+            "href": "https://fernandobelotto.github.io/7.1/api/connect-advanced"
           },
           {
             "type": "link",
             "label": "batch()",
-            "href": "/7.1/api/batch"
+            "href": "https://fernandobelotto.github.io/7.1/api/batch"
           },
           {
             "type": "link",
             "label": "Hooks",
-            "href": "/7.1/api/hooks"
+            "href": "https://fernandobelotto.github.io/7.1/api/hooks"
           }
         ]
       },
@@ -93,25 +93,25 @@
           {
             "type": "link",
             "label": "Troubleshooting",
-            "href": "/7.1/troubleshooting"
+            "href": "https://fernandobelotto.github.io/7.1/troubleshooting"
           }
         ]
       }
     ]
   },
   "permalinkToSidebar": {
-    "/7.1/api/batch": "version-7.1/docs",
-    "/7.1/api/connect": "version-7.1/docs",
-    "/7.1/api/connect-advanced": "version-7.1/docs",
-    "/7.1/api/hooks": "version-7.1/docs",
-    "/7.1/api/provider": "version-7.1/docs",
-    "/7.1/introduction/basic-tutorial": "version-7.1/docs",
-    "/7.1/introduction/quick-start": "version-7.1/docs",
-    "/7.1/introduction/why-use-react-redux": "version-7.1/docs",
-    "/7.1/troubleshooting": "version-7.1/docs",
-    "/7.1/using-react-redux/accessing-store": "version-7.1/docs",
-    "/7.1/using-react-redux/connect-mapdispatch": "version-7.1/docs",
-    "/7.1/using-react-redux/connect-mapstate": "version-7.1/docs",
-    "/7.1/using-react-redux/static-typing": "version-7.1/docs"
+    "https://fernandobelotto.github.io/7.1/api/batch": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/api/connect": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/api/connect-advanced": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/api/hooks": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/api/provider": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/introduction/basic-tutorial": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/introduction/quick-start": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/introduction/why-use-react-redux": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/troubleshooting": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/using-react-redux/accessing-store": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapdispatch": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/using-react-redux/connect-mapstate": "version-7.1/docs",
+    "https://fernandobelotto.github.io/7.1/using-react-redux/static-typing": "version-7.1/docs"
   }
 }

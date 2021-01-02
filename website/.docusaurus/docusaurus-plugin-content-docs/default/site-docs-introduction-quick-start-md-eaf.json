@@ -6,12 +6,12 @@
   "description": "Início rápido",
   "source": "@site/..\\docs\\introduction\\quick-start.md",
   "slug": "/introduction/quick-start",
-  "permalink": "/next/introduction/quick-start",
+  "permalink": "https://fernandobelotto.github.io/next/introduction/quick-start",
   "version": "current",
   "sidebar_label": "Começo rápido",
   "sidebar": "docs",
   "next": {
     "title": "Tutorial Básico",
-    "permalink": "/next/introduction/basic-tutorial"
+    "permalink": "https://fernandobelotto.github.io/next/introduction/basic-tutorial"
   }
 }

@@ -6,16 +6,16 @@
   "description": "Provider",
   "source": "@site/versioned_docs\\version-7.2\\api\\Provider.md",
   "slug": "/api/provider",
-  "permalink": "/api/provider",
+  "permalink": "https://fernandobelotto.github.io/api/provider",
   "version": "7.2",
   "sidebar_label": "Provider",
   "sidebar": "version-7.2/docs",
   "previous": {
     "title": "Connect",
-    "permalink": "/api/connect"
+    "permalink": "https://fernandobelotto.github.io/api/connect"
   },
   "next": {
     "title": "connectAdvanced",
-    "permalink": "/api/connect-advanced"
+    "permalink": "https://fernandobelotto.github.io/api/connect-advanced"
   }
 }

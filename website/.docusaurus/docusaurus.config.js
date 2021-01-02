@@ -25,10 +25,10 @@ export default {
   "title": "React Redux",
   "onBrokenLinks": "throw",
   "tagline": "Ligações oficiais do React para Redux",
-  "url": "https://react-redux.js.org",
-  "baseUrl": "/",
+  "url": "/react-redux/",
+  "baseUrl": "https://fernandobelotto.github.io/",
   "projectName": "react-redux",
-  "organizationName": "reduxjs",
+  "organizationName": "fernandobelotto",
   "favicon": "img/favicon/favicon.ico",
   "scripts": [
     "/scripts/sidebarScroll.js",

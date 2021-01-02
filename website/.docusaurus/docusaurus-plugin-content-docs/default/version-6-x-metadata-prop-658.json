@@ -12,17 +12,17 @@
           {
             "type": "link",
             "label": "Quick Start",
-            "href": "/6.x/introduction/quick-start"
+            "href": "https://fernandobelotto.github.io/6.x/introduction/quick-start"
           },
           {
             "type": "link",
             "label": "Basic Tutorial",
-            "href": "/6.x/introduction/basic-tutorial"
+            "href": "https://fernandobelotto.github.io/6.x/introduction/basic-tutorial"
           },
           {
             "type": "link",
             "label": "Why Use React Redux?",
-            "href": "/6.x/introduction/why-use-react-redux"
+            "href": "https://fernandobelotto.github.io/6.x/introduction/why-use-react-redux"
           }
         ]
       },
@@ -34,17 +34,17 @@
           {
             "type": "link",
             "label": "Connect: Extracting Data with mapStateToProps",
-            "href": "/6.x/using-react-redux/connect-mapstate"
+            "href": "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapstate"
           },
           {
             "type": "link",
             "label": "Connect: Dispatching Actions with mapDispatchToProps",
-            "href": "/6.x/using-react-redux/connect-mapdispatch"
+            "href": "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapdispatch"
           },
           {
             "type": "link",
             "label": "Accessing the Store",
-            "href": "/6.x/using-react-redux/accessing-store"
+            "href": "https://fernandobelotto.github.io/6.x/using-react-redux/accessing-store"
           }
         ]
       },
@@ -56,17 +56,17 @@
           {
             "type": "link",
             "label": "connect()",
-            "href": "/6.x/api/connect"
+            "href": "https://fernandobelotto.github.io/6.x/api/connect"
           },
           {
             "type": "link",
             "label": "Provider",
-            "href": "/6.x/api/provider"
+            "href": "https://fernandobelotto.github.io/6.x/api/provider"
           },
           {
             "type": "link",
             "label": "connectAdvanced()",
-            "href": "/6.x/api/connect-advanced"
+            "href": "https://fernandobelotto.github.io/6.x/api/connect-advanced"
           }
         ]
       },
@@ -78,22 +78,22 @@
           {
             "type": "link",
             "label": "Troubleshooting",
-            "href": "/6.x/troubleshooting"
+            "href": "https://fernandobelotto.github.io/6.x/troubleshooting"
           }
         ]
       }
     ]
   },
   "permalinkToSidebar": {
-    "/6.x/api/connect": "version-6.x/docs",
-    "/6.x/api/connect-advanced": "version-6.x/docs",
-    "/6.x/api/provider": "version-6.x/docs",
-    "/6.x/introduction/basic-tutorial": "version-6.x/docs",
-    "/6.x/introduction/quick-start": "version-6.x/docs",
-    "/6.x/introduction/why-use-react-redux": "version-6.x/docs",
-    "/6.x/troubleshooting": "version-6.x/docs",
-    "/6.x/using-react-redux/accessing-store": "version-6.x/docs",
-    "/6.x/using-react-redux/connect-mapdispatch": "version-6.x/docs",
-    "/6.x/using-react-redux/connect-mapstate": "version-6.x/docs"
+    "https://fernandobelotto.github.io/6.x/api/connect": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/api/connect-advanced": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/api/provider": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/introduction/basic-tutorial": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/introduction/quick-start": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/introduction/why-use-react-redux": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/troubleshooting": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/using-react-redux/accessing-store": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapdispatch": "version-6.x/docs",
+    "https://fernandobelotto.github.io/6.x/using-react-redux/connect-mapstate": "version-6.x/docs"
   }
 }

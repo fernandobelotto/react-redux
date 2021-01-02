@@ -6,16 +6,16 @@
   "description": "Basic Tutorial",
   "source": "@site/versioned_docs\\version-7.1\\introduction\\basic-tutorial.md",
   "slug": "/introduction/basic-tutorial",
-  "permalink": "/7.1/introduction/basic-tutorial",
+  "permalink": "https://fernandobelotto.github.io/7.1/introduction/basic-tutorial",
   "version": "7.1",
   "sidebar_label": "Basic Tutorial",
   "sidebar": "version-7.1/docs",
   "previous": {
     "title": "Quick Start",
-    "permalink": "/7.1/introduction/quick-start"
+    "permalink": "https://fernandobelotto.github.io/7.1/introduction/quick-start"
   },
   "next": {
     "title": "Why Use React Redux?",
-    "permalink": "/7.1/introduction/why-use-react-redux"
+    "permalink": "https://fernandobelotto.github.io/7.1/introduction/why-use-react-redux"
   }
 }

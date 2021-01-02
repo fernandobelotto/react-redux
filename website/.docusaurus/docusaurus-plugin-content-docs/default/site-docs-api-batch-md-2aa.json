@@ -6,16 +6,16 @@
   "description": "batch()",
   "source": "@site/..\\docs\\api\\batch.md",
   "slug": "/api/batch",
-  "permalink": "/next/api/batch",
+  "permalink": "https://fernandobelotto.github.io/next/api/batch",
   "version": "current",
   "sidebar_label": "batch()",
   "sidebar": "docs",
   "previous": {
     "title": "connectAdvanced",
-    "permalink": "/next/api/connect-advanced"
+    "permalink": "https://fernandobelotto.github.io/next/api/connect-advanced"
   },
   "next": {
     "title": "Hooks",
-    "permalink": "/next/api/hooks"
+    "permalink": "https://fernandobelotto.github.io/next/api/hooks"
   }
 }

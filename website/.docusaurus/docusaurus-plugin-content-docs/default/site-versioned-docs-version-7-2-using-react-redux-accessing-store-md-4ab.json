@@ -6,16 +6,16 @@
   "description": "Acessando a store",
   "source": "@site/versioned_docs\\version-7.2\\using-react-redux\\accessing-store.md",
   "slug": "/using-react-redux/accessing-store",
-  "permalink": "/using-react-redux/accessing-store",
+  "permalink": "https://fernandobelotto.github.io/using-react-redux/accessing-store",
   "version": "7.2",
   "sidebar_label": "Acessando a store",
   "sidebar": "version-7.2/docs",
   "previous": {
     "title": "Connect: Despachando Actions com mapDispatchToProps",
-    "permalink": "/using-react-redux/connect-mapdispatch"
+    "permalink": "https://fernandobelotto.github.io/using-react-redux/connect-mapdispatch"
   },
   "next": {
     "title": "Tipagem Estática",
-    "permalink": "/using-react-redux/static-typing"
+    "permalink": "https://fernandobelotto.github.io/using-react-redux/static-typing"
   }
 }

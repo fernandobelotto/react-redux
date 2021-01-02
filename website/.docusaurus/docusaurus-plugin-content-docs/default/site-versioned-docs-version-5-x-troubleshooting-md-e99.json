@@ -6,12 +6,12 @@
   "description": "Troubleshooting",
   "source": "@site/versioned_docs\\version-5.x\\troubleshooting.md",
   "slug": "/troubleshooting",
-  "permalink": "/5.x/troubleshooting",
+  "permalink": "https://fernandobelotto.github.io/5.x/troubleshooting",
   "version": "5.x",
   "sidebar_label": "Troubleshooting",
   "sidebar": "version-5.x/docs",
   "previous": {
     "title": "Provider",
-    "permalink": "/5.x/api/provider"
+    "permalink": "https://fernandobelotto.github.io/5.x/api/provider"
   }
 }

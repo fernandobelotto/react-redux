@@ -6,16 +6,16 @@
   "description": "connectAdvanced()",
   "source": "@site/..\\docs\\api\\connect-advanced.md",
   "slug": "/api/connect-advanced",
-  "permalink": "/next/api/connect-advanced",
+  "permalink": "https://fernandobelotto.github.io/next/api/connect-advanced",
   "version": "current",
   "sidebar_label": "connectAdvanced()",
   "sidebar": "docs",
   "previous": {
     "title": "Provider",
-    "permalink": "/next/api/provider"
+    "permalink": "https://fernandobelotto.github.io/next/api/provider"
   },
   "next": {
     "title": "batch",
-    "permalink": "/next/api/batch"
+    "permalink": "https://fernandobelotto.github.io/next/api/batch"
   }
 }
