@@ -7,45 +7,45 @@ hide_title: true
 
 # `connect()`
 
-## Overview
+## Visão geral
 
-The `connect()` function connects a React component to a Redux store.
+A função `connect()` conecta um componente React a uma Redux store.
 
-It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
+Ele fornece a seu componente conectado as partes dos dados de que precisa da store e as funções que pode usar para despachar actions para a store.
 
-It does not modify the component class passed to it; instead, it returns a new, connected component class that wraps the component you passed in.
+Ele não modifica a classe de componente que você passou a ela; em vez disso, ela retorna uma nova classe de componente conectado que envolve o componente que você passou.
 
 ```js
 function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
 ```
 
-The `mapStateToProps` and `mapDispatchToProps` deals with your Redux store’s `state` and `dispatch`, respectively. `state` and `dispatch` will be supplied to your `mapStateToProps` or `mapDispatchToProps` functions as the first argument.
+O `mapStateToProps` e `mapDispatchToProps` lida com o `state` e `dispatch` de sua Redux store, respectivamente. `state` e `dispatch` serão fornecidos para suas funções `mapStateToProps` ou` mapDispatchToProps` como o primeiro argumento.
 
-The returns of `mapStateToProps` and `mapDispatchToProps` are referred to internally as `stateProps` and `dispatchProps`, respectively. They will be supplied to `mergeProps`, if defined, as the first and the second argument, where the third argument will be `ownProps`. The combined result, commonly referred to as `mergedProps`, will then be supplied to your connected component.
+Os retornos de `mapStateToProps` e `mapDispatchToProps` são referidos internamente como `stateProps` e `dispatchProps`, respectivamente. Eles serão fornecidos a `mergeProps`, se definidos, como o primeiro e o segundo argumento, onde o terceiro argumento será `ownProps`. O resultado combinado, comumente referido como `mergedProps`, será então fornecido ao seu componente conectado.
 
-## `connect()` Parameters
+## Parâmetros da `connect()`
 
-`connect` accepts four different parameters, all optional. By convention, they are called:
+`connect` aceita quatro parâmetros diferentes, todos opcionais. Por convenção, eles são chamados de:
 
-1. `mapStateToProps?: Function`
-2. `mapDispatchToProps?: Function | Object`
-3. `mergeProps?: Function`
-4. `options?: Object`
+1. `mapStateToProps?: Função`
+2. `mapDispatchToProps?: Função | Objeto`
+3. `mergeProps?: Função`
+4. `options?: Objeto`
 
 ### `mapStateToProps?: (state, ownProps?) => Object`
 
-If a `mapStateToProps` function is specified, the new wrapper component will subscribe to Redux store updates. This means that any time the store is updated, `mapStateToProps` will be called. The results of `mapStateToProps` must be a plain object, which will be merged into the wrapped component’s props. If you don't want to subscribe to store updates, pass `null` or `undefined` in place of `mapStateToProps`.
+Se uma função `mapStateToProps` for especificada, o novo componente envolvido irá assinar as atualizações da Redux store. Isso significa que sempre que o armazenamento for atualizado, `mapStateToProps` será chamado. Os resultados de `mapStateToProps` devem ser um objeto simples, que será mesclado nas propriedades do componente encapsulado. Se você não quiser assinar para armazenar atualizações, passe `null` ou `undefined` no lugar de `mapStateToProps`.
 
-#### Parameters
+#### Parâmetros
 
-1. `state: Object`
-2. `ownProps?: Object`
+1. `state: Objeto`
+2. `ownProps?: Objeto`
 
-A `mapStateToProps` function takes a maximum of two parameters. The number of declared function parameters (a.k.a. arity) affects when it will be called. This also determines whether the function will receive ownProps. See notes [here](#the-arity-of-maptoprops-functions).
+Uma função `mapStateToProps` leva no máximo dois parâmetros. O número de parâmetros de função declarados (também conhecido como aridade) afeta quando ela será chamada. Isso também determina se a função receberá ownProps. Veja notas [aqui](#the-arity-of-maptoprops-functions).
 
 ##### `state`
 
-If your `mapStateToProps` function is declared as taking one parameter, it will be called whenever the store state changes, and given the store state as the only parameter.
+Se sua função `mapStateToProps` for declarada como tendo um parâmetro, ela será chamada sempre que o estado da store mudar, e dado o estado da store como o único parâmetro.
 
 ```js
 const mapStateToProps = state => ({ todos: state.todos })
@@ -53,9 +53,9 @@ const mapStateToProps = state => ({ todos: state.todos })
 
 ##### `ownProps`
 
-If your `mapStateToProps` function is declared as taking two parameters, it will be called whenever the store state changes _or_ when the wrapper component receives new props (based on shallow equality comparisons). It will be given the store state as the first parameter, and the wrapper component's props as the second parameter.
+Se sua função `mapStateToProps` for declarada como tendo dois parâmetros, ela será chamada sempre que o estado da store mudar _ou_ quando o componente envolvido receber novos props (com base em comparações de igualdade rasas (shallow equality)). Ele receberá o estado da store como o primeiro parâmetro e os props do componente encolvido como o segundo parâmetro.
 
-The second parameter is normally referred to as `ownProps` by convention.
+O segundo parâmetro é normalmente referido como `ownProps` por convenção.
 
 ```js
 const mapStateToProps = (state, ownProps) => ({
@@ -63,24 +63,24 @@ const mapStateToProps = (state, ownProps) => ({
 })
 ```
 
-#### Returns
+#### Retorno
 
-Your `mapStateToProps` functions are expected to return an object. This object, normally referred to as `stateProps`, will be merged as props to your connected component. If you define `mergeProps`, it will be supplied as the first parameter to `mergeProps`.
+Espera-se que suas funções `mapStateToProps` retornem um objeto. Este objeto, normalmente conhecido como `stateProps`, será mesclado como props para o seu componente conectado. Se você definir `mergeProps`, ele será fornecido como o primeiro parâmetro para` mergeProps`.
 
-The return of the `mapStateToProps` determine whether the connected component will re-render (details [here](../using-react-redux/connect-mapstate#return-values-determine-if-your-component-re-renders)).
+O retorno de `mapStateToProps` determina se o componente conectado irá renderizar novamente (detalhes [aqui](../using-react-redux/connect-mapstate#return-values-determine-if-your-component-re-renders)).
 
-For more details on recommended usage of `mapStateToProps`, please refer to [our guide on using `mapStateToProps`](../using-react-redux/connect-mapstate).
+Para obter mais detalhes sobre o uso recomendado de `mapStateToProps`, consulte [nosso guia sobre como usar` mapStateToProps`](../using-react-redux/connect-mapstate).
 
-> You may define `mapStateToProps` and `mapDispatchToProps` as a factory function, i.e., you return a function instead of an object. In this case your returned function will be treated as the real `mapStateToProps` or `mapDispatchToProps`, and be called in subsequent calls. You may see notes on [Factory Functions](#factory-functions) or our guide on performance optimizations.
+> Você pode definir `mapStateToProps` e` mapDispatchToProps` como uma factory function, ou seja, você retorna uma função em vez de um objeto. Neste caso, sua função retornada será tratada como o real `mapStateToProps` ou `mapDispatchToProps`, e será chamada em chamadas subsequentes. Você pode ver notas em [Factory Funcions](#factory-functions) ou nosso guia sobre otimizações de desempenho.
 
 ### `mapDispatchToProps?: Object | (dispatch, ownProps?) => Object`
 
-Conventionally called `mapDispatchToProps`, this second parameter to `connect()` may either be an object, a function, or not supplied.
+Convencionalmente chamado de `mapDispatchToProps`, este segundo parâmetro para `connect()` pode ser um objeto, uma função ou não ser fornecido.
 
-Your component will receive `dispatch` by default, i.e., when you do not supply a second parameter to `connect()`:
+Seu componente receberá `dispatch` por padrão, ou seja, quando você não fornecer um segundo parâmetro para `connect()`:
 
 ```js
-// do not pass `mapDispatchToProps`
+// não passe `mapDispatchToProps`
 connect()(MyComponent)
 connect(mapState)(MyComponent)
 connect(
@@ -91,51 +91,49 @@ connect(
 )(MyComponent)
 ```
 
-If you define a `mapDispatchToProps` as a function, it will be called with a maximum of two parameters.
+Se você definir um `mapDispatchToProps` como uma função, ele será chamado com no máximo dois parâmetros.
 
-#### Parameters
+#### Parâmetros
 
-1. `dispatch: Function`
-2. `ownProps?: Object`
+1. `dispatch: Função`
+2. `ownProps?: Objeto`
 
 ##### `dispatch`
 
-If your `mapDispatchToProps` is declared as a function taking one parameter, it will be given the `dispatch` of your `store`.
+Se seu `mapDispatchToProps` for declarado como uma função recebendo um parâmetro, ele receberá o `dispatch` de sua `store`.
 
 ```js
 const mapDispatchToProps = dispatch => {
   return {
-    // dispatching plain actions
+    // despachando actions simples
     increment: () => dispatch({ type: 'INCREMENT' }),
     decrement: () => dispatch({ type: 'DECREMENT' }),
     reset: () => dispatch({ type: 'RESET' })
   }
 }
 ```
-
 ##### `ownProps`
 
-If your `mapDispatchToProps` function is declared as taking two parameters, it will be called with `dispatch` as the first parameter and the props passed to the wrapper component as the second parameter, and will be re-invoked whenever the connected component receives new props.
+Se sua função `mapDispatchToProps` for declarada como tendo dois parâmetros, ela será chamada com `dispatch` como o primeiro parâmetro e os props passados ​​para o componente envolvido como o segundo parâmetro, e serão re-invocados sempre que o componente conectado receber novas props.
 
-The second parameter is normally referred to as `ownProps` by convention.
+O segundo parâmetro é normalmente referido como `ownProps` por convenção.
 
 ```js
-// binds on component re-rendering
+// vincula-se à re-renderização do componente
 <button onClick={() => this.props.toggleTodo(this.props.todoId)} />
 
-// binds on `props` change
+// vincula-se à mudança de `props`
 const mapDispatchToProps = (dispatch, ownProps) => {
   toggleTodo: () => dispatch(toggleTodo(ownProps.todoId))
 }
 ```
+O número de parâmetros de função declarados de `mapDispatchToProps` determina se eles recebem ownProps. Veja notas [aqui](#the-arity-of-maptoprops-functions).
 
-The number of declared function parameters of `mapDispatchToProps` determines whether they receive ownProps. See notes [here](#the-arity-of-maptoprops-functions).
+#### Retorno
 
-#### Returns
+Espera-se que suas funções `mapDispatchToProps` retornem um objeto. Cada campo do objeto deve ser uma função, chamando a qual se espera que despache uma action para a store.
 
-Your `mapDispatchToProps` functions are expected to return an object. Each fields of the object should be a function, calling which is expected to dispatch an action to the store.
-
-The return of your `mapDispatchToProps` functions are regarded as `dispatchProps`. It will be merged as props to your connected component. If you define `mergeProps`, it will be supplied as the second parameter to `mergeProps`.
+O retorno de suas funções `mapDispatchToProps` são considerados `dispatchProps`. Ele será mesclado como props ao seu componente conectado. Se você definir `mergeProps`, ele será fornecido como o segundo parâmetro para` mergeProps`.
 
 ```js
 const createMyAction = () => ({ type: 'MY_ACTION' })
@@ -145,19 +143,19 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     dispatchPlainObject: () => dispatch({ type: 'MY_ACTION' }),
     dispatchActionCreatedByActionCreator: () => dispatch(createMyAction()),
     ...boundActions,
-    // you may return dispatch here
+    // você pode devolver a dispatch aqui
     dispatch
   }
 }
 ```
+Para obter mais detalhes sobre o uso recomendado, consulte [nosso guia sobre como usar `mapDispatchToProps`](../using-react-redux/connect-mapdispatch).
 
-For more details on recommended usage, please refer to [our guide on using `mapDispatchToProps`](../using-react-redux/connect-mapdispatch).
 
-> You may define `mapStateToProps` and `mapDispatchToProps` as a factory function, i.e., you return a function instead of an object. In this case your returned function will be treated as the real `mapStateToProps` or `mapDispatchToProps`, and be called in subsequent calls. You may see notes on [Factory Functions](#factory-functions) or our guide on performance optimizations.
+> Você pode definir `mapStateToProps` e` mapDispatchToProps` como uma factory function, ou seja, você retorna uma função em vez de um objeto. Neste caso, sua função retornada será tratada como o real `mapStateToProps` ou` mapDispatchToProps`, e será chamada em chamadas subsequentes. Você pode ver notas em [Factory Functions](#factory-functions) ou nosso guia sobre otimizações de desempenho.
 
-#### Object Shorthand Form
+#### Forma abreviada de objeto
 
-`mapDispatchToProps` may be an object where each field is an [action creator](https://redux.js.org/glossary#action-creator).
+`mapDispatchToProps` pode ser um objeto onde cada campo é um [action creator](https://redux.js.org/glossary#action-creator).
 
 ```js
 import { addTodo, deleteTodo, toggleTodo } from './actionCreators'
@@ -173,34 +171,32 @@ export default connect(
   mapDispatchToProps
 )(TodoApp)
 ```
-
-In this case, React-Redux binds the `dispatch` of your store to each of the action creators using `bindActionCreators`. The result will be regarded as `dispatchProps`, which will be either directly merged to your connected components, or supplied to `mergeProps` as the second argument.
+Neste caso, React-Redux vincula a `dispatch` de sua store a cada um dos action creators usando` bindActionCreators`. O resultado será considerado como `dispatchProps`, que será diretamente mesclado aos componentes conectados ou fornecido a `mergeProps` como o segundo argumento.
 
 ```js
-// internally, React-Redux calls bindActionCreators
-// to bind the action creators to the dispatch of your store
+// internamente, React-Redux chama bindActionCreators
+// para vincular os action creators a dispatch de sua store
 bindActionCreators(mapDispatchToProps, dispatch)
 ```
-
-We also have a section in our `mapDispatchToProps` guide on the usage of object shorthand form [here](../using-react-redux/connect-mapdispatch#defining-mapdispatchtoprops-as-an-object).
+Também temos uma seção em nosso guia `mapDispatchToProps` sobre o uso da forma abreviada de objeto [aqui](../using-react-redux/connect-mapdispatch#defining-mapdispatchtoprops-as-an-object).
 
 ### `mergeProps?: (stateProps, dispatchProps, ownProps) => Object`
 
-If specified, defines how the final props for your own wrapped component are determined. If you do not provide `mergeProps`, your wrapped component receives `{ ...ownProps, ...stateProps, ...dispatchProps }` by default.
+Se especificado, define como os props finais para seu próprio componente envolvido são determinados. Se você não fornecer `mergeProps`, seu componente envolvido receberá `{...ownProps, ...stateProps, ...dispatchProps}` por padrão.
 
-#### Parameters
+#### Parâmetros
 
-`mergeProps` should be specified with maximum of three parameters. They are the result of `mapStateToProps()`, `mapDispatchToProps()`, and the wrapper component's `props`, respectively:
+`mergeProps` deve ser especificado com no máximo três parâmetros. Eles são o resultado de `mapStateToProps()`, `mapDispatchToProps()` e os `props` do componente envolvido, respectivamente:
 
 1. `stateProps`
 2. `dispatchProps`
 3. `ownProps`
 
-The fields in the plain object you return from it will be used as the props for the wrapped component. You may specify this function to select a slice of the state based on props, or to bind action creators to a particular variable from props.
+Os campos no objeto simples que você retorna dele serão usados ​​como props para o componente envolvido. Você pode especificar esta função para selecionar uma parte do estado com base em props ou para ligar os action creators a uma variável particular de props.
 
-#### Returns
+#### Retorno
 
-The return value of `mergeProps` is referred to as `mergedProps` and the fields will be used as the props for the wrapped component.
+O valor de retorno de `mergeProps` é referido como `mergedProps` e os campos serão usados ​​como props para o componente encapsulado.
 
 ### `options?: Object`
 
@@ -218,11 +214,11 @@ The return value of `mergeProps` is referred to as `mergedProps` and the fields 
 
 #### `context: Object`
 
-> Note: This parameter is supported in >= v6.0 only
+> Nota: Este parâmetro é compatível com >= v6.0 apenas
 
-React-Redux v6 allows you to supply a custom context instance to be used by React-Redux.
-You need to pass the instance of your context to both `<Provider />` and your connected component.
-You may pass the context to your connected component either by passing it here as a field of option, or as a prop to your connected component in rendering.
+React-Redux v6 permite que você forneça uma instância de context customizada para ser usada pelo React-Redux.
+Você precisa passar a instância de seu context para `<Provider />` e seu componente conectado.
+Você pode passar o contexto para o seu componente conectado passando-o aqui como um campo de opção ou como uma props para o seu componente conectado na renderização.
 
 ```js
 // const MyContext = React.createContext();
@@ -236,74 +232,72 @@ connect(
 
 #### `pure: boolean`
 
-- default value: `true`
+- valor padrão: `true`
 
-Assumes that the wrapped component is a “pure” component and does not rely on any input or state other than its props and the selected Redux store’s state.
+Assume que o componente envolvido é um componente "puro" e não depende de nenhuma entrada ou estado além de seus props e o estado da Redux store selecionada.
 
-When `options.pure` is true, `connect` performs several equality checks that are used to avoid unnecessary calls to `mapStateToProps`, `mapDispatchToProps`, `mergeProps`, and ultimately to `render`. These include `areStatesEqual`, `areOwnPropsEqual`, `areStatePropsEqual`, and `areMergedPropsEqual`. While the defaults are probably appropriate 99% of the time, you may wish to override them with custom implementations for performance or other reasons.
+Quando `options.pure` é verdadeiro, `connect` executa várias verificações de igualdade que são usadas para evitar chamadas desnecessárias para `mapStateToProps`, `mapDispatchToProps`, `mergeProps` e, finalmente, para `render`. Estes incluem `areStatesEqual`, `areOwnPropsEqual`, `areStatePropsEqual` e `areMergedPropsEqual`. Embora os padrões provavelmente sejam apropriados 99% das vezes, você pode desejar substituí-los por implementações personalizadas para desempenho ou outros motivos.
 
-We provide a few examples in the following sections.
+Fornecemos alguns exemplos nas seções a seguir.
 
 #### `areStatesEqual: (next: Object, prev: Object) => boolean`
 
-- default value: `strictEqual: (next, prev) => prev === next`
+- valor padrão: `strictEqual: (next, prev) => prev === next`
 
-When pure, compares incoming store state to its previous value.
+Quando puro, compara o estado da store de entrada com seu valor anterior.
 
-_Example 1_
+_Exemplo 1_
 
 ```js
 const areStatesEqual = (next, prev) =>
   prev.entities.todos === next.entities.todos
 ```
+Você pode desejar sobrescrever `areStatesEqual` se sua função `mapStateToProps` for computacionalmente pesada e também estiver preocupada apenas com uma pequena parte de seu estado. O exemplo acima irá efetivamente ignorar as mudanças de estado para tudo, exceto para aquela parte do estado.
 
-You may wish to override `areStatesEqual` if your `mapStateToProps` function is computationally expensive and is also only concerned with a small slice of your state. The example above will effectively ignore state changes for everything but that slice of state.
+_Exemplo 2_
 
-_Example 2_
-
-If you have impure reducers that mutate your store state, you may wish to override `areStatesEqual` to always return false:
+Se você tiver redutores impuros que alteram o seu estado da store, você pode substituir `areStatesEqual` para sempre retornar falso:
 
 ```js
 const areStatesEqual = () => false
 ```
-
-This would likely impact the other equality checks as well, depending on your `mapStateToProps` function.
+Isso provavelmente afetaria as outras verificações de igualdade também, dependendo de sua função `mapStateToProps`.
 
 `areOwnPropsEqual: (next: Object, prev: Object) => boolean`
 
-- default value: `shallowEqual: (objA, objB) => boolean`
-  ( returns `true` when each field of the objects is equal )
+- valor padrão: `shallowEqual: (objA, objB) => boolean`
+  ( retorna `verdadeiro` quando cada campo dos objetos é igual )
 
-When pure, compares incoming props to its previous value.
+Quando puro, compara os props recebidos com seu valor anterior.
 
-You may wish to override `areOwnPropsEqual` as a way to whitelist incoming props. You'd also have to implement `mapStateToProps`, `mapDispatchToProps` and `mergeProps` to also whitelist props. (It may be simpler to achieve this other ways, for example by using [recompose's mapProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#mapprops).)
+Você pode querer substituir `areOwnPropsEqual` como uma forma de colocar as props de entrada na lista de permissões. Você também teria que implementar `mapStateToProps`,`mapDispatchToProps` e `mergeProps` para também colocar props na lista de permissões. (Pode ser mais simples conseguir isso de outras maneiras, por exemplo, usando [recompose's mapProps](https://github.com/acdlite/recompose/blob/master/docs/API.md#mapprops).)
 
 #### `areStatePropsEqual: (next: Object, prev: Object) => boolean`
 
-- type: `function`
-- default value: `shallowEqual`
+- tipo: `function`
+- valor padrão: `shallowEqual`
 
-When pure, compares the result of `mapStateToProps` to its previous value.
+Quando puro, compara o resultado de `mapStateToProps` com seu valor anterior.
 
 #### `areMergedPropsEqual: (next: Object, prev: Object) => boolean`
 
-- default value: `shallowEqual`
+- valor padrão: `shallowEqual`
 
-When pure, compares the result of `mergeProps` to its previous value.
+Quando puro, compara o resultado de `mergeProps` com seu valor anterior.
 
-You may wish to override `areStatePropsEqual` to use `strictEqual` if your `mapStateToProps` uses a memoized selector that will only return a new object if a relevant prop has changed. This would be a very slight performance improvement, since would avoid extra equality checks on individual props each time `mapStateToProps` is called.
+Você pode querer sobrescrever `areStatePropsEqual` para usar `strictEqual` se seu `mapStateToProps` usar um seletor memoizado que só retornará um novo objeto se um prop relevante mudou. Isso seria uma pequena melhoria de desempenho, pois evitaria verificações extras de igualdade em props individuais cada vez que `mapStateToProps` fosse chamado.
 
-You may wish to override `areMergedPropsEqual` to implement a `deepEqual` if your selectors produce complex props. ex: nested objects, new arrays, etc. (The deep equal check may be faster than just re-rendering.)
+Você pode querer substituir `areMergedPropsEqual` para implementar um `deepEqual` se seus selectors produzirem props complexos. ex: objetos aninhados, novas matrizes, etc. (A verificação de igualdade profunda pode ser mais rápida do que apenas uma nova renderização.)
 
 #### `forwardRef: boolean`
 
-> Note: This parameter is supported in >= v6.0 only
+> Nota: Este parâmetro é compatível com >= v6.0 apenas
 
-If `{forwardRef : true}` has been passed to `connect`, adding a ref to the connected wrapper component will actually return the instance of the wrapped component.
+Se `{forwardRef: true}` foi passado para `connect`, adicionar um ref ao componente envolvido conectado irá realmente retornar a instância do componente envolvido.
 
-## `connect()` Returns
+## Retorno da `connect()`
 
-The return of `connect()` is a wrapper function that takes your component and returns a wrapper component with the additional props it injects.
+O retorno de `connect()` é uma função que pega seu componente e retorna um componente envolvido com as props adicionais que ele injeta.
 
 ```js
 import { login, logout } from './actionCreators'
@@ -311,19 +305,19 @@ import { login, logout } from './actionCreators'
 const mapState = state => state.user
 const mapDispatch = { login, logout }
 
-// first call: returns a hoc that you can use to wrap any component
+// primeira chamada: retorna um hoc (higher order component) que você pode usar para envolver qualquer componente
 const connectUser = connect(
   mapState,
   mapDispatch
 )
 
-// second call: returns the wrapper component with mergedProps
-// you may use the hoc to enable different components to get the same behavior
+// segunda chamada: retorna o componente wrapper com mergedProps
+// você pode usar o hoc para permitir que diferentes componentes obtenham o mesmo comportamento
 const ConnectedUserLogin = connectUser(Login)
 const ConnectedUserProfile = connectUser(Profile)
 ```
 
-In most cases, the wrapper function will be called right away, without being saved in a temporary variable:
+Na maioria dos casos, a função retornada será chamada imediatamente, sem ser salva em uma variável temporária:
 
 ```js
 import { login, logout } from './actionCreators'
@@ -331,8 +325,8 @@ import { login, logout } from './actionCreators'
 const mapState = state => state.user
 const mapDispatch = { login, logout }
 
-// call connect to generate the wrapper function, and immediately call
-// the wrapper function to generate the final wrapper component.
+// chame connect para gerar a função wrapper e chame imediatamente
+// a função wrapper para gerar o componente envolvido final.
 
 export default connect(
   mapState,
@@ -340,17 +334,17 @@ export default connect(
 )(Login)
 ```
 
-## Example Usage
+## Exemplo de uso
 
-Because `connect` is so flexible, it may help to see some additional examples of how it can be called:
+Como `connect` é tão flexível, pode ser útil ver alguns exemplos adicionais de como ela pode ser chamada:
 
-- Inject just `dispatch` and don't listen to store
+- Injete apenas `dispatch` e não dê ouvidos a store
 
 ```js
 export default connect()(TodoApp)
 ```
 
-- Inject all action creators (`addTodo`, `completeTodo`, ...) without subscribing to the store
+- Injetar todos os action creators (`addTodo`,` completeTodo`, ...) sem assinar na loja
 
 ```js
 import * as actionCreators from './actionCreators'
@@ -361,17 +355,17 @@ export default connect(
 )(TodoApp)
 ```
 
-- Inject `dispatch` and every field in the global state
+- Injetar `dispatch` e todos os campos no estado global
 
-> Don’t do this! It kills any performance optimizations because `TodoApp` will rerender after every state change.
-> It’s better to have more granular `connect()` on several components in your view hierarchy that each only listen to a relevant slice of the state.
+> Não faça isso! Ele mata qualquer otimização de desempenho porque `TodoApp` irá renderizar novamente após cada mudança de estado.
+> É melhor ter `connect()` mais granular em vários componentes em sua hierarquia de visualização, de modo que cada um ouça apenas uma parte relevante do estado.
 
 ```js
-// don't do this!
+// não faça isso!
 export default connect(state => state)(TodoApp)
 ```
 
-- Inject `dispatch` and `todos`
+- Injetar `dispatch` e `todos`
 
 ```js
 function mapStateToProps(state) {
@@ -380,8 +374,7 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps)(TodoApp)
 ```
-
-- Inject `todos` and all action creators
+- Injetar `todos` e todos os action creators
 
 ```js
 import * as actionCreators from './actionCreators'
@@ -395,8 +388,7 @@ export default connect(
   actionCreators
 )(TodoApp)
 ```
-
-- Inject `todos` and all action creators (`addTodo`, `completeTodo`, ...) as `actions`
+- Injetar `todos` e todos os action creators (`addTodo`, `completeTodo`, ...) como `actions`
 
 ```js
 import * as actionCreators from './actionCreators'
@@ -415,8 +407,7 @@ export default connect(
   mapDispatchToProps
 )(TodoApp)
 ```
-
-- Inject `todos` and a specific action creator (`addTodo`)
+- Injetar `todos` e um action creator específico (` addTodo`)
 
 ```js
 import { addTodo } from './actionCreators'
@@ -435,8 +426,7 @@ export default connect(
   mapDispatchToProps
 )(TodoApp)
 ```
-
-- Inject `todos` and specific action creators (`addTodo` and `deleteTodo`) with shorthand syntax
+- Injetar `todos` e action creators específicos (`addTodo` e `deleteTodo`) com sintaxe abreviada
 
 ```js
 import { addTodo, deleteTodo } from './actionCreators'
@@ -455,8 +445,7 @@ export default connect(
   mapDispatchToProps
 )(TodoApp)
 ```
-
-- Inject `todos`, `todoActionCreators` as `todoActions`, and `counterActionCreators` as `counterActions`
+- Injetar `todos`,` todoActionCreators` como `todoActions` e `counterActionCreators` como `counterActions`
 
 ```js
 import * as todoActionCreators from './todoActionCreators'
@@ -479,8 +468,7 @@ export default connect(
   mapDispatchToProps
 )(TodoApp)
 ```
-
-- Inject `todos`, and todoActionCreators and counterActionCreators together as `actions`
+- Injetar `todos`, todoActionCreators e counterActionCreators juntos como `actions`
 
 ```js
 import * as todoActionCreators from './todoActionCreators'
@@ -505,8 +493,7 @@ export default connect(
   mapDispatchToProps
 )(TodoApp)
 ```
-
-- Inject `todos`, and all `todoActionCreators` and `counterActionCreators` directly as props
+- Injetar `todos` e todos os `todoActionCreators` e `counterActionCreators` diretamente como props
 
 ```js
 import * as todoActionCreators from './todoActionCreators'
@@ -530,7 +517,7 @@ export default connect(
 )(TodoApp)
 ```
 
-- Inject `todos` of a specific user depending on props
+- Injetar `todos` de um usuário específico dependendo das props
 
 ```js
 import * as actionCreators from './actionCreators'
@@ -541,8 +528,7 @@ function mapStateToProps(state, ownProps) {
 
 export default connect(mapStateToProps)(TodoApp)
 ```
-
-- Inject `todos` of a specific user depending on props, and inject `props.userId` into the action
+- Injetar `todos` de um usuário específico dependendo dos props e injetar `props.userId` na action
 
 ```js
 import * as actionCreators from './actionCreators'
@@ -565,13 +551,13 @@ export default connect(
 )(TodoApp)
 ```
 
-## Notes
+## Notas
 
-### The Arity of `mapToProps` Functions
+### A Aridade das Funções `mapToProps`
 
-The number of declared function parameters of `mapStateToProps` and `mapDispatchToProps` determines whether they receive `ownProps`
+O número de parâmetros de função declarados de `mapStateToProps` e `mapDispatchToProps` determina se eles recebem `ownProps`
 
-> Note: `ownProps` is not passed to `mapStateToProps` and `mapDispatchToProps` if the formal definition of the function contains one mandatory parameter (function has length 1). For example, functions defined like below won't receive `ownProps` as the second argument. If the incoming value of `ownProps` is `undefined`, the default argument value will be used.
+> Nota: `ownProps` não é passado para `mapStateToProps` e `mapDispatchToProps` se a definição formal da função contém um parâmetro obrigatório (função tem comprimento 1). Por exemplo, funções definidas como abaixo não receberão `ownProps` como o segundo argumento. Se o valor de entrada de `ownProps` for `undefined`, o valor do argumento padrão será usado.
 
 ```js
 function mapStateToProps(state) {
@@ -584,8 +570,7 @@ const mapStateToProps = (state, ownProps = {}) => {
   console.log(ownProps) // {}
 }
 ```
-
-Functions with no mandatory parameters or two parameters\*will receive `ownProps`.
+Funções sem parâmetros obrigatórios ou dois parâmetros\*receberão `ownProps`.
 
 ```js
 const mapStateToProps = (state, ownProps) => {
@@ -607,8 +592,9 @@ const mapStateToProps = (...args) => {
 ### Factory Functions
 
 If your `mapStateToProps` or `mapDispatchToProps` functions return a function, they will be called once when the component instantiates, and their returns will be used as the actual `mapStateToProps`, `mapDispatchToProps`, functions respectively, in their subsequent calls.
+Se suas funções `mapStateToProps` ou `mapDispatchToProps` retornarem uma função, elas serão chamadas uma vez quando o componente instanciar, e seus retornos serão usados ​​como as funções reais `mapStateToProps`,` mapDispatchToProps` respectivamente, em suas chamadas subsequentes.
 
-The factory functions are commonly used with memoized selectors. This gives you the ability to create component-instance-specific selectors inside the closure:
+As factory functions são comumente usadas com selectors memoizados. Isso dá a você a capacidade de criar selectors específicos de instância de componente dentro do closure:
 
 ```js
 const makeUniqueSelectorInstance = () =>

@@ -11,57 +11,57 @@ hide_title: true
 connectAdvanced(selectorFactory, connectOptions?)
 ```
 
-Connects a React component to a Redux store. It is the base for `connect()` but is less opinionated about how to combine `state`, `props`, and `dispatch` into your final props. It makes no assumptions about defaults or memoization of results, leaving those responsibilities to the caller.
+Conecta um componente React a uma Redux store. É a base para `connect()`, mas é menos opinativo sobre como combinar `state`,` props` e `dispatch` em seus props finais. Ele não faz suposições sobre padrões ou memorização de resultados, deixando essas responsabilidades para quem chama-lá.
 
-It does not modify the component class passed to it; instead, it _returns_ a new, connected component class for you to use.
+Ele não modifica a classe de componente transmitida a ele; em vez disso, ele _retorna_ uma nova classe de componente conectado para você usar.
 
-Most applications will not need to use this, as the default behavior in `connect` is intended to work for most use cases.
+A maioria dos aplicativos não precisará usar isso, já que o comportamento padrão em `connect` se destina a funcionar na maioria dos casos de uso.
 
-> Note: `connectAdvanced` was added in version 5.0, and `connect` was reimplemented as a specific set of parameters to `connectAdvanced`.
+> Nota: `connectAdvanced` foi adicionado na versão 5.0, e `connect` foi reimplementado como um conjunto específico de parâmetros para `connectAdvanced`.
 
-## Arguments
+## Argumentos
 
-- `selectorFactory(dispatch, factoryOptions): selector(state, ownProps): props` \(_Function_): Initializes a selector function (during each instance's constructor). That selector function is called any time the connector component needs to compute new props, as a result of a store state change or receiving new props. The result of `selector` is expected to be a plain object, which is passed as the props to the wrapped component. If a consecutive call to `selector` returns the same object (`===`) as its previous call, the component will not be re-rendered. It's the responsibility of `selector` to return that previous object when appropriate.
+- `selectorFactory (dispatch, factoryOptions): selector (state, ownProps): props` \ (_ Function_): Inicializa uma função selector (durante o construtor de cada instância). Essa função selector é chamada sempre que o componente conector precisa computar novos props, como resultado de uma mudança de estado da store ou recebimento de novos props. Espera-se que o resultado de `selector` seja um objeto simples, que é passado como props para o componente encapsulado. Se uma chamada consecutiva para `selector` retornar o mesmo objeto (` === `) que sua chamada anterior, o componente não será renderizado novamente. É responsabilidade do `selector` retornar o objeto anterior quando apropriado.
 
-- [`connectOptions`] _(Object)_ If specified, further customizes the behavior of the connector.
+- [`connectOptions`] _(Objeto)_ Se especificado, personaliza ainda mais o comportamento do conector.
 
-  - [`getDisplayName`] _(Function)_: computes the connector component's displayName property relative to that of the wrapped component. Usually overridden by wrapper functions. Default value: `name => 'ConnectAdvanced('+name+')'`
+  - [`getDisplayName`] _(Função)_: calcula a propriedade displayName do componente do conector em relação ao componente encapsulado. Normalmente substituído por funções de wrapper. Valor padrão: `name => 'ConnectAdvanced('+name+')'`
 
-  - [`methodName`] _(String)_: shown in error messages. Usually overridden by wrapper functions. Default value: `'connectAdvanced'`
+  - [`methodName`] _(String)_: mostrado nas mensagens de erro. Normalmente substituído por funções de wrapper. Valor padrão: `'connectAdvanced'`
 
-  - [`renderCountProp`] _(String)_: if defined, a property named this value will be added to the props passed to the wrapped component. Its value will be the number of times the component has been rendered, which can be useful for tracking down unnecessary re-renders. Default value: `undefined`
+  - [`renderCountProp`] _(String)_: se definida, uma propriedade chamada este valor será adicionada aos props passados ​​para o componente envolvido. Seu valor será o número de vezes que o componente foi renderizado, o que pode ser útil para rastrear re-renderizações desnecessárias. Valor padrão: `undefined`
 
-  - [`shouldHandleStateChanges`] _(Boolean)_: controls whether the connector component subscribes to redux store state changes. If set to false, it will only re-render when parent component re-renders. Default value: `true`
+  - [`shouldHandleStateChanges`] _(Boolean)_: controla se o componente do conector assinmou para alterações de estado da redux store. Se definido como falso, ele só será renderizado novamente quando o componente pai for renderizado novamente. Valor padrão: `true`
 
-  - [`forwardRef`] _(Boolean)_: If true, adding a ref to the connected wrapper component will actually return the instance of the wrapped component.
+  - [`forwardRef`] _(Boolean)_: se verdadeiro, adicionar um ref ao componente envolvido conectado retornará a instância do componente envolvido.
 
-  - Additionally, any extra options passed via `connectOptions` will be passed through to your `selectorFactory` in the `factoryOptions` argument.
+  - Além disso, quaisquer opções extras passadas por `connectOptions` serão passadas para seu `selectorFactory` no argumento `factoryOptions`.
 
 <a id="connectAdvanced-returns"></a>
 
-## Returns
+## Retorno
 
-A higher-order React component class that builds props from the store state and passes them to the wrapped component. A higher-order component is a function which accepts a component argument and returns a new component.
+Um componente de classe React de ordem superior que cria props a partir do estado da store e os passa para o componente envolvido. Um componente de ordem superior é uma função que aceita um componente como argumento e retorna um novo componente.
 
-### Static Properties
+### Propriedades estáticas
 
-- `WrappedComponent` _(Component)_: The original component class passed to `connectAdvanced(...)(Component)`.
+- `WrappedComponent` _(Componente)_: A classe do componente original passada para `connectAdvanced(...)(Component)`.
 
-### Static Methods
+### Métodos estáticos
 
-All the original static methods of the component are hoisted.
+Todos os métodos estáticos originais do componente são içados (hoisted).
 
-## Remarks
+## Observações
 
-- Since `connectAdvanced` returns a higher-order component, it needs to be invoked two times. The first time with its arguments as described above, and a second time, with the component: `connectAdvanced(selectorFactory)(MyComponent)`.
+- Como `connectAdvanced` retorna um componente de ordem superior, ele precisa ser invocado duas vezes. A primeira vez com seus argumentos conforme descrito acima, e uma segunda vez, com o componente: `connectAdvanced(selectorFactory)(MyComponent)`.
 
-- `connectAdvanced` does not modify the passed React component. It returns a new, connected component, that you should use instead.
+- `connectAdvanced` não modifica o componente React passado. Ele retorna um novo componente conectado, que você deve usar no lugar.
 
 <a id="connectAdvanced-examples"></a>
 
-### Examples
+### Exemplos
 
-### Inject `todos` of a specific user depending on props, and inject `props.userId` into the action
+### Injetar `todos` de um usuário específico dependendo das propriedades e injetar `props.userId` na ação
 
 ```js
 import * as actionCreators from './actionCreators'
